@@ -9,47 +9,102 @@
     <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
 </head>
 <body>
+    <section class="hero">
 
-     <!-- Navbar Beginning -->
-     <nav class="navbar navbar-expand-lg navbar-light p-2">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-center justify-content-center">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservation</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <button class="text-black ms-2 border-0" type="submit" style="background-color: transparent;"><i class="fa-solid fa-headset fa-xl me-1" style="color: #c33;"></i> +880 123 465 789</button>
-                </form>
+        <!-- Navbar Beginning -->
+        <nav class="navbar navbar-expand-lg navbar-light p-2">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30"
+                        class="d-inline-block align-text-center justify-content-center">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reservation</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button class="text-black ms-2 border-0" type="submit"
+                            style="background-color: transparent;"><i class="fa-solid fa-headset fa-xl me-1"
+                                style="color: #c33;"></i> +880 123 465 789</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Slider -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators (Optional) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container d-flex align-items-center">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12 align-self-center me-5">
+                                <h5 class="mb-4">Best In Cafeu</h5>
+                                <h1 class="mb-4">Different <span style="color: #c33; text-decoration: underline;">Spice</span>
+                                    For A Different Taste</h1>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolores?
+                                    Lorem ipsum dolor sit amet consectetur adipisicin </p>
+                                <div class="d-flex justify-content-evenly flex-nowrap">
+                                    <button class="btns order-btn">Order Now</button>
+                                    <span class="d-flex">
+                                        <button class="btns watch-btn mx-2"><i class="fa-solid fa-play"
+                                                style="opacity: .1;"></i></button>
+                                        <h6 class="mt-3">Watch Video</h6>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ps-5 col-sm-12">
+                                <img src="assets/images/sliderImgs/baner1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other carousel items -->
             </div>
         </div>
-    </nav>
-    <!-- Navbar End-->
-     
+        <!-- End Slider -->
+    </section>
+
+
+
+
+
     <section class="features-section py-5">
         <div class="container">
             <div class="row text-center">
@@ -194,5 +249,7 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
