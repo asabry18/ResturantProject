@@ -1,3 +1,12 @@
+.c-banner-item{
+    height: 250px;
+}
+.c-banner-img{
+    filter: brightness(0.4);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 footer{
     background-image: url(../images/footerImgs/footer-bg.png);
     color: white;
