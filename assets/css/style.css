@@ -1,3 +1,119 @@
+.download-info-section {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+}
+.download-info-section .download-info {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/info-img-photos/app-bg.png);
+    padding: 32px;
+    width: 85%;
+    max-height: 400px;
+}
+.download-info-section .download-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.download-info-section .download-images {
+    flex: 1;
+}
+.download-info-section .download-images .mobile-screenshots {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.download-info-section .download-images .mobile-screenshots img {
+    max-height: 100%;
+}
+
+.download-info-section .download-images .mobile-screenshots img:last-of-type {
+    margin-top: -32px;
+    margin-bottom: 40px;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .download-info-section .download-info {
+        flex-direction: column; 
+        max-height: none; 
+    }
+
+    .download-info-section .download-images .mobile-screenshots img {
+        display: none;
+    }
+
+    .download-info-section .download-images .mobile-screenshots {
+        justify-content: center; 
+        gap: 0.5em; /
+    }
+}
+
+@media (max-width: 768px) {
+    .download-info-section {
+        min-height: auto; 
+        padding: 15px; 
+    }
+
+    .download-info-section .download-title h3 {
+        font-size: 20px; 
+    }
+
+    .download-info-section .download-title p {
+        font-size: 14px; 
+    }
+
+    .download-info-section .download-images .mobile-screenshots img {
+        display: none;
+    }
+    .download-info-section .download-title .download-link .link {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-info-section .download-title h3 {
+        font-size: 18px; 
+    }
+
+    .download-info-section .download-title p {
+        font-size: 12px; 
+    }
+
+    .download-info-section .download-images .mobile-screenshots img {
+        display: none;
+    }
+
+    .download-info-section .download-images .mobile-screenshots img:last-of-type {
+        margin-top: -8px;
+    }
+    .download-info-section .download-title .download-link .link {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
 footer{
     background-image: url(../images/footerImgs/footer-bg.png);
     color: white;
