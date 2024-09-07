@@ -7,6 +7,9 @@
     width: 100%;
     object-fit: cover;
 }
+.c-contact-us-section{
+    box-shadow: -2px 10px 20px 5px #888888;
+}
 footer{
     background-image: url(../images/footerImgs/footer-bg.png);
     color: white;
