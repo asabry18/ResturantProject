@@ -22,7 +22,7 @@ body {
   margin-bottom: 15px;
 }
 .contact-form .textarea {
-  min-height: 220px;
+  min-height: 200px;
   resize: none;
 }
 .c-form-icon {
