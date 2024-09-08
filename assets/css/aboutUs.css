@@ -1,6 +1,6 @@
 .AboutUsBg{
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/aboutUsimages/various-fresh-vegetables.avif); /* The least supported option. */
-    height: 330px;
+    height: 260px;
     color: white;
 }
 .CallBg{
@@ -21,4 +21,52 @@
 }
 .CallBg .Discover:hover{
     background-color: #517894;
+}
+ .AboutUsSec .AboutUsBtn{
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #c33;
+    color: #ffff;
+ }
+ .AboutUsSec .AboutUsBtn:hover{
+    background-color:rgb(124, 15, 15) ;
+}
+.AboutUsSec .iconssec .icon{
+    width: 40px;
+    margin-right: 30px;
+}
+.TeamSec .card{
+    border: none;
+    transition: all 1s;
+    position: relative;
+    height: 100%;   
+}
+.TeamSec .card img{
+    height: 100%;
+}
+.TeamSec .col-lg-4{
+    height: 450px;
+}
+.TeamSec .card-body{
+    background-color: white;
+    height: 95px;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 12px;
+    transition: all 0.7s;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.TeamSec .card hr{
+    border: 2px solid black;
+    margin: 15px auto 15px auto;
+}
+.TeamSec .card:hover .card-body{
+    height: 190px;
+    padding-bottom: 0;
+}
+.CheckSec{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/aboutUsimages/subscribe-bg.png);
+    color: white;
 }
