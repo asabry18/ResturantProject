@@ -118,10 +118,10 @@ footer{
     background-image: url(../images/footerImgs/footer-bg.png);
     color: white;
 }
-footer .row{
-    padding-top: 60px;
-    padding-bottom: 90px;
-}
+footer .row {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 footer .title h5{
     font-weight: 700;
     font-style:  normal;
