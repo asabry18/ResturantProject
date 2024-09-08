@@ -69,4 +69,30 @@
 .CheckSec{
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/aboutUsimages/subscribe-bg.png);
     color: white;
+    position: relative;
 }
+.openingTimes{
+    position: absolute;
+    background-color: white;
+    color: #000;
+    bottom: -150px;
+    right: 110px;
+    box-shadow: rgba(228, 228, 228, 0.25) 0px 5px 15px;
+}
+.watch-btn {
+    background-color: #c33;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.TimesSec{
+    margin: 0 auto;
+    width: 380px;
+}
+.TimesSec hr{
+    margin: 0;
+    border-style: dashed;
+}
+
