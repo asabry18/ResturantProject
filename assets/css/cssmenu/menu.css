@@ -20,7 +20,11 @@ body {
     transition: transform 0.3s;
   }
   .card img {
+<<<<<<< HEAD
     background-color: #cec6c6;
+=======
+    background-color: #e7dede;
+>>>>>>> 5f889aa6dc6e4c201f16aac3352888c00fe54f0d
     width: 235px;
     height: 300px;
     padding: 20px;
