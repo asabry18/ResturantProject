@@ -24,8 +24,21 @@
   //   });
   // });
   
+  let scrollbtn = document.querySelector('.scroll')
+  onscroll = function(){
+      if(scrollY >= 200){
+        scrollbtn .style.display='block'
+      }
+      else{
+        scrollbtn.style.display='none'
+      }
+      scrollbtn.onclick = function(){
+          window.scrollTo(0,0)
+      }
+  }
+
  // Show more functionality
-document.querySelector('.show-more-btn').addEventListener('click', function () {
+let showbtn = document.querySelector('.show-more-btn').addEventListener('click', function () {
   const hiddenItems = document.querySelectorAll('.menu-item.hidden');
 
   // Show 4 hidden items at a time
@@ -37,11 +50,13 @@ document.querySelector('.show-more-btn').addEventListener('click', function () {
       }
   });
 
+
   // If there are no more hidden items, hide the button
   if (document.querySelectorAll('.menu-item.hidden').length === 0) {
       // Uncomment the following line if you want to keep the button visible
-      // this.style.display = 'none';
+      this.style.display = 'none';
   }
+
 });
 document.addEventListener('DOMContentLoaded', function () {
   // Get all icon items and menu items
