@@ -1,52 +1,137 @@
-footer{
-    background-image: url(../images/footerImgs/footer-bg.png);
-    color: white;
+body {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-footer .row{
-    padding-top: 60px;
-    padding-bottom: 90px;
+.c-banner-item {
+  height: 250px;
 }
-footer .title h5{
-    font-weight: 700;
-    font-style:  normal;
+.c-banner-img {
+  filter: brightness(0.4);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-footer .title hr{
-    width: 18%;
-    border: 2px solid white;
-    opacity: 1;
+.c-contact-us-section {
+  box-shadow: -2px 10px 20px 5px #888888;
+  border-radius: 5px;
 }
-footer .contacts .contactsBody .contactsIcon{
-    width: 23px;
+.contact-form {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-footer .contacts .contactsBody .contactsIcon i{
-    font-size: 23px;
+.contact-form .textarea {
+  min-height: 200px;
+  resize: none;
 }
-footer .instagramImages{
-    column-gap: 10px;
-    row-gap: 10px;
+.c-form-icon {
+  position: absolute;
+  right: 5%;
+  top: 35%;
 }
-footer .instagramImages .image{
-    width: 27%;
-    height: 75px;
+.form-control {
+  box-shadow: none;
+  border-color: #eee;
+  height: 49px;
+  margin: 5px;
 }
-footer .instagramImages .image img{
-    height: 100%;
+.form-control:focus {
+  box-shadow: none;
+  border-color: #00b09c;
 }
-footer .subscribeInput input{
-    padding: 7px 7px 8px 9px;
-    border: none;
-    outline: none;
+.form-control-feedback {
+  line-height: 50px;
 }
-footer .subscribeInput #subsbtn{
-    padding: 8px 18px;
-    border: none;
-    background-color:#c33 ;
-    color: #ffff;
-    outline: none;
+.main-btn {
+  background-color: #c33;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #fff;
 }
-footer .subscribeInput #subsbtn:hover{
-    background-color:rgb(124, 15, 15) ;
+.main-btn:hover {
+  background-color: #666;
+  color: #fff;
 }
-footer .subscribeIcons i{
-    padding: 0px 7px;
+.form-control-feedback {
+  line-height: 50px;
+  top: 0px;
+}
+.c-alert {
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: -18px;
+  border-radius: 3px;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 100%;
+  display: none; /* Hidden by default */
+}
+.c-google-map {
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .c-google-map {
+    padding-bottom: 70%;
+  }
+}
+.c-google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+footer {
+  background-image: url(../images/footerImgs/footer-bg.png);
+  color: white;
+}
+footer .row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer .title h5 {
+  font-weight: 700;
+  font-style: normal;
+}
+footer .title hr {
+  width: 18%;
+  border: 2px solid white;
+  opacity: 1;
+}
+footer .contacts .contactsBody .contactsIcon {
+  width: 23px;
+}
+footer .contacts .contactsBody .contactsIcon i {
+  font-size: 23px;
+}
+footer .instagramImages {
+  column-gap: 10px;
+  row-gap: 10px;
+}
+footer .instagramImages .image {
+  width: 27%;
+  height: 75px;
+}
+footer .instagramImages .image img {
+  height: 100%;
+}
+footer .subscribeInput input {
+  padding: 7px 7px 8px 9px;
+  border: none;
+  outline: none;
+}
+footer .subscribeInput #subsbtn {
+  padding: 8px 18px;
+  border: none;
+  background-color: #c33;
+  color: #ffff;
+  outline: none;
+}
+footer .subscribeInput #subsbtn:hover {
+  background-color: rgb(124, 15, 15);
+}
+footer .subscribeIcons i {
+  padding: 0px 7px;
 }

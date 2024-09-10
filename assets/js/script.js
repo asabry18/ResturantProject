@@ -1,49 +1,82 @@
-let scrollbtn = document.querySelector('.scroll')
-onscroll = function(){
-    if(scrollY >= 200){
-      scrollbtn .style.display='block'
-    }
-    else{
-      scrollbtn.style.display='none'
-    }
-    scrollbtn.onclick = function(){
-        window.scrollTo(0,0)
-    }
-}
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let isValid = true;
 
-let footerLinks = document.querySelector(".footerLinks")
+    // Clear previous error messages
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("locationError").textContent = "";
+    document.getElementById("messageError").textContent = "";
+
+    // Name validation
+    const name = document.getElementById("name").value.trim();
+    if (name === "") {
+      document.getElementById("nameError").textContent = "Name is required";
+      isValid = false;
+    }
+
+    // Email validation (simple regex for demonstration purposes)
+    const email = document.getElementById("email").value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "" || !emailRegex.test(email)) {
+      document.getElementById("emailError").textContent =
+        "Valid email is required";
+      isValid = false;
+    }
+
+    // Phone validation (numeric check)
+    const phone = document.getElementById("phone").value.trim();
+    const phoneRegex = /^[0-9]+$/;
+    if (phone === "" || !phoneRegex.test(phone) || phone.length < 10) {
+      document.getElementById("phoneError").textContent =
+        "Valid phone number is required";
+      isValid = false;
+    }
+
+    // Location validation
+    const location = document.getElementById("location").value.trim();
+    if (location === "") {
+      document.getElementById("locationError").textContent =
+        "Location is required";
+      isValid = false;
+    }
+
+    // Message validation
+    const message = document.getElementById("message").value.trim();
+    if (message === "") {
+      document.getElementById("messageError").textContent =
+        "Message is required";
+      isValid = false;
+    }
+
+    // Inline Alert Function
+    function showInlineAlert() {
+      var alertDiv = document.getElementById("inline-alert");
+      alertDiv.innerHTML = "Form Submitted Successfully!";
+      alertDiv.style.display = "block"; // Make the alert visible
+    }
+
+    // If the form is valid, you show inline alert message
+    if (isValid) {
+      showInlineAlert();
+    }
+  });
+
+let footerLinks = document.querySelector(".footerLinks");
 const LinksArray = [
-    "About Us",
-    "Menu",
-    "Blog",
-    "FAQ",
-    "Services",
-    "Gallery",
-    "Contact Us",
-]
+  "About Us",
+  "Menu",
+  "Blog",
+  "FAQ",
+  "Services",
+  "Gallery",
+  "Contact Us",
+];
 
-const linksloop = LinksArray.forEach((ele)=>{
-    footerLinks.innerHTML+=`<P class="mb-2">${ele}</p>`
-})
+const linksloop = LinksArray.forEach((ele) => {
+  footerLinks.innerHTML += `<P class="mb-2">${ele}</p>`;
+});
 
-let teams = document.querySelector(".teams")
-const teamsinner = [
-    {name: "Cathy Anderson",title: "Chief executive",Image:"assets/images/aboutUsimages/chieff.jpg"},
-    {name: "Mike Dooley",title: "Executive",Image:"assets/images/aboutUsimages/chieff2new.jpg"},
-    {name: "Alextina Jimiey",title: "Food Inspector",Image:"assets/images/aboutUsimages/chieff3new.jpg"}
-]
-
-const teamsecloop = teamsinner.map((ele)=>{
-    teams.innerHTML+=`
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="${ele.Image}" class="card-img-top">
-                        <div class="card-body text-center overflow-hidden">
-                            <h4 class="card-title">${ele.name}</h4>
-                            <p class="text-capitalize opacity-75">${ele.title}</p>
-                            <hr class="opacity-100 w-75">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                        </div>
-                    </div>
-                </div>`
-})
