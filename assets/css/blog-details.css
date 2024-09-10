@@ -1,3 +1,15 @@
+.scroll{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #c33;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 20px;
+  }
 .blog-details-bg{
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogDetailsImgs/various-fresh-vegetables.avif); /* The least supported option. */
     height: 40vh;
