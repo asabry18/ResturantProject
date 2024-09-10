@@ -99,3 +99,10 @@
     font-size: small;
   }
 }
+.hero .social-links {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%) rotate(90deg);
+ 
+}
