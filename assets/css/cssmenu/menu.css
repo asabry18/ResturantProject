@@ -20,12 +20,17 @@ body {
     transition: transform 0.3s;
   }
   .card img {
-    background-color: #e7dede;
-    width: 235px;
+    background-color: #cec6c6;
+    width: 240px;
     height: 300px;
     padding: 20px;
     margin: 10px;
   }
+
+  .hidden {
+    display: none;
+  }
+  
 
 
 
