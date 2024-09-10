@@ -1,6 +1,6 @@
 /* Hero Section Styles */
 .hero {
-  background-image: url(/assets/images/sliderImgs/banner-bg.jpg);
+  background-image: url(../images/sliderImgs/banner-bg.jpg);
   background-size: cover;
   width: 100%;
   height: fit-content;
