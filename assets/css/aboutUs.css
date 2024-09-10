@@ -49,13 +49,13 @@
     width: 40px;
     margin-right: 30px;
 }
-.TeamSec .card{
+.TeamSec .teamcard{
     border: none;
     transition: all 1s;
     position: relative;
     height: 100%;   
 }
-.TeamSec .card img{
+.TeamSec .teamcard .card-img-top{
     height: 100%;
 }
 .TeamSec .col-lg-4{
@@ -70,12 +70,12 @@
     bottom: 0px;
     left: 0px;
 }
-.TeamSec .card hr{
+.TeamSec .teamcard hr{
     border: 2px solid black;
     margin: 15px auto 15px auto;
 }
-.TeamSec .card:hover .card-body{
-    height: 190px;
+.TeamSec .teamcard:hover .card-body{
+    height: 170px;
     padding-bottom: 0;
 }
 .CheckSec{
@@ -90,7 +90,7 @@
     background-color: white;
     color: #000;
     right: 110px;
-    bottom: -150px;
+    bottom: -130px;
     box-shadow: rgba(228, 228, 228, 0.25) 0px 5px 15px;
 }
 .watch-btn {
