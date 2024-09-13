@@ -1,4 +1,16 @@
-.blogSection .blog {
+.scroll{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #c33;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 20px;
+  }
+.blog {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +58,7 @@
 .blogSection .blog .showMore {
     width: 130px;
     padding: 10px 20px;
-    background-color: #e74c3c;
+    background-color: #c33;
     color: #fff;
     border: none;
     cursor: pointer;
