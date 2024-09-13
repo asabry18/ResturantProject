@@ -26,6 +26,9 @@ nav .collapse form i{
 .blogSection .blog h3 {
     text-align: center;
 }
+.blogSection .blog .latestNewsCard {
+    width: 23rem;
+}
 .blogSection .blog .blogBg{
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogimgs/various-fresh-vegetables.avif); 
     height: 40vh;
