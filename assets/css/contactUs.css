@@ -1,20 +1,38 @@
+.scroll{
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #c33;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 20px;
+  z-index: 10;
+}
 body {
   margin: auto;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-.CallButton{
+nav .collapse form button{
+  background-color: transparent;
+}
+nav .collapse form i{
   color: #c33;
 }
-.CBannerItem {
-  height: 250px;
+.AboutUsBg{
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/bodyImgs/various-fresh-vegetables.avif); 
+  height: 260px;
+  color: white;
 }
-.CBannerImage {
-  filter: brightness(0.4);
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.AboutUsBg h1{
+  font-weight: 700;
+}
+.CallButton{
+  color: #c33;
 }
 .CContactUsSection {
   box-shadow: -2px 10px 20px 5px #888888;
@@ -38,6 +56,7 @@ body {
   border-color: #eee;
   height: 49px;
   margin: 5px;
+  margin-left: 0px;
 }
 .form-control:focus {
   box-shadow: none;
@@ -132,9 +151,14 @@ footer .subscribeInput #subsbtn {
   color: #ffff;
   outline: none;
 }
-footer .subscribeInput #subsbtn:hover {
-  background-color: rgb(124, 15, 15);
+footer .subscribeInput #subsbtn:hover{
+  background-color:#666 ;
 }
-footer .subscribeIcons i {
+footer .subscribeIcons i{
   padding: 0px 7px;
+}
+@media (max-width:1200px){
+  footer .Subscribtion{
+      width: 100%;
+  }
 }
