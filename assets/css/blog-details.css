@@ -1,4 +1,4 @@
-.scroll{
+.Scroll{
     width: 40px;
     height: 40px;
     border: none;
@@ -10,29 +10,33 @@
     display: none;
     border-radius: 20px;
   }
-.blog-details-bg{
+.BlogDetailsBg{
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogDetailsImgs/various-fresh-vegetables.avif); /* The least supported option. */
     height: 40vh;
     color: white;
 }
 
-.card img {
+.BlogDetailsBg h1 {
+    font-weight: 700;
+}
+
+.BlogContent .card img {
     
     height :55vh ;
 
 }
 
-.card h1 {
+.BlogContent .card h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
     line-height: 40px;
     padding-top: 20px;
 }
-.progress-bar{
+.SideBar .progress-bar{
     background-color: #c33;
 }
-ul img {
+.SideBar ul img {
     width:25% ;
     height :25% ;
     margin-top: 5%;
