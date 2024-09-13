@@ -59,15 +59,15 @@ for(let i = 0 ; i<menu.length ; i++) {
 
     const mainElement = 
     `
-    <div class="card" style="width: 23rem;">
+    <div class="card latestNewsCard" style="width: 23rem;">
             <img src= ${menu[i].backgroundImage} class="card-img-top" alt="Restraunt-Latest-News">
             <div class="card-body">
               <h5 class="card-title">${menu[i].title}</h5>
-              <p class="card-text">${menu[i].paragraph}</p>
+              <p class="card-text opacity-75">${menu[i].paragraph}</p>
               <hr>
-              <div class="date-blog">
+              <div class="date-blog opacity-75">
                 <p>${menu[i].date}</p>
-                <button class="cardButton"> Read More</button>
+                <a href="###" class="opacity-75">Read More</a>
               </div>
             </div>
         </div>
