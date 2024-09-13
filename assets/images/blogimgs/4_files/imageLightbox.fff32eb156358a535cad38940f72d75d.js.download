@@ -1,0 +1,2 @@
+!function(){"use strict";!function(n){var e=n.wafer,t=function(){var t=n.benji,i=[];null==t||t.on("RENDER_SUCCEEDED",(function(n){var e=n.data.id;e&&-1===i.indexOf(e)&&i.push(e)})),e.on("lightbox:close",(function(n){n.elem.getElementsByClassName("caas-image-lightbox")[0]&&t&&t.refresh(i,{checkViewport:!0})}))};e?e.ready((function(){t()}),n):document.body.addEventListener("wafer:ready",(function(){t()}))}(window)}();
+//# sourceMappingURL=imageLightbox.js.map

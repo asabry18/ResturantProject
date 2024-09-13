@@ -1,15 +1,15 @@
-.blog {
+.blogSection .blog {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.blog h3 {
+.blogSection .blog h3 {
     text-align: center;
 }
 
-.blog .blog-details-bg{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogimgs/various-fresh-vegetables.avif); /* The least supported option. */
+.blogSection .blog .blogBg{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogimgs/various-fresh-vegetables.avif); 
     height: 40vh;
     color: white;
     width: 100%;
@@ -17,7 +17,7 @@
 
 
 
-.blog .main {
+.blogSection .blog .mainBlog {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -28,18 +28,22 @@
 }
 
 
-.blog .main .date-blog {
+.blogSection .blog .mainBlog .date-blog {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.blog .main .date-blog p {
+.blogSection .blog .mainBlog .date-blog p {
     color: gray;
 }
 
+.blogSection .blog .mainBlog .cardButton {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
 
-.blog .show-more {
+.blogSection .blog .showMore {
     width: 130px;
     padding: 10px 20px;
     background-color: #e74c3c;
@@ -51,3 +55,4 @@
     border-radius: 4px;
     margin-bottom: 20px;
 }
+
