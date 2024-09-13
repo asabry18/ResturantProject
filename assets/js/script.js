@@ -11,21 +11,6 @@ onscroll = function(){
     }
 }
 
-let footerLinks = document.querySelector(".footerLinks")
-const LinksArray = [
-    "About Us",
-    "Menu",
-    "Blog",
-    "FAQ",
-    "Services",
-    "Gallery",
-    "Contact Us",
-]
-
-const linksloop = LinksArray.forEach((ele)=>{
-    footerLinks.innerHTML+=`<P class="mb-2">${ele}</p>`
-})
-
 let teams = document.querySelector(".teams")
 const teamsinner = [
     {name: "Cathy Anderson",title: "Chief executive",Image:"assets/images/aboutUsimages/chieff.jpg"},
@@ -35,9 +20,9 @@ const teamsinner = [
 
 const teamsecloop = teamsinner.map((ele)=>{
     teams.innerHTML+=`
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="${ele.Image}" class="card-img-top">
+                <div class="col-lg-4 col-md-6 col-12 FullCard">
+                    <div class="card teamCard">
+                        <img src="${ele.Image}" class="card-img-top" alt="team-img">
                         <div class="card-body text-center overflow-hidden">
                             <h4 class="card-title">${ele.name}</h4>
                             <p class="text-capitalize opacity-75">${ele.title}</p>

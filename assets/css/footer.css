@@ -45,8 +45,13 @@ footer .subscribeInput #subsbtn{
     outline: none;
 }
 footer .subscribeInput #subsbtn:hover{
-    background-color:rgb(124, 15, 15) ;
+    background-color:#666 ;
 }
 footer .subscribeIcons i{
     padding: 0px 7px;
+}
+@media (max-width:1200px){
+    footer .Subscribtion{
+        width: 100%;
+    }
 }
