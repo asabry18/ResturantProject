@@ -1,41 +1,15 @@
-// Filter functionality for categories
-// document.querySelectorAll('.category-filter a').forEach(function (categoryLink) {
-//     categoryLink.addEventListener('click', function (event) {
-//       event.preventDefault();
-  
-      // Remove active class from all links
-      // document.querySelector('.category-filter .active').classList.remove('active');
-  
-      // Add active class to clicked link
-      // this.classList.add('active');
-  
-      // Get category from clicked link
-      // const category = this.textContent.toLowerCase();
-  
-      // Show/hide items based on category
-  //     const items = document.querySelectorAll('.menu-item');
-  //     items.forEach(function (item) {
-  //       if (category === 'all categories' || item.dataset.category === category) {
-  //         item.style.display = 'block';
-  //       } else {
-  //         item.style.display = 'none';
-  //       }
-  //     });
-  //   });
-  // });
-  
-  let scrollbtn = document.querySelector('.scroll')
-  onscroll = function(){
-      if(scrollY >= 200){
-        scrollbtn .style.display='block'
-      }
-      else{
-        scrollbtn.style.display='none'
-      }
-      scrollbtn.onclick = function(){
-          window.scrollTo(0,0)
-      }
-  }
+let scrollbtn = document.querySelector('.scroll')
+onscroll = function(){
+    if(scrollY >= 200){
+      scrollbtn .style.display='block'
+    }
+    else{
+      scrollbtn.style.display='none'
+    }
+    scrollbtn.onclick = function(){
+        window.scrollTo(0,0)
+    }
+}
 
  // Show more functionality
 let showbtn = document.querySelector('.show-more-btn').addEventListener('click', function () {
