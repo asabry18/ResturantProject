@@ -9,34 +9,104 @@
     right: 20px;
     display: none;
     border-radius: 20px;
-  }
-.blog-details-bg{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogDetailsImgs/various-fresh-vegetables.avif); /* The least supported option. */
+    z-index: 10;
+}
+nav .collapse form button{
+    background-color: transparent;
+}
+nav .collapse form i{
+    color: #c33;
+}
+.BlogDetailsBg{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/blogDetailsImgs/various-fresh-vegetables.avif);
     height: 40vh;
     color: white;
 }
-
-.card img {
-    
-    height :55vh ;
-
+.BlogDetailsBg h1 {
+    font-weight: 700;
 }
-
-.card h1 {
+.BlogContent .card img { 
+    height :55vh ;
+}
+.BlogContent .SideBar .progress{
+    height: 2px;
+}
+.BlogContent .card h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
     line-height: 40px;
     padding-top: 20px;
 }
-.progress-bar{
+.SideBar .progress-bar{
     background-color: #c33;
+    width: 25%
 }
-ul img {
+.SideBar ul img {
     width:25% ;
     height :25% ;
     margin-top: 5%;
-
 }
-
-
+.SideBar{
+    padding-left: 3rem;
+}
+footer{
+    background-image: url(../images/footerImgs/footer-bg.png);
+    color: white;
+}
+footer .row{
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+footer .title h5{
+    font-weight: 700;
+    font-style:  normal;
+}
+footer .title hr{
+    width: 18%;
+    border: 2px solid white;
+    opacity: 1;
+}
+footer .contacts .contactsBody .contactsIcon{
+    width: 23px;
+}
+footer .contacts .contactsBody .contactsIcon i{
+    font-size: 23px;
+}
+footer .instagramImages{
+    column-gap: 10px;
+    row-gap: 10px;
+}
+footer .instagramImages .image{
+    width: 27%;
+    height: 75px;
+}
+footer .instagramImages .image img{
+    height: 100%;
+}
+footer .subscribeInput input{
+    padding: 7px 7px 8px 9px;
+    border: none;
+    outline: none;
+}
+footer .subscribeInput #subsbtn{
+    padding: 8px 18px;
+    border: none;
+    background-color:#c33 ;
+    color: #ffff;
+    outline: none;
+}
+footer .subscribeInput #subsbtn:hover{
+    background-color:#666 ;
+}
+footer .subscribeIcons i{
+    padding: 0px 7px;
+}
+@media (max-width:1200px){
+    footer .Subscribtion{
+        width: 100%;
+    }
+    .SideBar{
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,639 @@
+.scroll{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #c33;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 20px;
+    z-index: 10;
+}
+nav .collapse form button{
+    background-color: transparent;
+}
+nav .collapse form i{
+    color: #c33;
+}
+.hero .social-links li a{
+    text-decoration: none;
+    color: black;
+  }
+/* Hero Section Styles */
+.hero {
+    background-image: url(../images/sliderImgs/banner-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+  }
+  
+  .hero h1 {
+    font-style: bold;
+    font-weight: bolder;
+  }
+  
+  .hero img {
+    width: 100%;
+  }
+  /* Carousel Styles */
+  .carousel-item .slider {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/images/sliderImgs/banner-bg.jpg);
+    background-size: cover;
+  }
+  .carousel-item h1 span{
+    color: #c33; 
+    text-decoration: underline
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: #666 !important;
+    width: 50px;
+    height: 5px;
+    display: flex;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #c33 !important;
+  }
+  
+  /* Button Styles */
+  .btns {
+    background-color: #c33;
+    border: none;
+  }
+  
+  .order-btn {
+    color: white;
+    padding: 7px 25px;
+    border-radius: 3px;
+  }
+  
+  .watch-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 1148px) {
+    .carousel-item img {
+      width: 125%;
+      height: 95%;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    h5 {
+      font-size: 20px;
+    }
+  
+    .btns {
+      margin-bottom: 50px;
+      font-size:small ;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item h5 {
+      padding-top: 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h5 {
+      font-size: 18px;
+    }
+  
+    .carousel-item img {
+      width: 100%;
+      height: 80%;
+      margin-bottom: 0;
+    }
+  
+    .btns {
+      margin-bottom: 0;
+      font-size: small;
+    }
+  }
+  .hero .social-links {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .DownloadInfo {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+}
+.DownloadInfo .download-info {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/info-img-photos/app-bg.png);
+    padding: 32px;
+    width: 85%;
+    max-height: 400px;
+}
+.DownloadInfo .download-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.DownloadInfo .download-images {
+    flex: 1;
+}
+.DownloadInfo .download-images .mobile-screenshots {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.DownloadInfo .download-images .mobile-screenshots img {
+    max-height: 100%;
+}
+
+.DownloadInfo .download-images .mobile-screenshots img:last-of-type {
+    margin-top: -32px;
+    margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+    .DownloadInfo .download-info {
+        flex-direction: column; 
+        max-height: none; 
+    }
+
+    .DownloadInfo .download-images .mobile-screenshots img {
+        display: none;
+    }
+
+    .DownloadInfo .download-images .mobile-screenshots {
+        justify-content: center; 
+        gap: 0.5em; /
+    }
+}
+
+@media (max-width: 768px) {
+    .DownloadInfo {
+        min-height: auto; 
+        padding: 15px; 
+    }
+
+    .DownloadInfo .download-title h3 {
+        font-size: 20px; 
+    }
+
+    .DownloadInfo .download-title p {
+        font-size: 14px; 
+    }
+
+    .DownloadInfo .download-images .mobile-screenshots img {
+        display: none;
+    }
+    .DownloadInfo .download-title .download-link .link {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .DownloadInfo .download-title h3 {
+        font-size: 18px; 
+    }
+
+    .DownloadInfo .download-title p {
+        font-size: 12px; 
+    }
+
+    .DownloadInfo .download-images .mobile-screenshots img {
+        display: none;
+    }
+
+    .DownloadInfo .download-images .mobile-screenshots img:last-of-type {
+        margin-top: -8px;
+    }
+    .DownloadInfo .download-title .download-link .link {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}  
+.feature-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.feature-box .icon img {
+    width: 50px;
+    height: 50px;
+}
+.feature-box h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.feature-box p {
+    color: #777;
+    font-size: 0.875rem;
+}
+.feature-box a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    display: inline-block;
+}
+.scroll{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #c33;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 20px;
+}
+nav .collapse form button{
+    background-color: transparent;
+}
+nav .collapse form i{
+    color: #c33;
+}
+.AboutUsSec .AboutUsTxt h5{
+    color: #c33;
+}
+.AboutUsSec .AboutUsTxt h2{
+    font-weight:700 ;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .iconTxt h6{
+    font-weight: 700;
+}
+.AboutUsSec .AboutUsBtn{
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #c33;
+    color: #ffff;
+}
+.AboutUsSec .AboutUsTxt{
+    margin-left: 50px;
+}
+.AboutUsSec .AboutUsBtn:hover{
+    background-color:#666 ;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .icon{
+    width: 40px;
+    margin-right: 30px;
+}
+.TeamSec .teamCard{
+    border: none;
+    transition: all 1s;
+    position: relative;
+    height: 100%; 
+}
+.TeamSec .teamCard .card-img-top{
+    height: 100%;
+}
+.TeamSec .FullCard{
+    height: 450px;
+}
+.TeamSec h5{
+    color: #c33;
+}
+.TeamSec h2{
+    font-weight:700 ;
+}
+.TeamSec .teamCard .card-body{
+    background-color: white;
+    height: 95px;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 12px;
+    transition: all 0.7s;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.TeamSec .teamCard hr{
+    border: 2px solid black;
+    margin: 15px auto 15px auto;
+}
+.TeamSec .teamCard:hover .card-body{
+    height: 190px;
+    padding-bottom: 0;
+}
+.CheckSec{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/aboutUsimages/subscribe-bg.png);
+    color: white;
+}
+.OpenTimes{
+    position: relative;
+}
+.OpenTimes .CheckSec{
+    margin-bottom: 90px;
+}
+.OpenTimes .CheckSec h2{
+    font-weight: 700;
+}
+.OpenTimes .openingTimes h5{
+    color: #c33;
+}
+.OpenTimes .openingTimes h2{
+    font-weight:700 ;
+}
+.OpenTimes .openingTimes .ContactInfo h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.OpenTimes .openingTimes .ContactInfo p{
+    font-size: 20px;
+}
+.OpenTimes .openingTimes{
+    position: absolute;
+    background-color: white;
+    color: #000;
+    right: 110px;
+    bottom: -150px;
+    box-shadow: rgba(42, 42, 42, 0.322) 0px 5px 15px;
+}
+.watch-btn {
+    background-color: #c33;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.OpenTimes .openingTimes .TimesSec{
+    margin: 0 auto;
+    width: 380px;
+}
+.OpenTimes .openingTimes .TimesSec hr{
+    margin: 0;
+    border-style: dashed;
+}
+@media (max-width: 768px) , (max-width: 1200px){
+    .OpenTimes .openingTimes{
+        position: relative;
+        background-color: white;
+        color: #000;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        margin: auto;
+        margin-bottom: 90px;
+        box-shadow: rgba(30, 30, 30, 0.25) 0px 2px 15px 5px;
+    }
+    .OpenTimes .openingTimes .TimesSec{
+        width: 100%;
+    }
+    .AboutUsSec .AboutUsTxt{
+        margin-left: 0px;
+    }
+}
+.special-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .special-heading h2 {
+    color: #c33; 
+    font-size: 24px;
+    font-weight: 500; 
+  }
+  .menuCard {
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(179, 176, 176, 0.1);
+    transition: transform 0.3s;
+  }
+  .menu{
+    background-color: #fff9f4 !important;
+  }
+  .menuCard img {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    border: white 10px solid;
+  }
+  .hidden {
+    display: none;
+  }
+  .menuCard:hover {
+    transform: scale(1.05);
+  }
+  .menuCard .card-title {
+    font-size: 1.1rem;
+  }
+  .menuCard .card-text {
+    font-size: 0.9rem;
+  }
+  .stars {
+    color: #ffc107;
+  }
+  .text-danger {
+    font-weight: bold;
+  }
+  .btn-danger {
+    background-color: #c33 !important;
+    border: none !important;
+  }
+  .btn-danger:hover{
+    background-color: #666 !important;
+  }
+  .hidden {
+    display: none;
+  }
+  .special-menu {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .icons-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .icon-item {
+    text-align: center;
+  }
+  .icon-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .icon-item span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .icon-item {
+    transition: transform 0.3s, color 0.3s, border-bottom 0.3s;
+    position: relative; 
+  }
+  
+  .icon-item:hover {
+    transform: scale(1.1); 
+    color: #c33; 
+  }
+  
+  .icon-item:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #c33; 
+  }
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blogSection{
+    background-image: url("../images/homeImages/latestNewsImages/bg-blog.png");
+}
+.blogSection .blog h3 {
+    text-align: center;
+}
+.blogSection .blog .newsblogtitle {
+    text-align: center;
+    color: #c33;
+}
+.blogSection .blog .latestNewsCard {
+    width: 23rem;
+}
+.blogSection .blog .mainBlog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+.blogSection .blog h6{
+    color: #c33;
+    font-weight: 700;
+}
+.blogSection .blog .mainBlog .latestNewsCard{
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.229);
+    border-radius: 0px;
+}
+.blogSection .blog .mainBlog .latestNewsCard img{
+    border-radius: 0px;
+}
+.blogSection .blog .mainBlog .date-blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.blogSection .blog .mainBlog a {
+    color: black;
+}
+.blogSection .blog .showMore {
+    width: 130px;
+    padding: 10px 20px;
+    background-color: #c33;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.blogSection .blog .showMore:hover{
+    background-color: #666;
+}
+footer{
+    background-image: url(../images/footerImgs/footer-bg.png);
+    color: white;
+}
+footer .row{
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+footer .title h5{
+    font-weight: 700;
+    font-style:  normal;
+}
+footer .title hr{
+    width: 18%;
+    border: 2px solid white;
+    opacity: 1;
+}
+footer .contacts .contactsBody .contactsIcon{
+    width: 23px;
+}
+footer .contacts .contactsBody .contactsIcon i{
+    font-size: 23px;
+}
+footer .instagramImages{
+    column-gap: 10px;
+    row-gap: 10px;
+}
+footer .instagramImages .image{
+    width: 27%;
+    height: 75px;
+}
+footer .instagramImages .image img{
+    height: 100%;
+}
+footer .subscribeInput input{
+    padding: 7px 7px 8px 9px;
+    border: none;
+    outline: none;
+}
+footer .subscribeInput #subsbtn{
+    padding: 8px 18px;
+    border: none;
+    background-color:#c33 ;
+    color: #ffff;
+
+    outline: none;
+
+}
+
+footer .subscribeInput #subsbtn:hover{
+
+    background-color:#666 ;
+
+}
+
+footer .subscribeIcons i{
+
+    padding: 0px 7px;
+
+}
+
+@media (max-width:1200px){
+
+    footer .Subscribtion{
+
+        width: 100%;
+
+    }
+
+}

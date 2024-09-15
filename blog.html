@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/BLOG.css">
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/cssbootstrap/all.min.css">
+    <title>Blog</title>
+    <link rel="stylesheet" href="assets/css/blog.css">
     <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
 </head>
 <body>
-    <button class="scroll">^</button>
+    <!--scroll up button-->
+    <button class="scroll"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!--start navbar-->
     <nav class="navbar navbar-expand-lg navbar-light p-2">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-center justify-content-center">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-        
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
@@ -43,30 +43,33 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="text-black ms-2 border-0" type="submit" style="background-color: transparent;"><i class="fa-solid fa-headset fa-xl me-1" style="color: #c33;"></i> +880 123 465 789</button>
+                    <button class="text-black ms-2 border-0" type="submit"><i class="fa-solid fa-headset fa-xl me-1"></i> +880 123 465 789</button>
                 </form>
             </div>
         </div>
     </nav>
+    <!--end navbar-->
 
-    <div class="blog">
-        <div class="blog-details-bg d-flex flex-column justify-content-center align-items-center mb-5">
-            <h1 style="font-weight: 700;"><h1>Blog</h1>
-            <p>Home/Blog</p>
+    <!--latest news section-->
+    <section class="blogSection">
+        <div class="blog">
+            <div class="blogBg d-flex flex-column justify-content-center align-items-center mb-5">
+                <h1>Blog</h1>
+                <p>Home/Blog</p>
+            </div>
+            <h3>Latest News</h3>
+            <div class="mainBlog" id="main">
+            </div>
+            <button class="showMore" id="showbtn">Show More</button>
         </div>
-        <h3>Latest News</h3>
-        <blog class="main" id="main">
-        </blog>
-        <button class="show-more" id="showbtn">Show More</button>
-    </div>
-   
+    </section>
 
-
+    <!--start footer-->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <img src="assets/images/footerImgs/logo-white.png" alt="">
+                    <img src="assets/images/footerImgs/logo-white.png" alt="white-logo">
                     <P class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do</P>
                     <div class="contacts">
                         <div class="contactsBody d-flex align-items-center pt-3">
@@ -94,7 +97,6 @@
                                 <p class="m-0 ps-3">+123 456 789 123</p>
                                 <p class="m-0 ps-3">+123 456 789</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -104,7 +106,13 @@
                         <hr class="mb-0">
                     </div>
                     <div class="footerLinks pt-4">
-
+                        <P class="mb-2">About Us</p>
+                        <P class="mb-2">Menu</p>
+                        <P class="mb-2">Blog</p>
+                        <P class="mb-2">FAQ</p>
+                        <P class="mb-2">Services</p>
+                        <P class="mb-2">Gallery</p>
+                        <P class="mb-2">Contact Us</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 pt-4">
@@ -114,26 +122,26 @@
                     </div>
                     <div class="instagramImages d-flex flex-wrap pt-4">
                         <div class="image">
-                            <img src="assets/images/footerImgs/pizza.webp" class="w-100">
+                            <img src="assets/images/footerImgs/pizza.webp" class="w-100" alt="pizza">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/grands.png" class="w-100">
+                            <img src="assets/images/footerImgs/grands.png" class="w-100" alt="grands">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/burger.jpg" class="w-100">
+                            <img src="assets/images/footerImgs/burger.jpg" class="w-100" alt="burger">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/soup.jpg" class="w-100">
+                            <img src="assets/images/footerImgs/soup.jpg" class="w-100" alt="soup">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/eggs.jpeg" class="w-100">
+                            <img src="assets/images/footerImgs/eggs.jpeg" class="w-100" alt="eggs">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/salad.png" class="w-100">
+                            <img src="assets/images/footerImgs/salad.png" class="w-100" alt="salad">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
+                <div class="col-lg-3 col-md-4 col-6 pt-4 Subscribtion">
                     <div class="title">
                         <h5>Subscribe</h5>
                         <hr class="mb-0">
@@ -154,13 +162,13 @@
         </div>
         <hr>
         <div class="copyrights d-flex justify-content-center align-items-center pb-4">
-            <i class="fa-regular fa-copyright" style="font-size: 10px;"></i>
+            <i class="fa-regular fa-copyright"></i>
             <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
         </div>
     </footer>
-    <script src="assets/js/blog.js"></script>
-    <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
+    <!--end footer-->
 
-    
+    <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script> <!--javascript bootstrap bundle-->
+    <script src="assets/js/blog.js"></script>
 </body>
 </html>
