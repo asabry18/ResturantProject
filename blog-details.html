@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant - Blog Details</title>
-
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/cssbootstrap/all.min.css">
-    <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS links -->
     <link rel="stylesheet" href="assets/css/blog-details.css">
+    <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <button class="scroll">^</button>
-      <!-- Navbar Beginning -->
-      <nav class="navbar navbar-expand-lg navbar-light p-2">
+    <!--scroll up button-->
+    <button class="scroll"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!--start navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-center justify-content-center">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,181 +45,193 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="text-black ms-2 border-0" type="submit" style="background-color: transparent;"><i class="fa-solid fa-headset fa-xl me-1" style="color: #c33;"></i> +880 123 465 789</button>
+                    <button class="text-black ms-2 border-0" type="submit"><i class="fa-solid fa-headset fa-xl me-1"></i> +880 123 465 789</button>
                 </form>
             </div>
         </div>
     </nav>
-    <!-- Navbar End-->
+    <!--end navbar-->
 
-    <!-- blog details logo -->
-    <div class="blog-details-bg d-flex flex-column justify-content-center align-items-center mb-5">
-        <h1 style="font-weight: 700;"><h1>Blog Details</h1>
+    <!-- Blog details logo -->
+    <section class="BlogDetailsBg d-flex flex-column justify-content-center align-items-center mb-5">
+        <h1>Blog Details</h1>
         <p>Home/menu</p>
-    </div>
-    
-    <div class="container mt-5 pt-5 mb-5 pb-5">
+    </section>
+
+    <!-- Blog content section -->
+    <section class="BlogContent mt-5 pt-5 mb-5 pb-5">
+     <div class="container">
         <div class="row">
+            <!-- post  -->
             <div class="col-md-8 col-sm-12">
                 <div class="card">
-                    <img src="assets/images/blogDetailsImgs/3 (1).png" class="card-img-top" alt="rice and salad">
+                    <img src="assets/images/blogDetailsImgs/salad.png" class="card-img-top" alt="rice and salad">
                     <div class="card-body p-5">
-                      <h6 class="card-title text-muted"><i class="fa-solid fa-calendar-days"></i> Sep 5 ,2023</h6>
+                        <h6 class="card-title text-muted"><i class="fa-solid fa-calendar-days"></i> Sep 5 ,2023</h6>
                         <h1>Make Authentic Italian Margherita Pizza at Home</h1>
-                      <p class="card-text opacity-75">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iusto vero natus at facilis hic, amet provident nisi aperiam dolores nemo deserunt qui repellat mollitia quod voluptas quas aspernatur nostrum.
-                      </p>
-                      <p class="opacity-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque vel fugit expedita atque quaerat nihil ex tenetur ipsam consequuntur fuga velit voluptatibus maxime neque, mollitia sed odio libero ipsum debitis.</p>
-                      <br>
-                      <h1>Special Food Recipes for Special</h1>
-                      <p class="opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quod nostrum totam aspernatur modi voluptas aut, dolores quasi aliquid atque! Quae doloremque deleniti aliquam totam voluptatibus ipsum, tempore deserunt exercitationem!</p>
+                        <p class="card-text opacity-75">Some quick example text to build on the card title and make up
+                            the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum ea animi excepturi deserunt obcaecati deleniti? Eos obcaecati minus aspernatur!
+                        </p>
+                        <p class="opacity-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, alias? Consequatur hic fuga explicabo non fugit laborum iure distinctio dignissimos.</p>
+                        <br>
+                        <h1>Special Food Recipes for Special</h1>
+                        <p class="opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veritatis rem necessitatibus atque architecto, nulla eveniet, debitis consectetur distinctio, harum quod labore maiores totam quaerat.</p>
                     </div>
-                  </div>
-                  <br>
-                    
-        </div>
-        <div class="col-md-4 col-sm-12 ps-5">
-          <h4 class="mt-sm-3 mt-md-0">Latest Post</h4>
-          <div class="progress " role="progressbar" aria-label="Example px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 2px ">
-            <div class="progress-bar" style="width: 25% "></div>
-          </div>
-        
-          <ul class="list-unstyled">
-            <li class="d-flex gap-3 align-items-center mb-3">
-                <img src="assets/images/blogDetailsImgs/1 (2).png" alt="">
-                <div class="TxtTime d-flex flex-column">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">New Resturant Town Our Ple Award Contract</a>
-                    <h6 class="card-title text-muted"> Sep 5 ,2023</h6>
                 </div>
-            </li>
-            <li class="d-flex gap-3 align-items-center mb-3">
-                <img src="assets/images/blogDetailsImgs/2 (1).png" alt="">
-                <div class="TxtTime d-flex flex-column">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">Greek Yogurt breakfast bowls Ple Award Contract</a>
-                    <h6 class="card-title text-muted"> Sep 5 ,2023</h6>
+                <br>
+            </div>
+            <!-- end of post -->
+
+            <!-- Sidebar: Latest posts -->
+            <div class="SideBar col-md-4 col-sm-12">
+                <!-- progress bar -->
+                <h4 class="mt-sm-3 mt-md-0">Latest Post</h4>
+                <div class="progress" role="progressbar" aria-label="Example px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar"></div>
                 </div>
-            </li>
-            <li class="d-flex gap-3 align-items-center mb-3">
-                <img src="assets/images/blogDetailsImgs/3 (1).png" alt="">
-                <div class="TxtTime d-flex flex-column">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">Make Authentic Italian Margherita Pizza</a>
-                    <h6 class="card-title text-muted"> Sep 5 ,2023</h6>
-                </div>
-            </li>
-          </ul>
-          
-          
+                <!-- posts list -->
+                <ul class="list-unstyled">
+                    <li class="d-flex gap-3 align-items-center mb-3">
+                        <img src="assets/images/blogDetailsImgs/chicken.png" alt="post about chicken">
+                        <div class="TxtTime d-flex flex-column">
+                            <a href="#" class="text-decoration-none text-dark fw-bold">New Restaurant Town Our Ple Award
+                                Contract</a>
+                            <h6 class="card-title opacity-75"><i class="fa-solid fa-calendar-days"></i> Sep 5, 2023</h6>
+                        </div>
+                    </li>
+                    <li class="d-flex gap-3 align-items-center mb-3">
+                        <img src="assets/images/blogDetailsImgs/salad.png" alt=" post about yogart">
+                        <div class="TxtTime d-flex flex-column">
+                            <a href="#" class="text-decoration-none text-dark fw-bold">Greek Yogurt Breakfast Bowls Ple
+                                Award Contract</a>
+                            <h6 class="card-title opacity-75"><i class="fa-solid fa-calendar-days"></i> Sep 5, 2023</h6>
+                        </div>
+                    </li>
+                    <li class="d-flex gap-3 align-items-center mb-3">
+                        <img src="assets/images/blogDetailsImgs/grands.png" alt="post about salad">
+                        <div class="TxtTime d-flex flex-column">
+                            <a href="#" class="text-decoration-none text-dark fw-bold">Make Authentic Italian Margherita
+                                Pizza</a>
+                            <h6 class="card-title opacity-75"><i class="fa-solid fa-calendar-days"></i> Sep 5, 2023</h6>
+                        </div>
+                    </li>
+                </ul>
+                <!-- end of posts list -->
+            </div>
+            <!-- end of sidebar -->
         </div>
-        </div>
+        <!-- end of row -->
     </div>
+    <!-- end of container -->
+    </section>
+
+    <!--start footer-->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <img src="assets/images/footerImgs/logo-white.png" alt="">
-                    <P class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do</P>
-                    <div class="contacts">
-                        <div class="contactsBody d-flex align-items-center pt-3">
-                            <div class="contactsIcon">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="contactsText">
-                                <p class="text-capitalize m-0 ps-3">4920 trails end road ft, united states, fl 33311</p>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-6 pt-4">
+                <img src="assets/images/footerImgs/logo-white.png" alt="white-logo">
+                <P class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do</P>
+                <div class="contacts">
+                    <div class="contactsBody d-flex align-items-center pt-3">
+                        <div class="contactsIcon">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
-                        <div class="contactsBody d-flex align-items-center pt-3">
-                            <div class="contactsIcon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="contactsText">
-                                <p class="m-0 ps-3">nfo@example.com</p>
-                                <p class="m-0 ps-3">test@example.com</p>
-                            </div>
-                        </div>
-                        <div class="contactsBody d-flex align-items-center pt-3">
-                            <div class="contactsIcon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="contactsText">
-                                <p class="m-0 ps-3">+123 456 789 123</p>
-                                <p class="m-0 ps-3">+123 456 789</p>
-                            </div>
-
+                        <div class="contactsText">
+                            <p class="text-capitalize m-0 ps-3">4920 trails end road ft, united states, fl 33311</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <div class="title">
-                        <h5>Quick links</h5>
-                        <hr class="mb-0">
-                    </div>
-                    <div class="footerLinks pt-4">
-
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <div class="title">
-                        <h5>Instagram</h5>
-                        <hr class="mb-0">
-                    </div>
-                    <div class="instagramImages d-flex flex-wrap pt-4">
-                        <div class="image">
-                            <img src="assets/images/footerImgs/pizza.webp" class="w-100">
+                    <div class="contactsBody d-flex align-items-center pt-3">
+                        <div class="contactsIcon">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <div class="image">
-                            <img src="assets/images/footerImgs/grands.png" class="w-100">
-                        </div>
-                        <div class="image">
-                            <img src="assets/images/footerImgs/burger.jpg" class="w-100">
-                        </div>
-                        <div class="image">
-                            <img src="assets/images/footerImgs/soup.jpg" class="w-100">
-                        </div>
-                        <div class="image">
-                            <img src="assets/images/footerImgs/eggs.jpeg" class="w-100">
-                        </div>
-                        <div class="image">
-                            <img src="assets/images/footerImgs/salad.png" class="w-100">
+                        <div class="contactsText">
+                            <p class="m-0 ps-3">nfo@example.com</p>
+                            <p class="m-0 ps-3">test@example.com</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <div class="title">
-                        <h5>Subscribe</h5>
-                        <hr class="mb-0">
-                    </div>
-                    <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus doloremque. </p>
-                    <form class="subscribeInput d-flex">
-                        <input id="subsemail" type="email" placeholder="Enter Your Email" required>
-                        <input id="subsbtn" type="submit" value="Subscribe">
-                    </form>
-                    <div class="subscribeIcons pt-3">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-skype"></i>
-                        <i class="fa-brands fa-instagram"></i>
+                    <div class="contactsBody d-flex align-items-center pt-3">
+                        <div class="contactsIcon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contactsText">
+                            <p class="m-0 ps-3">+123 456 789 123</p>
+                            <p class="m-0 ps-3">+123 456 789</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-4 col-6 pt-4">
+                <div class="title">
+                    <h5>Quick links</h5>
+                    <hr class="mb-0">
+                </div>
+                <div class="footerLinks pt-4">
+                    <P class="mb-2">About Us</p>
+                    <P class="mb-2">Menu</p>
+                    <P class="mb-2">Blog</p>
+                    <P class="mb-2">FAQ</p>
+                    <P class="mb-2">Services</p>
+                    <P class="mb-2">Gallery</p>
+                    <P class="mb-2">Contact Us</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 pt-4">
+                <div class="title">
+                    <h5>Instagram</h5>
+                    <hr class="mb-0">
+                </div>
+                <div class="instagramImages d-flex flex-wrap pt-4">
+                    <div class="image">
+                        <img src="assets/images/footerImgs/pizza.webp" class="w-100" alt="pizza">
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/footerImgs/grands.png" class="w-100" alt="grands">
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/footerImgs/burger.jpg" class="w-100" alt="burger">
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/footerImgs/soup.jpg" class="w-100" alt="soup">
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/footerImgs/eggs.jpeg" class="w-100" alt="eggs">
+                    </div>
+                    <div class="image">
+                        <img src="assets/images/footerImgs/salad.png" class="w-100" alt="salad">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 pt-4 Subscribtion">
+                <div class="title">
+                    <h5>Subscribe</h5>
+                    <hr class="mb-0">
+                </div>
+                <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus doloremque. </p>
+                <form class="subscribeInput d-flex">
+                    <input id="subsemail" type="email" placeholder="Enter Your Email" required>
+                    <input id="subsbtn" type="submit" value="Subscribe">
+                </form>
+                <div class="subscribeIcons pt-3">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-skype"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
         </div>
-        <hr>
-        <div class="copyrights d-flex justify-content-center align-items-center pb-4">
-            <i class="fa-regular fa-copyright" style="font-size: 10px;"></i>
-            <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
-        </div>
+    </div>
+    <hr>
+    <div class="copyrights d-flex justify-content-center align-items-center pb-4">
+        <i class="fa-regular fa-copyright"></i>
+        <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
+    </div>
     </footer>
-   
+    <!--end footer-->
 
-
-
-
-
-
-
-
-    <script src="assets/js/aboutUs.js"></script>
+    <!-- JavaScript files -->
     <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
-  
-
+    <script src="assets/js/blogDetails.js"></script>
 </body>
 </html>

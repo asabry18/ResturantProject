@@ -4,230 +4,189 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant - Home</title>
-    <link rel="stylesheet" href="assets/css/slider.css">
-    <link rel="stylesheet" href="assets/css/cards.css">
-    <link rel="stylesheet" href="assets/css/aboutUs.css">
-    <link rel="stylesheet" href="assets/css/homemenu.css">
-    <link rel="stylesheet" href="assets/css/downloads.css">
-    <link rel="stylesheet" href="assets/css/BLOG.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/cssbootstrap/all.min.css" />
+    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="crossorigin="anonymous"referrerpolicy="no-referrer"
     />
   </head>
   <body>
-    <button class="scroll">^</button>
-    
+    <!--scroll up button-->
+    <button class="scroll"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!--hero section-->
     <section class="hero">
+      <!--start navbar-->
       <nav class="navbar navbar-expand-lg navbar-light p-2">
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img
-              src="assets/images/navbarImgs/logo.png"
-              alt="Logo"
-              width="100"
-              height="30"
-              class="d-inline-block align-text-center justify-content-center m-auto"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Menu.html">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="AboutUs.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactUs.html">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog-details.html">Reservation</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <button
-                class="text-black ms-2 border-0"
-                type="submit"
-                style="background-color: transparent"
-              >
-                <i
-                  class="fa-solid fa-headset fa-xl me-1"
-                  style="color: #c33"
-                ></i>
-                +880 123 465 789
-              </button>
-            </form>
-          </div>
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-center justify-content-center">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-details.html">Reservation</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="text-black ms-2 border-0" type="submit"><i class="fa-solid fa-headset fa-xl me-1"></i> +880 123 465 789</button>
+                </form>
+            </div>
         </div>
       </nav>
+      <!--end navbar-->
 
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+      <!--home slider-->
+      <section id="carouselExampleIndicators"class="carousel slide"data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 align-self-center me-5">
+                <h5 class="mb-4">Best In Cafeu</h5>
+                <h1 class="mb-4">
+                  Different
+                  <span>Spice</span>
+                  For A Different Taste
+                </h1>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, dolores? Lorem ipsum dolor sit amet consectetur
+                  adipisicin
+                </p>
+                <div class="d-flex pt-4">
+                  <button class="btns order-btn">Order Now</button>
+                  <span class="d-flex ps-4">
+                    <button class="btns watch-btn mx-2">
+                      <i class="fa-solid fa-play opacity-25"></i>
+                    </button>
+
+                    <h6 class="mt-3">Watch Video</h6>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6 ps-5 col-sm-12">
+                <img src="assets/images/sliderImgs/baner1.png" alt="slider banner" />
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 align-self-center me-5">
+                <h5 class="mb-4">Best In Cafeu</h5>
+                <h1 class="mb-4">
+                  Different
+                  <span>Spice</span>
+                  For A Different Taste
+                </h1>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, dolores? Lorem ipsum dolor sit amet consectetur
+                  adipisicin
+                </p>
+                <div class="d-flex pt-4">
+                  <button class="btns order-btn">Order Now</button>
+                  <span class="d-flex ps-4">
+                    <button class="btns watch-btn mx-2">
+                      <i class="fa-solid fa-play opacity-25"></i>
+                    </button>
 
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container d-flex align-items-center">
-              <div class="row">
-                <div class="col-md-5 col-sm-12 align-self-center me-5">
-                  <h5 class="mb-4">Best In Cafeu</h5>
-                  <h1 class="mb-4">
-                    Different
-                    <span style="color: #c33; text-decoration: underline"
-                      >Spice</span
-                    >
-                    For A Different Taste
-                  </h1>
-                  <p class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, dolores? Lorem ipsum dolor sit amet consectetur
-                    adipisicin
-                  </p>
-                  <div class="d-flex pt-4">
-                    <button class="btns order-btn">Order Now</button>
-                    <span class="d-flex ps-4">
-                      <button class="btns watch-btn mx-2">
-                        <i class="fa-solid fa-play" style="opacity: 0.1"></i>
-                      </button>
-
-                      <h6 class="mt-3">Watch Video</h6>
-                    </span>
-                  </div>
+                    <h6 class="mt-3">Watch Video</h6>
+                  </span>
                 </div>
-                <div class="col-md-6 ps-5 col-sm-12">
-                  <img src="assets/images/sliderImgs/baner1.png" alt="" />
-                </div>
+              </div>
+              <div class="col-md-6 ps-5 col-sm-12">
+                <img src="assets/images/sliderImgs/first-slider.png" alt=" slider banner" />
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="container d-flex align-items-center">
-              <div class="row">
-                <div class="col-md-5 col-sm-12 align-self-center me-5">
-                  <h5 class="mb-4">Best In Cafeu</h5>
-                  <h1 class="mb-4">
-                    Different
-                    <span style="color: #c33; text-decoration: underline"
-                      >Spice</span
-                    >
-                    For A Different Taste
-                  </h1>
-                  <p class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, dolores? Lorem ipsum dolor sit amet consectetur
-                    adipisicin
-                  </p>
-                  <div class="d-flex pt-4">
-                    <button class="btns order-btn">Order Now</button>
-                    <span class="d-flex ps-4">
-                      <button class="btns watch-btn mx-2">
-                        <i class="fa-solid fa-play" style="opacity: 0.1"></i>
-                      </button>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 align-self-center me-5 pe-5">
+                <h5 class="mb-4">Best In Cafeu</h5>
+                <h1 class="mb-4">
+                  Different
+                  <span>Spice</span>
+                  For A Different Taste
+                </h1>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, dolores? Lorem ipsum dolor sit amet consectetur
+                  adipisicin
+                </p>
+                <div class="d-flex pt-4">
+                  <button class="btns order-btn">Order Now</button>
+                  <span class="d-flex ps-4">
+                    <button class="btns watch-btn mx-2">
+                      <i class="fa-solid fa-play opacity-25"></i>
+                    </button>
 
-                      <h6 class="mt-3">Watch Video</h6>
-                    </span>
-                  </div>
-                </div>
-                <div class="col-md-6 ps-5 col-sm-12">
-                  <img src="assets/images/sliderImgs/first-slider.png" alt="" />
+                    <h6 class="mt-3">Watch Video</h6>
+                  </span>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container d-flex">
-              <div class="row">
-                <div class="col-md-5 col-sm-12 align-self-center me-5 pe-5">
-                  <h5 class="mb-4">Best In Cafeu</h5>
-                  <h1 class="mb-4">
-                    Different
-                    <span style="color: #c33; text-decoration: underline"
-                      >Spice</span
-                    >
-                    For A Different Taste
-                  </h1>
-                  <p class="mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, dolores? Lorem ipsum dolor sit amet consectetur
-                    adipisicin
-                  </p>
-                  <div class="d-flex pt-4">
-                    <button class="btns order-btn">Order Now</button>
-                    <span class="d-flex ps-4">
-                      <button class="btns watch-btn mx-2">
-                        <i class="fa-solid fa-play" style="opacity: 0.1"></i>
-                      </button>
-
-                      <h6 class="mt-3">Watch Video</h6>
-                    </span>
-                  </div>
-                </div>
-                <div class="col-md-6 ps-5 col-sm-12">
-                  <img src="assets/images/sliderImgs/baner1.png" alt="" />
-                </div>
+              <div class="col-md-6 ps-5 col-sm-12">
+                <img src="assets/images/sliderImgs/baner1.png" alt="slider banner" />
               </div>
             </div>
           </div>
         </div>
       </div>
+      </section>
 
-      <ul class=" social-links d-flex list-unstyled mt-5 " >
-        <li class="me-5"><a href="" style="text-decoration: none; color: black;">Facebook</a></li>
-        <li class="me-5"><a href="" style="text-decoration: none; color: black;"> Instagram</a></li>
-        <li class="me-5"><a href="" style="text-decoration: none; color: black;">Twitter</a></li>
+      <ul class="social-links d-flex list-unstyled mt-5 " >
+        <li class="me-5"><a href="">Facebook</a></li>
+        <li class="me-5"><a href=""> Instagram</a></li>
+        <li class="me-5"><a href="">Twitter</a></li>
       </ul>
     </section>
 
-    <section class="features-section py-5">
+    <!--certified section-->
+    <section class="features-section py-5 my-5">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-3">
@@ -292,34 +251,35 @@
       </div>
     </section>
 
-    <div class="AboutUsSec mt-5 pt-5">
+    <!--about us section-->
+    <section class="AboutUsSec mt-5 pt-5 pb-5">
       <div class="container">
           <div class="row pb-5">
               <div class="col-lg-6 col-12">
                   <div class="imagesec">
-                      <img src="assets/images/aboutUsimages/experience.png" class="w-100">
+                      <img src="assets/images/aboutUsimages/experience.png" class="w-100" alt="experience-image">
                   </div>
               </div>
-              <div class="col-lg-6 col-12 ps-5 pt-5">
-                  <div class="txt container">
-                      <h5 style="color: #c33;">About us</h5>
-                      <h2 class="text-capitalize pt-2 pb-3" style="font-weight:700 ;">why we are the best</h2>
-                      <p class="opacity-75 pb-4" style="margin-right: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed quae asperiores maxime tempora, dolorem hic velit dolores distinctio praesentium quidem dicta eaque fuga quaerat corporis odio ea, eligendi sint laborum ullam perferendis iusto eveniet nesciunt rerum.</p>
-                      <div class="iconssec d-flex pb-4">
+              <div class="col-lg-6 col-12 pt-5">
+                  <div class="AboutUsTxt">
+                      <h5>About us</h5>
+                      <h2 class="text-capitalize pt-2 pb-3">why we are the best</h2>
+                      <p class="opacity-75 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed quae asperiores maxime tempora, dolorem hic velit dolores distinctio praesentium quidem dicta eaque fuga quaerat corporis odio ea, eligendi sint laborum ullam perferendis iusto eveniet nesciunt rerum.</p>
+                      <div class="iconsSec d-flex pb-4">
                           <div class="icon">
-                              <img src="assets/images/aboutUsimages/waiter.png" class="w-100">
+                              <img src="assets/images/aboutUsimages/waiter.png" class="w-100" alt="Buffet-service">
                           </div>
-                          <div class="icontxt">
-                              <h6 style="font-weight: 700;">Buffet service</h6>
+                          <div class="iconTxt">
+                              <h6>Buffet service</h6>
                               <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Maxime, deserunt.</p>
                           </div>
                       </div>
-                      <div class="iconssec d-flex">
+                      <div class="iconsSec d-flex">
                           <div class="icon">
-                              <img src="assets/images/aboutUsimages/booking.png" class="w-100">
+                              <img src="assets/images/aboutUsimages/booking.png" class="w-100" alt="Online-booking">
                           </div>
-                          <div class="icontxt">
-                              <h6 style="font-weight: 700;">Online Booking</h6>
+                          <div class="iconTxt">
+                              <h6>Online Booking</h6>
                               <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Maxime, deserunt.</p>
                           </div>
                       </div>
@@ -328,187 +288,216 @@
               </div>
           </div>
       </div>
-    </div>
+    </section>
 
-    <section class="meun">
-      <div class="container my-5">
-        <section class="special-heading">
-          <h2>Special Menu</h2>
-      </section>
-        <h1 class="text-center mb-4">Our Specials Menu</h1>
-    
-        <!-- <div class="text-center mb-4 category-filter">
-          <a href="#" class="text-danger active">All Categories</a>
-          <a href="#" class="mx-3">Perch Fish</a>
-          <a href="#">Lobster</a>
-          <a href="#" class="mx-3">Shrimps</a>
-          <a href="#">Red Crab</a>
-        </div> -->
-    
-        <section class="special-menu">
+    <!--menu section-->
+    <section class="menu pt-5 pb-5">
+      <div class="container">
+        <div class="row my-5">
+          <div class="special-heading">
+            <h2>Special Menu</h2>
+          </div>
+          <h1 class="text-center mb-4">Our Specials Menu</h1>
+          <div class="special-menu">
+              <div class="icons-menu d-flex flex-wrap">
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/3.png" alt="All">
+                      <span>All</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/pizzaIcon.png" alt="Pizza">
+                      <span>Pizza</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/2.png" alt="Asian">
+                      <span>Asian</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/burgerIcon.png" alt="Burger">
+                      <span>Burger</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/4.png" alt="Salad">
+                      <span>Salad</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/5.png" alt="Bakery">
+                      <span>Bakery</span>
+                  </div>
+                  <div class="icon-item">
+                      <img src="assets/images/homeImages/menuimages/6.png" alt="Drink">
+                      <span>Drink</span>
+                  </div>
+              </div>
+          </div>
+          <div class="menuContent">
+            <div class="container">
+              <div class="row">
+                <!-- Menu Item 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="fish">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/fish.png" class="card-img-top" alt="Grilled Fish">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Grilled Fish</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$13.49 - $10.99</p>
+                    
+                    </div>
+                  </div>
+                </div>
           
-            <div class="icons-menu">
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/1.png" alt="All">
-                    <span>All</span>
+                <!-- Menu Item 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="salad">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/capreseSalad.png" class="card-img-top" alt="Caprese Salad">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Caprese Salad</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$8.49 - $6.99</p>
+                    
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/2.png" alt="Pizza">
-                    <span>Pizza</span>
+          
+                <!-- Menu Item 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="meat">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/BBQ.png" class="card-img-top" alt="BBQ Ribs">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">BBQ Ribs</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$17.99 - $14.49</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/3.png" alt="Asian">
-                    <span>Asian</span>
+          
+                <!-- Menu Item 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="dessert">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/tiramisu.png" class="card-img-top" alt="Tiramisu">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Tiramisu</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$6.99 - $5.49</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/4.png" alt="Burger">
-                    <span>Burger</span>
+          
+                <!-- Menu Item 5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="drink">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/mango.png" class="card-img-top" alt="Mango Smoothie">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Mango Smoothie</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$5.49 - $4.29</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/5.png" alt="Salad">
-                    <span>Salad</span>
+          
+                <!-- Menu Item 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="salad">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/greekSalad.png" class="card-img-top" alt="Greek Salad">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Greek Salad</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$8.99 - $7.49</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/6.png" alt="Bakery">
-                    <span>Bakery</span>
+          
+                <!-- Menu Item 7 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="meat">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/porkChops.png" class="card-img-top" alt="Pork Chops">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Pork Chops</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$15.99 - $12.49</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="icon-item">
-                    <img src="assets/images/iconmenu/7.png" alt="Drink">
-                    <span>Drink</span>
+          
+                <!-- Menu Item 8 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="fish">
+                  <div class="card menuCard">
+                    <img src="assets/images/homeImages/menuimages/sushi.png" class="card-img-top" alt="Sushi Platter">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Sushi Platter</h5>
+                      <div class="stars">
+                        <!-- <span>★ ★ ★ ★</span> -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> 
+                      </div>
+                      <p class="card-text">$18.99 - $15.49</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
-    
-        <div class="row">
-          <!-- Menu Item 1 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="fish">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/1.png" class="card-img-top" alt="Grilled Fish">
-              <div class="card-body text-center">
-                <h5 class="card-title">Grilled Fish</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$13.49 - $10.99</p>
-              
               </div>
             </div>
           </div>
-    
-          <!-- Menu Item 2 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="salad">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/2.png" class="card-img-top" alt="Caprese Salad">
-              <div class="card-body text-center">
-                <h5 class="card-title">Caprese Salad</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$8.49 - $6.99</p>
-              
-              </div>
-            </div>
+          <div class="text-center">
+            <button class="btn btn-danger show-more-btn">Show More</button>
           </div>
-    
-          <!-- Menu Item 3 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="meat">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/3.png" class="card-img-top" alt="BBQ Ribs">
-              <div class="card-body text-center">
-                <h5 class="card-title">BBQ Ribs</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$17.99 - $14.49</p>
-    
-              </div>
-            </div>
-          </div>
-    
-          <!-- Menu Item 4 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item" data-category="dessert">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/4.png" class="card-img-top" alt="Tiramisu">
-              <div class="card-body text-center">
-                <h5 class="card-title">Tiramisu</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$6.99 - $5.49</p>
-               
-              </div>
-            </div>
-          </div>
-    
-          <!-- Menu Item 5 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="drink">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/5.png" class="card-img-top" alt="Mango Smoothie">
-              <div class="card-body text-center">
-                <h5 class="card-title">Mango Smoothie</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$5.49 - $4.29</p>
-               
-              </div>
-            </div>
-          </div>
-    
-          <!-- Menu Item 6 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="salad">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/6.png" class="card-img-top" alt="Greek Salad">
-              <div class="card-body text-center">
-                <h5 class="card-title">Greek Salad</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$8.99 - $7.49</p>
-               
-              </div>
-            </div>
-          </div>
-    
-          <!-- Menu Item 7 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="meat">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/7.png" class="card-img-top" alt="Pork Chops">
-              <div class="card-body text-center">
-                <h5 class="card-title">Pork Chops</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$15.99 - $12.49</p>
-               
-              </div>
-            </div>
-          </div>
-    
-          <!-- Menu Item 8 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4 menu-item hidden" data-category="fish">
-            <div class="cardmenu">
-              <img src="assets/images/imagmenu/8.png" class="card-img-top" alt="Sushi Platter">
-              <div class="card-body text-center">
-                <h5 class="card-title">Sushi Platter</h5>
-                <div class="stars">
-                  <span>★ ★ ★ ★</span>
-                </div>
-                <p class="card-text">$18.99 - $15.49</p>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="text-center">
-          <button class="btn btn-danger show-more-btn">Show More</button>
         </div>
       </div>
-    
-  </section>
+    </section>
 
-    <div class="download-info-section pt-0">
+    <!--downloading section-->
+    <section class="DownloadInfo">
       <div class="download-info">
         <div class="download-title">
           <h3>
@@ -523,37 +512,38 @@
           </p>
           <div class="download-link">
             <div class="link">
-              <a href="###"
-                ><img src="assets/images/info-img-photos/play-store.png"
-              /></a>
-              <a href="###"
-                ><img src="assets/images/info-img-photos/apple.png"
-              /></a>
+              <a href="###"><img src="assets/images/info-img-photos/play-store.png" alt="play store button"/></a>
+              <a href="###"><img src="assets/images/info-img-photos/apple.png" alt="apple store button"/></a>
             </div>
           </div>
         </div>
         <div class="download-images">
           <div class="mobile-screenshots">
-            <img src="assets/images/info-img-photos/app-1.png" />
-            <img src="assets/images/info-img-photos/app-2.png" />
+            <img src="assets/images/info-img-photos/app-1.png" alt="mobile-screenshot"/>
+            <img src="assets/images/info-img-photos/app-2.png" alt="mobile-screenshot" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="all">
-      <div class="CheckSec pt-5 pb-5" style="margin-bottom: 90px;">
-          <div class="container pt-4">
-              <button class="watch-btn">
-                  <i class="fa-solid fa-play"></i>
-              </button>
-              <h2 class="text-capitalize pt-3 pb-3" style="font-weight: 700;">we have excellent of quality <br> japanese food</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta <br> quia repudiandae aperiam? At, voluptatibus aliquam.</p>
+    <!--opening times-->
+    <section class="OpenTimes">
+      <div class="CheckSec pt-5 pb-5">
+          <div class="container">
+              <div class="row">
+                  <div class="WatchBtnContain">
+                      <button class="watch-btn">
+                          <i class="fa-solid fa-play"></i>
+                      </button>
+                  </div>
+                  <h2 class="text-capitalize pt-3 pb-3">we have excellent of quality <br> japanese food</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta <br> quia repudiandae aperiam? At, voluptatibus aliquam.</p>
+              </div>
           </div>
       </div>
-      <div class="openingTimes pb-4 pt-4 px-4 text-center" style="box-shadow: rgba(52, 52, 52, 0.27) 0px 5px 15px 5px;">
-          <h5 style="color: #c33;">Opening Times</h5>
-          <h2 class="text-capitalize pt-2 pb-3" style="font-weight:700 ;">Check Availability</h2>
+      <div class="openingTimes pb-4 pt-4 px-4 text-center">
+          <h5>Opening Times</h5>
+          <h2 class="text-capitalize pt-2 pb-3">Check Availability</h2>
           <div class="TimesSec">
               <div class="Times d-flex justify-content-between">
                   <p>Sunday to Tuesday</p>
@@ -582,64 +572,41 @@
               <hr>
           </div>
           <div class="ContactInfo mt-4">
-              <h3 style="font-size: 20px; font-weight: 700;">Call Us Now</h3>
-              <p style="font-size: 20px;">+993240-765230</p>
+              <h3>Call Us Now</h3>
+              <p>+993240-765230</p>
           </div>
       </div>
-    </div>
-  
-    <div class="TeamSec container text-center pt-5 pb-5">
-      <h5 style="color: #c33;" class="pt-5">Our Team</h5>
-      <h2 class="text-capitalize pt-2 pb-5" style="font-weight:700 ;">meet our team</h2>
-      <div class="teams row pb-5 gy-3">
-          <div class="col-lg-4 col-md-6 col-12">
-              <div class="teamcard">
-                  <img src="assets/images/aboutUsimages/chieff3new.jpg" class="card-img-top">
-                  <div class="card-body text-center overflow-hidden">
-                      <h4 class="card-title pt-4">Alextina Jimiey</h4>
-                      <p class="text-capitalize opacity-75">Food Inspector</p>
-                      <hr class="opacity-100 w-75">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-              <div class="teamcard">
-                  <img src="assets/images/aboutUsimages/chieff2new.jpg" class="card-img-top">
-                  <div class="card-body text-center overflow-hidden">
-                      <h4 class="card-title pt-4">Mike Dooley</h4>
-                      <p class="text-capitalize opacity-75">Executive</p>
-                      <hr class="opacity-100 w-75">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-              <div class="teamcard">
-                  <img src="assets/images/aboutUsimages/chieff.jpg" class="card-img-top">
-                  <div class="card-body text-center overflow-hidden">
-                      <h4 class="card-title pt-4">Cathy Anderson</h4>
-                      <p class="text-capitalize opacity-75">Chief executive</p>
-                      <hr class="opacity-100 w-75">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    </section>
 
-    <div class="blog pt-5 pb-5" style="background-image: url(assets/images/blogimgs/bg-blog.png);">
+    <!--meet our team section-->
+    <section class="TeamSec text-center pt-5 pb-5">
+      <h5>Our Team</h5>
+      <h2 class="text-capitalize pt-2 pb-5">meet our team</h2>
+      <div class="container">
+          <div class="row teams pb-5 gy-3">
+
+          </div>
+      </div>
+    </section>
+
+    <!--latest news section-->
+    <section class="blogSection pt-5 pb-5">
+      <div class="blog">
+        <h5 class="newsblogtitle">News & Blog</h5>
         <h3>Latest News</h3>
-        <blog class="main" id="main">
-        </blog>
-        <button class="show-more" id="showbtn">Show More</button>
-    </div>
-   
+        <div class="mainBlog" id="main">
+          
+        </div>
+        <button class="showMore" id="showbtn">Show More</button>
+      </div>
+    </section>
+
+    <!--start footer-->
     <footer>
       <div class="container">
           <div class="row">
               <div class="col-lg-3 col-md-4 col-6 pt-4">
-                  <img src="assets/images/footerImgs/logo-white.png" alt="">
+                  <img src="assets/images/footerImgs/logo-white.png" alt="white-logo">
                   <P class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do</P>
                   <div class="contacts">
                       <div class="contactsBody d-flex align-items-center pt-3">
@@ -667,7 +634,6 @@
                               <p class="m-0 ps-3">+123 456 789 123</p>
                               <p class="m-0 ps-3">+123 456 789</p>
                           </div>
-
                       </div>
                   </div>
               </div>
@@ -677,7 +643,13 @@
                       <hr class="mb-0">
                   </div>
                   <div class="footerLinks pt-4">
-
+                      <P class="mb-2">About Us</p>
+                      <P class="mb-2">Menu</p>
+                      <P class="mb-2">Blog</p>
+                      <P class="mb-2">FAQ</p>
+                      <P class="mb-2">Services</p>
+                      <P class="mb-2">Gallery</p>
+                      <P class="mb-2">Contact Us</p>
                   </div>
               </div>
               <div class="col-lg-3 col-md-4 col-6 pt-4">
@@ -687,26 +659,26 @@
                   </div>
                   <div class="instagramImages d-flex flex-wrap pt-4">
                       <div class="image">
-                          <img src="assets/images/footerImgs/pizza.webp" class="w-100">
+                          <img src="assets/images/footerImgs/pizza.webp" class="w-100" alt="pizza">
                       </div>
                       <div class="image">
-                          <img src="assets/images/footerImgs/grands.png" class="w-100">
+                          <img src="assets/images/footerImgs/grands.png" class="w-100" alt="grands">
                       </div>
                       <div class="image">
-                          <img src="assets/images/footerImgs/burger.jpg" class="w-100">
+                          <img src="assets/images/footerImgs/burger.jpg" class="w-100" alt="burger">
                       </div>
                       <div class="image">
-                          <img src="assets/images/footerImgs/soup.jpg" class="w-100">
+                          <img src="assets/images/footerImgs/soup.jpg" class="w-100" alt="soup">
                       </div>
                       <div class="image">
-                          <img src="assets/images/footerImgs/eggs.jpeg" class="w-100">
+                          <img src="assets/images/footerImgs/eggs.jpeg" class="w-100" alt="eggs">
                       </div>
                       <div class="image">
-                          <img src="assets/images/footerImgs/salad.png" class="w-100">
+                          <img src="assets/images/footerImgs/salad.png" class="w-100" alt="salad">
                       </div>
                   </div>
               </div>
-              <div class="col-lg-3 col-md-4 col-6 pt-4">
+              <div class="col-lg-3 col-md-4 col-6 pt-4 Subscribtion">
                   <div class="title">
                       <h5>Subscribe</h5>
                       <hr class="mb-0">
@@ -727,12 +699,13 @@
       </div>
       <hr>
       <div class="copyrights d-flex justify-content-center align-items-center pb-4">
-          <i class="fa-regular fa-copyright" style="font-size: 10px;"></i>
+          <i class="fa-regular fa-copyright"></i>
           <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
       </div>
     </footer>
+    <!--end footer-->
 
-    <script src="assets/js/all.js"></script>
     <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/home.js"></script>
   </body>
 </html>

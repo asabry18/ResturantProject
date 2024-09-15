@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - us</title>
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <title>About Us</title>
     <link rel="stylesheet" href="assets/css/aboutUs.css">
-    <link rel="stylesheet" href="assets/cssbootstrap/all.min.css">
     <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <button class="scroll">^</button>
+    <!--scroll up button-->
+    <button class="scroll"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!--start navbar-->
      <nav class="navbar navbar-expand-lg navbar-light p-2">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <img src="assets/images/navbarImgs/logo.png" alt="Logo" width="100" height="30" class="d-inline-block align-text-center justify-content-center">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +25,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="home.html">Home</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Menu.html">Menu</a>
                     </li>
@@ -42,45 +43,48 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="text-black ms-2 border-0" type="submit" style="background-color: transparent;"><i class="fa-solid fa-headset fa-xl me-1" style="color: #c33;"></i> +880 123 465 789</button>
+                    <button class="text-black ms-2 border-0" type="submit"><i class="fa-solid fa-headset fa-xl me-1"></i> +880 123 465 789</button>
                 </form>
             </div>
         </div>
     </nav>
+    <!--end navbar-->
 
-    <div class="AboutUsBg d-flex flex-column justify-content-center align-items-center">
-        <h1 style="font-weight: 700;">About Us</h1>
+    <!--about us background-->
+    <section class="AboutUsBg d-flex flex-column justify-content-center align-items-center">
+        <h1>About Us</h1>
         <p>Home/About</p>
-    </div>
+    </section>
 
-    <div class="AboutUsSec mt-5 pt-5 mb-5 pb-5">
+    <!--about us section & why we are the best-->
+    <section class="AboutUsSec mt-5 pt-5 mb-5 pb-5">
         <div class="container">
             <div class="row pb-5">
                 <div class="col-lg-6 col-12">
                     <div class="imagesec">
-                        <img src="assets/images/aboutUsimages/experience.png" class="w-100">
+                        <img src="assets/images/aboutUsimages/experience.png" class="w-100" alt="experience-image">
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 ps-5 pt-5">
-                    <div class="txt container">
-                        <h5 style="color: #c33;">About us</h5>
-                        <h2 class="text-capitalize pt-2 pb-3" style="font-weight:700 ;">why we are the best</h2>
-                        <p class="opacity-75 pb-4" style="margin-right: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed quae asperiores maxime tempora, dolorem hic velit dolores distinctio praesentium quidem dicta eaque fuga quaerat corporis odio ea, eligendi sint laborum ullam perferendis iusto eveniet nesciunt rerum.</p>
-                        <div class="iconssec d-flex pb-4">
+                <div class="col-lg-6 col-12 pt-5">
+                    <div class="AboutUsTxt">
+                        <h5>About us</h5>
+                        <h2 class="text-capitalize pt-2 pb-3">why we are the best</h2>
+                        <p class="opacity-75 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed quae asperiores maxime tempora, dolorem hic velit dolores distinctio praesentium quidem dicta eaque fuga quaerat corporis odio ea, eligendi sint laborum ullam perferendis iusto eveniet nesciunt rerum.</p>
+                        <div class="iconsSec d-flex pb-4">
                             <div class="icon">
-                                <img src="assets/images/aboutUsimages/waiter.png" class="w-100">
+                                <img src="assets/images/aboutUsimages/waiter.png" class="w-100" alt="Buffet-service">
                             </div>
-                            <div class="icontxt">
-                                <h6 style="font-weight: 700;">Buffet service</h6>
+                            <div class="iconTxt">
+                                <h6>Buffet service</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Maxime, deserunt.</p>
                             </div>
                         </div>
-                        <div class="iconssec d-flex">
+                        <div class="iconsSec d-flex">
                             <div class="icon">
-                                <img src="assets/images/aboutUsimages/booking.png" class="w-100">
+                                <img src="assets/images/aboutUsimages/booking.png" class="w-100" alt="Online-booking">
                             </div>
-                            <div class="icontxt">
-                                <h6 style="font-weight: 700;">Online Booking</h6>
+                            <div class="iconTxt">
+                                <h6>Online Booking</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Maxime, deserunt.</p>
                             </div>
                         </div>
@@ -89,68 +93,45 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="CallBg d-flex flex-column justify-content-center align-items-center">
+    <!--call to action background-->
+    <section class="CallBg d-flex flex-column justify-content-center align-items-center">
         <p>CALL TO ACTION</p>
-        <h2 style="font-weight: 700;" class="text-capitalize">Hire your next candidate on discate</h2>
+        <h2 class="text-capitalize">Hire your next candidate on discate</h2>
         <h6>Call Us: +99 698 569 565</h6>
-        <button class="Discover">Discover More</button>
-    </div>
+        <button class="DiscoverBtn">Discover More</button>
+    </section>
 
-    <div class="TeamSec container text-center pt-5 pb-5">
-        <h5 style="color: #c33;" class="pt-5">Our Team</h5>
-        <h2 class="text-capitalize pt-2 pb-5" style="font-weight:700 ;">meet our team</h2>
-        <div class="teams row pb-5 gy-3">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="teamcard">
-                    <img src="assets/images/aboutUsimages/chieff3new.jpg" class="card-img-top">
-                    <div class="card-body text-center overflow-hidden">
-                        <h4 class="card-title pt-4">Alextina Jimiey</h4>
-                        <p class="text-capitalize opacity-75">Food Inspector</p>
-                        <hr class="opacity-100 w-75">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="teamcard">
-                    <img src="assets/images/aboutUsimages/chieff2new.jpg" class="card-img-top">
-                    <div class="card-body text-center overflow-hidden">
-                        <h4 class="card-title pt-4">Mike Dooley</h4>
-                        <p class="text-capitalize opacity-75">Executive</p>
-                        <hr class="opacity-100 w-75">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="teamcard">
-                    <img src="assets/images/aboutUsimages/chieff.jpg" class="card-img-top">
-                    <div class="card-body text-center overflow-hidden">
-                        <h4 class="card-title pt-4">Cathy Anderson</h4>
-                        <p class="text-capitalize opacity-75">Chief executive</p>
-                        <hr class="opacity-100 w-75">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facere libero ad blanditiis sunt sint.</p>
-                    </div>
-                </div>
+    <!--meet our team section-->
+    <section class="TeamSec text-center pt-5 pb-5">
+        <h5>Our Team</h5>
+        <h2 class="text-capitalize pt-2 pb-5">meet our team</h2>
+        <div class="container">
+            <div class="row teams pb-5 gy-3">
+
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="all">
-        <div class="CheckSec pt-5 pb-5" style="margin-bottom: 90px;">
-            <div class="container pt-4">
-                <button class="watch-btn">
-                    <i class="fa-solid fa-play"></i>
-                </button>
-                <h2 class="text-capitalize pt-3 pb-3" style="font-weight: 700;">we have excellent of quality <br> japanese food</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta <br> quia repudiandae aperiam? At, voluptatibus aliquam.</p>
+    <!--opening times-->
+    <section class="OpenTimes">
+        <div class="CheckSec pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="WatchBtnContain">
+                        <button class="watch-btn">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                    <h2 class="text-capitalize pt-3 pb-3">we have excellent of quality <br> japanese food</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta <br> quia repudiandae aperiam? At, voluptatibus aliquam.</p>
+                </div>
             </div>
         </div>
         <div class="openingTimes pb-4 pt-4 px-4 text-center">
-            <h5 style="color: #c33;">Opening Times</h5>
-            <h2 class="text-capitalize pt-2 pb-3" style="font-weight:700 ;">Check Availability</h2>
+            <h5>Opening Times</h5>
+            <h2 class="text-capitalize pt-2 pb-3">Check Availability</h2>
             <div class="TimesSec">
                 <div class="Times d-flex justify-content-between">
                     <p>Sunday to Tuesday</p>
@@ -179,18 +160,18 @@
                 <hr>
             </div>
             <div class="ContactInfo mt-4">
-                <h3 style="font-size: 20px; font-weight: 700;">Call Us Now</h3>
-                <p style="font-size: 20px;">+993240-765230</p>
+                <h3>Call Us Now</h3>
+                <p>+993240-765230</p>
             </div>
         </div>
-    </div>
+    </section>
     
-
+    <!--start footer-->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <img src="assets/images/footerImgs/logo-white.png" alt="">
+                    <img src="assets/images/footerImgs/logo-white.png" alt="white-logo">
                     <P class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do</P>
                     <div class="contacts">
                         <div class="contactsBody d-flex align-items-center pt-3">
@@ -228,7 +209,13 @@
                         <hr class="mb-0">
                     </div>
                     <div class="footerLinks pt-4">
-
+                        <P class="mb-2">About Us</p>
+                        <P class="mb-2">Menu</p>
+                        <P class="mb-2">Blog</p>
+                        <P class="mb-2">FAQ</p>
+                        <P class="mb-2">Services</p>
+                        <P class="mb-2">Gallery</p>
+                        <P class="mb-2">Contact Us</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 pt-4">
@@ -238,26 +225,26 @@
                     </div>
                     <div class="instagramImages d-flex flex-wrap pt-4">
                         <div class="image">
-                            <img src="assets/images/footerImgs/pizza.webp" class="w-100">
+                            <img src="assets/images/footerImgs/pizza.webp" class="w-100" alt="pizza">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/grands.png" class="w-100">
+                            <img src="assets/images/footerImgs/grands.png" class="w-100" alt="grands">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/burger.jpg" class="w-100">
+                            <img src="assets/images/footerImgs/burger.jpg" class="w-100" alt="burger">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/soup.jpg" class="w-100">
+                            <img src="assets/images/footerImgs/soup.jpg" class="w-100" alt="soup">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/eggs.jpeg" class="w-100">
+                            <img src="assets/images/footerImgs/eggs.jpeg" class="w-100" alt="eggs">
                         </div>
                         <div class="image">
-                            <img src="assets/images/footerImgs/salad.png" class="w-100">
+                            <img src="assets/images/footerImgs/salad.png" class="w-100" alt="salad">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 pt-4">
+                <div class="col-lg-3 col-md-4 col-6 pt-4 Subscribtion">
                     <div class="title">
                         <h5>Subscribe</h5>
                         <hr class="mb-0">
@@ -278,10 +265,12 @@
         </div>
         <hr>
         <div class="copyrights d-flex justify-content-center align-items-center pb-4">
-            <i class="fa-regular fa-copyright" style="font-size: 10px;"></i>
+            <i class="fa-regular fa-copyright"></i>
             <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
         </div>
     </footer>
+    <!--end footer-->
+    
     <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/js/aboutUs.js"></script>
 </body>

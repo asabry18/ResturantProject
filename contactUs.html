@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant - Contact Us</title>
     <link rel="stylesheet" href="assets/css/contactUs.css" />
-    <link rel="stylesheet" href="assets/cssbootstrap/all.min.css" />
     <link rel="stylesheet" href="assets/cssbootstrap/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -16,11 +15,13 @@
     />
   </head>
   <body>
-    <button class="scroll">^</button>
-    <!-- Navbar Beginning -->
+    <!--scroll up button-->
+    <button class="scroll"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!--start navbar-->
     <nav class="navbar navbar-expand-lg navbar-light p-2">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.html">
           <img
             src="assets/images/navbarImgs/logo.png"
             alt="Logo"
@@ -62,162 +63,155 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <button class="text-black ms-2 border-0" type="submit" style="background-color: white;">
-              <i class="fa-solid fa-headset fa-xl me-1" style="color: #c33"></i>
-              +880 123 465 789
+            <button class="text-black ms-2 border-0" type="submit">
+              <i class="fa-solid fa-headset fa-xl me-1"></i> +880 123 465 789
             </button>
           </form>
         </div>
       </div>
     </nav>
-    <!-- Navbar End-->
+    <!--end navbar-->
 
-    <!-- Background Header Beginning -->
-    <div id="carouselExampleCaptions" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active c-banner-item">
-          <img
-            src="assets/images/bodyImgs/ad-ban-bg.png"
-            class="c-banner-img d-block w-100"
-            alt="..."
-          />
-          <div class="carousel-caption d-md-block top-0 mt-5">
-            <h5 class="mt-3 fs-1">Contact Us</h5>
-            <p>Home/Contact</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Background Header End -->
+    <!--contact us background-->
+    <section class="AboutUsBg d-flex flex-column justify-content-center align-items-center">
+      <h1>Contact Us</h1>
+      <p>Home/Contact</p>
+    </section>
 
     <!-- Contact Us Section Beginning -->
-    <div class="container mx-auto my-5 c-contact-us-section">
-      <div class="row">
-        <div class="col-12 col-md-8">
-          <div class="container py-3">
-            <div>
-              <h5 class="text-center" style="color: #c33">Contact Us</h5>
-            </div>
-            <div>
-              <h3 class="text-center">Please Get In Touch With Us</h3>
-            </div>
-
+    <section class="contactUsForm">
+      <div class="container">
+        <div class="row mx-auto my-5 CContactUsSection">
+          <div class="col-12 col-md-8">
             <div class="container">
-              <div class="row">
-                <form role="form" id="contact-form" class="contact-form">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group position-relative">
-                        <i class="fa fa-user icon c-form-icon"></i>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="Name"
-                          autocomplete="off"
-                          id="name"
-                          placeholder="Your Name*"
-                        />
-                        <small class="text-danger" id="nameError"></small>
+              <div class="row py-3">
+                <div>
+                  <h5 class="text-center CallButton">Contact Us</h5>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-center">Please Get In Touch With Us</h3>
+              </div>
+  
+              <div class="container">
+                <div class="row">
+                  <form role="form" id="contact-form" class="contact-form">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group position-relative">
+                          <i class="fa fa-user icon CFormIcon"></i>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Name"
+                            autocomplete="off"
+                            id="name"
+                            placeholder="Your Name*"
+                          />
+                          <small class="text-danger" id="nameError"></small>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group position-relative">
+                          <i class="fa-solid fa-envelope icon CFormIcon"></i>
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="Email"
+                            autocomplete="off"
+                            id="email"
+                            placeholder="Your E-mail*"
+                          />
+                          <small class="text-danger" id="emailError"></small>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="form-group position-relative">
-                        <i class="fa-solid fa-envelope icon c-form-icon"></i>
-                        <input
-                          type="email"
-                          class="form-control"
-                          name="Email"
-                          autocomplete="off"
-                          id="email"
-                          placeholder="Your E-mail*"
-                        />
-                        <small class="text-danger" id="emailError"></small>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group position-relative">
+                          <i class="fa-solid fa-phone icon CFormIcon"></i>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Phone"
+                            autocomplete="off"
+                            id="phone"
+                            placeholder="Your Phone*"
+                          />
+                          <small class="text-danger" id="phoneError"></small>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group position-relative">
+                          <i class="fa-solid fa-location-dot icon CFormIcon"></i>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Location"
+                            autocomplete="off"
+                            id="location"
+                            placeholder="Your Location*"
+                          />
+                          <small class="text-danger" id="locationError"></small>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group position-relative">
-                        <i class="fa-solid fa-phone icon c-form-icon"></i>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="Phone"
-                          autocomplete="off"
-                          id="phone"
-                          placeholder="Your Phone*"
-                        />
-                        <small class="text-danger" id="phoneError"></small>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea
+                            class="form-control textarea"
+                            rows="3"
+                            name="Message"
+                            id="message"
+                            placeholder="Comment*"
+                          ></textarea>
+                          <small class="text-danger" id="messageError"></small>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="form-group position-relative">
-                        <i
-                          class="fa-solid fa-location-dot icon c-form-icon"
-                        ></i>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="Location"
-                          autocomplete="off"
-                          id="location"
-                          placeholder="Your Location*"
-                        />
-                        <small class="text-danger" id="locationError"></small>
+                    <div class="row">
+                      <div class="col-12 text-center mt-2">
+                        <button
+                          type="submit"
+                          class="main-btn"
+                          onclick="showInlineAlert()"
+                        >
+                          Send Message
+                        </button>
+                        <div id="inline-alert" class="CAlert"></div>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea
-                          class="form-control textarea"
-                          rows="3"
-                          name="Message"
-                          id="message"
-                          placeholder="Comment*"
-                        ></textarea>
-                        <small class="text-danger" id="messageError"></small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 text-center mt-2">
-                      <button
-                        type="submit"
-                        class="main-btn"
-                        onclick="showInlineAlert()"
-                      >
-                        Send Message
-                      </button>
-                      <div id="inline-alert" class="c-alert"></div>
-                    </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4 c-google-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537851.770682577!2d86.97732224861059!3d22.706239176045763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2seg!4v1725790908528!5m2!1sen!2seg"
-            width="300"
-            height="400"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="col-12 col-md-4 CGoogleMap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537851.770682577!2d86.97732224861059!3d22.706239176045763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2seg!4v1725790908528!5m2!1sen!2seg"
+              width="300"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Contact Us Section End -->
 
+    <!--start footer-->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-6 pt-4">
-            <img src="assets/images/footerImgs/logo-white.png" alt="" />
+            <img
+              src="assets/images/footerImgs/logo-white.png"
+              alt="white-logo"
+            />
             <p class="pt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do
             </p>
@@ -257,7 +251,15 @@
               <h5>Quick links</h5>
               <hr class="mb-0" />
             </div>
-            <div class="footerLinks pt-4"></div>
+            <div class="footerLinks pt-4">
+              <p class="mb-2">About Us</p>
+              <p class="mb-2">Menu</p>
+              <p class="mb-2">Blog</p>
+              <p class="mb-2">FAQ</p>
+              <p class="mb-2">Services</p>
+              <p class="mb-2">Gallery</p>
+              <p class="mb-2">Contact Us</p>
+            </div>
           </div>
           <div class="col-lg-3 col-md-4 col-6 pt-4">
             <div class="title">
@@ -266,26 +268,50 @@
             </div>
             <div class="instagramImages d-flex flex-wrap pt-4">
               <div class="image">
-                <img src="assets/images/footerImgs/pizza.webp" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/pizza.webp"
+                  class="w-100"
+                  alt="pizza"
+                />
               </div>
               <div class="image">
-                <img src="assets/images/footerImgs/grands.png" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/grands.png"
+                  class="w-100"
+                  alt="grands"
+                />
               </div>
               <div class="image">
-                <img src="assets/images/footerImgs/burger.jpg" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/burger.jpg"
+                  class="w-100"
+                  alt="burger"
+                />
               </div>
               <div class="image">
-                <img src="assets/images/footerImgs/soup.jpg" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/soup.jpg"
+                  class="w-100"
+                  alt="soup"
+                />
               </div>
               <div class="image">
-                <img src="assets/images/footerImgs/eggs.jpeg" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/eggs.jpeg"
+                  class="w-100"
+                  alt="eggs"
+                />
               </div>
               <div class="image">
-                <img src="assets/images/footerImgs/salad.png" class="w-100" />
+                <img
+                  src="assets/images/footerImgs/salad.png"
+                  class="w-100"
+                  alt="salad"
+                />
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-6 pt-4">
+          <div class="col-lg-3 col-md-4 col-6 pt-4 Subscribtion">
             <div class="title">
               <h5>Subscribe</h5>
               <hr class="mb-0" />
@@ -316,11 +342,13 @@
       <div
         class="copyrights d-flex justify-content-center align-items-center pb-4"
       >
-        <i class="fa-regular fa-copyright" style="font-size: 10px"></i>
+        <i class="fa-regular fa-copyright"></i>
         <p class="m-0 ps-1">Copyright Cafeu. 2024 All Right Reserved</p>
       </div>
     </footer>
+    <!--end footer-->
+
+    <script src="assets/jsbootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/js/contactUs.js"></script>
-    <Script src="assets/jsbootstrap/bootstrap.bundle.min.js"></Script>
   </body>
 </html>
