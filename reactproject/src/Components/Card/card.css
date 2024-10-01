@@ -1,0 +1,63 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blogSection .blog h3 {
+    text-align: center;
+}
+.blogSection .blog .latestNewsCard {
+    width: 23rem;
+}
+.blogSection .blog .blogBg{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url("../../assets/various-fresh-vegetables.avif"); 
+    height: 40vh;
+    color: white;
+    width: 100%;
+}
+.blogSection .blog .mainBlog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+.blogSection .blog h2{
+    font-weight: 700;
+}
+.blogSection .blog h6{
+    color: #c33;
+    font-weight: 700;
+}
+.blogSection .blog .mainBlog .latestNewsCard{
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.229);
+    border-radius: 0px;
+}
+.blogSection .blog .mainBlog .latestNewsCard img{
+    border-radius: 0px;
+}
+.blogSection .blog .mainBlog .date-blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.blogSection .blog .mainBlog a {
+    color: black;
+}
+.blogSection .blog .showMore {
+    width: 130px;
+    padding: 10px 20px;
+    background-color: #c33;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.blogSection .blog .showMore:hover{
+    background-color: #666;
+}
