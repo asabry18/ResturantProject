@@ -1,11 +1,11 @@
 import React from "react";
-import logoWhite from '../assets/images/footerImgs/logo-white.png';
-import pizzaImage from '../assets/images/footerImgs/pizza.webp';
-import grandsImage from '../assets/images/footerImgs/grands.png';
-import burgerImage from '../assets/images/footerImgs/burger.jpg';
-import soupImage from '../assets/images/footerImgs/soup.jpg';
-import eggsImage from '../assets/images/footerImgs/eggs.jpeg';
-import saladImage from '../assets/images/footerImgs/salad.png';
+import logoWhite from "../assets/images/footerImgs/logo-white.png";
+import pizzaImage from "../assets/images/footerImgs/pizza.webp";
+import grandsImage from "../assets/images/footerImgs/grands.png";
+import burgerImage from "../assets/images/footerImgs/burger.jpg";
+import soupImage from "../assets/images/footerImgs/soup.jpg";
+import eggsImage from "../assets/images/footerImgs/eggs.jpeg";
+import saladImage from "../assets/images/footerImgs/salad.png";
 
 function Footer() {
   return (

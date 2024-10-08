@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/images/navbarImgs/logo.png"; // Corrected image path
 
 function Header() {
   return (
@@ -6,7 +7,7 @@ function Header() {
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
-            src="assets/images/navbarImgs/logo.png"
+            src={logo} // Using imported logo
             alt="Logo"
             width="100"
             height="30"
@@ -59,8 +60,9 @@ function Header() {
           </ul>
           <form className="d-flex" role="search">
             <button className="text-black ms-2 border-0" type="submit">
-              <i className="fa-solid fa-headset fa-xl me-1"></i> +880 123 465
-              789
+              <i className="fa-solid fa-headset fa-xl me-1"></i>{" "}
+              {/* FontAwesome headset icon */}
+              +880 123 465 789
             </button>
           </form>
         </div>
