@@ -1,6 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Contact() {
+  // States for form fields and error messages
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // Handle input changes
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  // Validation function
+  const validateForm = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    // Name validation
+    if (formData.name.trim() === "") {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    // Email validation (simple regex)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email.trim() === "" || !emailRegex.test(formData.email)) {
+      newErrors.email = "Valid email is required";
+      isValid = false;
+    }
+
+    // Phone validation (numeric check)
+    const phoneRegex = /^[0-9]+$/;
+    if (
+      formData.phone.trim() === "" ||
+      !phoneRegex.test(formData.phone) ||
+      formData.phone.length < 10
+    ) {
+      newErrors.phone = "Valid phone number is required";
+      isValid = false;
+    }
+
+    // Location validation
+    if (formData.location.trim() === "") {
+      newErrors.location = "Location is required";
+      isValid = false;
+    }
+
+    // Message validation
+    if (formData.message.trim() === "") {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate form
+    if (validateForm()) {
+      setSuccessMessage("Form Submitted Successfully!");
+      // Clear form after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        location: "",
+        message: "",
+      });
+    } else {
+      setSuccessMessage("");
+    }
+  };
+
   return (
     <div className="container">
       <div className="row mx-auto my-5 CContactUsSection">
@@ -17,7 +101,7 @@ function Contact() {
 
             <div className="container">
               <div className="row">
-                <form role="form" id="contact-form" className="contact-form">
+                <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group position-relative">
@@ -25,12 +109,12 @@ function Contact() {
                         <input
                           type="text"
                           className="form-control"
-                          name="Name"
-                          autocomplete="off"
                           id="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
                           placeholder="Your Name*"
                         />
-                        <small className="text-danger" id="nameError"></small>
+                        {errors.name && <small className="text-danger">{errors.name}</small>}
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -39,12 +123,12 @@ function Contact() {
                         <input
                           type="email"
                           className="form-control"
-                          name="Email"
-                          autocomplete="off"
                           id="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
                           placeholder="Your E-mail*"
                         />
-                        <small className="text-danger" id="emailError"></small>
+                        {errors.email && <small className="text-danger">{errors.email}</small>}
                       </div>
                     </div>
                   </div>
@@ -55,12 +139,12 @@ function Contact() {
                         <input
                           type="text"
                           className="form-control"
-                          name="Phone"
-                          autocomplete="off"
                           id="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
                           placeholder="Your Phone*"
                         />
-                        <small className="text-danger" id="phoneError"></small>
+                        {errors.phone && <small className="text-danger">{errors.phone}</small>}
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -69,15 +153,12 @@ function Contact() {
                         <input
                           type="text"
                           className="form-control"
-                          name="Location"
-                          autocomplete="off"
                           id="location"
+                          value={formData.location}
+                          onChange={handleInputChange}
                           placeholder="Your Location*"
                         />
-                        <small
-                          className="text-danger"
-                          id="locationError"
-                        ></small>
+                        {errors.location && <small className="text-danger">{errors.location}</small>}
                       </div>
                     </div>
                   </div>
@@ -87,27 +168,25 @@ function Contact() {
                         <textarea
                           className="form-control textarea"
                           rows="3"
-                          name="Message"
                           id="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
                           placeholder="Comment*"
                         ></textarea>
-                        <small
-                          className="text-danger"
-                          id="messageError"
-                        ></small>
+                        {errors.message && <small className="text-danger">{errors.message}</small>}
                       </div>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-12 text-center mt-2">
-                      <button
-                        type="submit"
-                        className="main-btn"
-                        onclick="showInlineAlert()"
-                      >
+                      <button type="submit" className="main-btn">
                         Send Message
                       </button>
-                      <div id="inline-alert" className="CAlert"></div>
+                      {successMessage && (
+                        <div id="inline-alert" className="CAlert mt-2">
+                          {successMessage}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </form>
@@ -120,10 +199,10 @@ function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7537851.770682577!2d86.97732224861059!3d22.706239176045763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2seg!4v1725790908528!5m2!1sen!2seg"
             width="300"
             height="400"
-            style={{ border: "0" }} // style="border: 0"
-            allowfullscreen=""
+            style={{ border: "0" }}
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
