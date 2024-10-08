@@ -1,4 +1,11 @@
 import React from "react";
+import logoWhite from '../assets/images/footerImgs/logo-white.png';
+import pizzaImage from '../assets/images/footerImgs/pizza.webp';
+import grandsImage from '../assets/images/footerImgs/grands.png';
+import burgerImage from '../assets/images/footerImgs/burger.jpg';
+import soupImage from '../assets/images/footerImgs/soup.jpg';
+import eggsImage from '../assets/images/footerImgs/eggs.jpeg';
+import saladImage from '../assets/images/footerImgs/salad.png';
 
 function Footer() {
   return (
@@ -6,10 +13,7 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-4 col-6 pt-4">
-            <img
-              src="assets/images/footerImgs/logo-white.png"
-              alt="white-logo"
-            />
+            <img src={logoWhite} alt="white-logo" />
             <p className="pt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. sed do
             </p>
@@ -29,7 +33,7 @@ function Footer() {
                   <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className="contactsText">
-                  <p className="m-0 ps-3">nfo@example.com</p>
+                  <p className="m-0 ps-3">info@example.com</p>
                   <p className="m-0 ps-3">test@example.com</p>
                 </div>
               </div>
@@ -66,46 +70,22 @@ function Footer() {
             </div>
             <div className="instagramImages d-flex flex-wrap pt-4">
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/pizza.webp"
-                  className="w-100"
-                  alt="pizza"
-                />
+                <img src={pizzaImage} className="w-100" alt="pizza" />
               </div>
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/grands.png"
-                  className="w-100"
-                  alt="grands"
-                />
+                <img src={grandsImage} className="w-100" alt="grands" />
               </div>
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/burger.jpg"
-                  className="w-100"
-                  alt="burger"
-                />
+                <img src={burgerImage} className="w-100" alt="burger" />
               </div>
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/soup.jpg"
-                  className="w-100"
-                  alt="soup"
-                />
+                <img src={soupImage} className="w-100" alt="soup" />
               </div>
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/eggs.jpeg"
-                  className="w-100"
-                  alt="eggs"
-                />
+                <img src={eggsImage} className="w-100" alt="eggs" />
               </div>
               <div className="image">
-                <img
-                  src="assets/images/footerImgs/salad.png"
-                  className="w-100"
-                  alt="salad"
-                />
+                <img src={saladImage} className="w-100" alt="salad" />
               </div>
             </div>
           </div>
