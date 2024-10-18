@@ -1,28 +1,24 @@
-import { Card, CardBody, Col, Container, Row } from "react-bootstrap"
+import { Card, CardBody, Col, Container, Row } from "react-bootstrap";
 
+import "../assets/css/blog-details.css";
+import saladImg from "../assets/images/salad.png";
+import yogartImg from "../assets/images/yogart.png";
+import chickenImg from "../assets/images/chicken.png";
 
-
-
-import '../assets/css/blog-details.css';
-import saladImg from '../assets/images/salad.png'
-import yogartImg from '../assets/images/yogart.png'
-import chickenImg from '../assets/images/chicken.png'
-
- function BlogDetails () {
-
+function BlogDetails() {
   return (
     <div>
-    
-
       {/* Blog details logo */}
       <div className="BlogDetailsBg d-flex flex-column justify-content-center align-items-center mb-5">
-        <h1 style={{ fontWeight: '700' }}>Blog Details</h1>
-        <p><a href="/">Home</a> / Menu</p>
+        <h1 style={{ fontWeight: "700" }}>Blog Details</h1>
+        <p>
+          <a href="/">Home</a> / Menu
+        </p>
       </div>
 
       <Container>
         <Row>
-          <Col sm='12' md='8' className="mb-5" >
+          <Col sm="12" md="8" className="mb-5">
             <Card className=" mb-3 ">
               <img
                 src={saladImg}
@@ -58,7 +54,7 @@ import chickenImg from '../assets/images/chicken.png'
               </CardBody>
             </Card>
           </Col>
-          <Col md='4' col='12'>
+          <Col md="4" col="12">
             <h4 className="mt-sm-3 mt-md-0">Latest Post</h4>
             <div
               className="progress"
@@ -67,51 +63,48 @@ import chickenImg from '../assets/images/chicken.png'
               aria-valuenow="25"
               aria-valuemin="0"
               aria-valuemax="100"
-              style={{ height: '2px' }}
+              style={{ height: "2px" }}
             >
-              <div className="progress-bar " style={{ width: '25%' }}></div>
+              <div className="progress-bar1" style={{ width: "25%" }}></div>
             </div>
 
             <ul className="list-unstyled mt-3 ">
               <li className="d-flex gap-3 align-items-center mb-3">
                 <img src={chickenImg} alt="Restaurant Town" />
-                <a href="chicken img" className="text-decoration-none text-dark fw-bold">
+                <a
+                  href="chicken img"
+                  className="text-decoration-none text-dark fw-bold"
+                >
                   New Restaurant Town Our Ple Award Contract
-                  <h6 className="card-title text-muted">
-                   Aug 1, 2023
-                </h6>
+                  <h6 className="card-title text-muted">Aug 1, 2023</h6>
                 </a>
               </li>
               <li className="d-flex gap-3 align-items-center mb-3">
                 <img src={yogartImg} alt="Yogurt breakfast bowls" />
-                <a href="yogart img" className="text-decoration-none text-dark fw-bold">
+                <a
+                  href="yogart img"
+                  className="text-decoration-none text-dark fw-bold"
+                >
                   Greek Yogurt Breakfast Bowls Ple Award Contract
-                  <h6 className="card-title text-muted">
-                   Jan 14, 2023
-                </h6>
+                  <h6 className="card-title text-muted">Jan 14, 2023</h6>
                 </a>
               </li>
               <li className="d-flex gap-3 align-items-center mb-3">
                 <img src={saladImg} alt="Margherita Pizza" />
-                <a href="salad img" className="text-decoration-none text-dark fw-bold">
+                <a
+                  href="salad img"
+                  className="text-decoration-none text-dark fw-bold"
+                >
                   Make Authentic Italian Margherita Pizza
-                  <h6 className="card-title text-muted">
-                   Sep 5, 2023
-                </h6>
+                  <h6 className="card-title text-muted">Sep 5, 2023</h6>
                 </a>
-                
               </li>
             </ul>
           </Col>
         </Row>
       </Container>
-
-      
-
-    
-  
     </div>
   );
-};
+}
 
 export default BlogDetails;
