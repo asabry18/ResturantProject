@@ -9,6 +9,7 @@ import yogartImg from '../assets/images/yogart.png'
 import chickenImg from '../assets/images/chicken.png'
 
  function BlogDetails () {
+
   return (
     <div>
     
