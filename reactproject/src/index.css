@@ -1,58 +1,82 @@
-footer{
-    background-image: url(./images/footer/footer-bg.png);
-    color: white;
+.scroll {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #c33;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 20px;
+  z-index: 10;
 }
-footer .row{
-    padding-top: 60px;
-    padding-bottom: 90px;
+body {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-footer .title h5{
-    font-weight: 700;
-    font-style:  normal;
+nav .collapse form button {
+  background-color: transparent;
 }
-footer .title hr{
-    width: 18%;
-    border: 2px solid white;
-    opacity: 1;
+nav .collapse form button .custom-icon {
+    color: #c33;
+  }
+footer {
+  background-image: url(./images/footer/footer-bg.png);
+  color: white;
 }
-footer .contacts .contactsBody .contactsIcon{
-    width: 23px;
+footer .row {
+  padding-top: 60px;
+  padding-bottom: 90px;
 }
-footer .contacts .contactsBody .contactsIcon i{
-    font-size: 23px;
+footer .title h5 {
+  font-weight: 700;
+  font-style: normal;
 }
-footer .instagramImages{
-    column-gap: 10px;
-    row-gap: 10px;
+footer .title hr {
+  width: 18%;
+  border: 2px solid white;
+  opacity: 1;
 }
-footer .instagramImages .image{
-    width: 27%;
-    height: 75px;
+footer .contacts .contactsBody .contactsIcon {
+  width: 23px;
 }
-footer .instagramImages .image img{
-    height: 100%;
+footer .contacts .contactsBody .contactsIcon i {
+  font-size: 23px;
 }
-footer .subscribeInput input{
-    padding: 7px 7px 8px 9px;
-    border: none;
-    outline: none;
+footer .instagramImages {
+  column-gap: 10px;
+  row-gap: 10px;
 }
-footer .subscribeInput #subsbtn{
-    padding: 8px 18px;
-    border: none;
-    background-color:#c33 ;
-    color: #ffff;
-    outline: none;
+footer .instagramImages .image {
+  width: 27%;
+  height: 75px;
 }
-footer .subscribeInput #subsbtn:hover{
-    background-color:#666 ;
+footer .instagramImages .image img {
+  height: 100%;
 }
-footer .subscribeIcons i{
-    padding: 0px 7px;
+footer .subscribeInput input {
+  padding: 7px 7px 8px 9px;
+  border: none;
+  outline: none;
 }
-@media (max-width:1200px){
-    footer .Subscribtion{
-        width: 100%;
-    }
-
+footer .subscribeInput #subsbtn {
+  padding: 8px 18px;
+  border: none;
+  background-color: #c33;
+  color: #ffff;
+  outline: none;
+}
+footer .subscribeInput #subsbtn:hover {
+  background-color: #666;
+}
+footer .subscribeIcons i {
+  padding: 0px 7px;
+}
+@media (max-width: 1200px) {
+  footer .Subscribtion {
+    width: 100%;
+  }
 }
