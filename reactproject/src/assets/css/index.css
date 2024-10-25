@@ -1,0 +1,287 @@
+nav .collapse form button .custom-icon {
+    color: #c33;
+}
+form .numButton{
+    background-color: transparent;
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+
+
+.featureBox {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.featureBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.featureBox .icon img {
+    width: 50px;
+    height: 50px;
+}
+.featureBox h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.featureBox p {
+    color: #777;
+    font-size: 0.875rem;
+}
+.featureBox a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+
+.AboutUsSec .AboutUsTxt h5{
+    color: #c33;
+}
+.AboutUsSec .AboutUsTxt h2{
+    font-weight:700 ;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .iconTxt h6{
+    font-weight: 700;
+}
+.AboutUsSec .AboutUsBtn{
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #c33;
+    color: #ffff;
+}
+.AboutUsSec .AboutUsTxt{
+    margin-left: 50px;
+}
+.AboutUsSec .AboutUsBtn:hover{
+    background-color:#666 ;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .icon{
+    width: 40px;
+    margin-right: 30px;
+}
+
+
+.menu {
+    background-image: url('../images/menu/bg-blog.png');
+  }
+  .menuTitle {
+    font-size: 40px;
+    margin: 20px 0;
+    color: black;
+  }
+  .iconsMenu {
+    gap: 30px;
+  }
+  .iconItem {
+    transition: transform 0.3s, color 0.3s, border-bottom 0.3s;
+    position: relative; 
+  }
+  .iconsMenu .iconItem img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .iconsMenu .iconItem p{
+    display: block;
+    font-size: 14px;
+    color: #555;
+  }
+  .iconItem:hover {
+    transform: scale(1.1); 
+    color: #c33; 
+  }
+  .iconItem:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #c33; 
+  }
+  .menuCard {
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(179, 176, 176, 0.1);
+    transition: transform 0.3s;
+  }
+  .menuCard img {
+    background-color: #f2f2f2;
+    height: 300px;
+    padding: 20px;
+    border: white 10px solid;
+  }
+  .menuCard:hover {
+    transform: scale(1.05);
+  }
+  .rating {
+    color: gold;
+  }
+  .showMoreBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c33;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .showMoreBtn:hover {
+    background-color: #666;
+  }
+
+
+.TeamSec .teamCard{
+    border: none;
+    transition: all 1s;
+    position: relative;
+    height: 100%; 
+}
+.TeamSec .teamCard .card-img-top{
+    height: 100%;
+}
+.TeamSec .FullCard{
+    height: 450px;
+}
+.TeamSec h5{
+    color: #c33;
+}
+.TeamSec h2{
+    font-weight:700 ;
+}
+.TeamSec .teamCard .card-body{
+    background-color: white;
+    height: 95px;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 12px;
+    transition: all 0.7s;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.TeamSec .teamCard hr{
+    border: 2px solid black;
+    margin: 15px auto 15px auto;
+}
+.TeamSec .teamCard:hover .card-body{
+    height: 190px;
+    padding-bottom: 0;
+}
+
+
+.CheckSec{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/OpeningTimes/subscribe-bg.png);
+    color: white;
+}
+.OpenTimes{
+    position: relative;
+}
+.OpenTimes .CheckSec{
+    margin-bottom: 90px;
+}
+.OpenTimes .CheckSec h2{
+    font-weight: 700;
+}
+.OpenTimes .openingTimes h5{
+    color: #c33;
+}
+.OpenTimes .openingTimes h2{
+    font-weight:700 ;
+}
+.OpenTimes .openingTimes .ContactInfo h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.OpenTimes .openingTimes .ContactInfo p{
+    font-size: 20px;
+}
+.OpenTimes .openingTimes{
+    position: absolute;
+    background-color: white;
+    color: #000;
+    right: 110px;
+    bottom: -150px;
+    box-shadow: rgba(228, 228, 228, 0.25) 0px 5px 15px;
+}
+.watch-btn {
+    background-color: #c33;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.OpenTimes .openingTimes .TimesSec{
+    margin: 0 auto;
+    width: 380px;
+}
+.OpenTimes .openingTimes .TimesSec hr{
+    margin: 0;
+    border-style: dashed;
+}
+
+
+footer{
+    background-image: url(.././images/footer/footer-bg.png);
+    color: white;
+}
+footer .row{
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+footer .title h5{
+    font-weight: 700;
+    font-style:  normal;
+}
+footer .title hr{
+    width: 18%;
+    border: 2px solid white;
+    opacity: 1;
+}
+footer .contacts .contactsBody .contactsIcon{
+    width: 23px;
+}
+footer .contacts .contactsBody .contactsIcon i{
+    font-size: 23px;
+}
+footer .instagramImages{
+    column-gap: 10px;
+    row-gap: 10px;
+}
+footer .instagramImages .image{
+    width: 27%;
+    height: 75px;
+}
+footer .instagramImages .image img{
+    height: 100%;
+}
+footer .subscribeInput input{
+    padding: 7px 7px 8px 9px;
+    border: none;
+    outline: none;
+}
+footer .subscribeInput #subsbtn{
+    padding: 8px 18px;
+    border: none;
+    background-color:#c33 ;
+    color: #ffff;
+    outline: none;
+}
+footer .subscribeInput #subsbtn:hover{
+    background-color:#666 ;
+}
+footer .subscribeIcons i{
+    padding: 0px 7px;
+}
+@media (max-width:1200px){
+    footer .Subscribtion{
+        width: 100%;
+    }
+}
