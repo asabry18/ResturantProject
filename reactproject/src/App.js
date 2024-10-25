@@ -1,10 +1,17 @@
 import "./index";
 import Header from "./views/Header";
 import Footer from "./views/Footer";
+import  Slider from './views/Slider'
 function App() {
   return (
     <div className="App">
-      <Header />
+    <div className="hero">
+
+        <Header />
+      <Slider/>
+    </div>
+      
+      
       <Footer />
     </div>
   );
