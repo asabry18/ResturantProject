@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg" className="p-2">
+    <Navbar  expand="lg" className="p-2">
       <Container>
         <Navbar.Brand href="#">
           <img

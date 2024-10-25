@@ -1,0 +1,99 @@
+ 
+ h1 span{
+  color: #c33; 
+  text-decoration: underline
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #666 !important;
+  width: 2rem;
+  height: 0.2rem;
+  display: flex;
+  margin-right: 10px;
+
+}
+
+.carousel-indicators .active {
+  background-color: #c33 !important;
+}
+
+  /* Button Styles */
+  .btns {
+    background-color: #c33;
+    border: none;
+  }
+  
+  .order-btn {
+    color: white;
+    padding: 7px 25px;
+    border-radius: 3px;
+  }
+  
+  .watch-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+ .social-links {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    
+  }
+  ul li a{
+    all: unset;
+    cursor: pointer;
+  }
+.carousel-control-next  , .carousel-control-prev {display: none;}
+
+  @media (max-width: 1148px) {
+    .hero img {
+      width: 125%;
+      height: 95%;
+    
+    }
+  
+    .hero   h1 {
+      font-size: 30px;
+    }
+  
+    .hero   h5 {
+      font-size: 20px;
+    }
+    .hero .btns {
+      margin-bottom: 50px;
+      font-size:small ;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .hero   h5 {
+      padding-top: 1rem;
+    }
+  
+    .hero  h1 {
+      font-size: 24px;
+    }
+  
+    .hero  h5 {
+      font-size: 18px;
+    }
+  
+     .hero img {
+      width: 100%;
+      height: 100%;
+      align-self: center;
+      padding-right: 10px;
+      padding-bottom: 50px;
+  
+    }
+    .btns {
+      margin-bottom: 0 ;
+      margin-left: 4rem;
+      font-size: small;
+    }
+  
+  
+  }
