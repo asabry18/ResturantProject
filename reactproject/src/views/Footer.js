@@ -3,13 +3,13 @@ import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-
 import { faFacebook, faTwitter, faInstagram, faSkype } from '@fortawesome/free-brands-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 import {Container, Row, Col} from 'react-bootstrap'
-import FooterLogo from '../images/footer/logo-white.png';
-import pizza from '../images/footer/pizza.webp'
-import grands from '../images/footer/grands.png'
-import soup from '../images/footer/soup.jpg'
-import eggs from '../images/footer/eggs.jpeg'
-import salad from '../images/footer/salad.png'
-import burger from '../images/footer/burger.jpg'
+import FooterLogo from '.././assets/images/footer/logo-white.png';
+import pizza from '.././assets/images/footer/pizza.webp'
+import grands from '.././assets/images/footer/grands.png'
+import soup from '.././assets/images/footer/soup.jpg'
+import eggs from '.././assets/images/footer/eggs.jpeg'
+import salad from '.././assets/images/footer/salad.png'
+import burger from '.././assets/images/footer/burger.jpg'
 export default function Footer(){
     return(
         <>
