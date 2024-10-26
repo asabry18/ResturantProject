@@ -23,10 +23,10 @@ export default function Menu() {
 
     return (
       <>
-        <section className="menu d-flex flex-column align-items-center">
+        <section className="menu d-flex flex-column align-items-center py-5">
 
             <div class="specialHeading">
-              <h4>Special Menu</h4>
+              <h5>Special Menu</h5>
             </div>
     
             <h1 className="menuTitle"> Our Special Menu</h1>
