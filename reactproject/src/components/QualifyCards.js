@@ -28,12 +28,6 @@ const CardSection = () => {
                             <a href={card.link}>Discover More</a>
                         </div>
                     </Col>
-                        // <div key={index} className="card">
-                        //     <img src={card.image} alt={card.title} className="card-image" /> {/* Image display */}
-                        //     <h3>{card.title}</h3>
-                        //     <p>{card.description}</p>
-                        //     <a href={card.link}>Discover More</a> {/* Link text changed to English */}
-                        // </div>
                 ))}
             </Row>
         </Container>
