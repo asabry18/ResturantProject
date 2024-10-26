@@ -1,0 +1,103 @@
+.DownloadInfo {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+}
+.DownloadInfo .downloadInfo {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../../../public/info-img-photos/app-bg.png);
+    padding: 32px;
+    width: 85%;
+    max-height: 400px;
+}
+.DownloadInfo .downloadTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.DownloadInfo .downloadImages {
+    flex: 1;
+}
+.DownloadInfo .downloadImages .mobileScreenshots {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.DownloadInfo .downloadImages .mobileScreenshots img {
+    max-height: 100%;
+}
+
+.DownloadInfo .downloadImages .mobileScreenshots img:last-of-type {
+    margin-top: -32px;
+    margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+    .DownloadInfo .downloadInfo {
+        flex-direction: column; 
+        max-height: none; 
+    }
+
+    .DownloadInfo .downloadImages .mobileScreenshots img {
+        display: none;
+    }
+
+    .DownloadInfo .downloadImages .mobileScreenshots {
+        justify-content: center; 
+        gap: 0.5em; 
+    }
+}
+
+@media (max-width: 768px) {
+    .DownloadInfo {
+        min-height: auto; 
+        padding: 15px; 
+    }
+
+    .DownloadInfo .downloadTitle h3 {
+        font-size: 20px; 
+    }
+
+    .DownloadInfo .downloadTitle p {
+        font-size: 14px; 
+    }
+
+    .DownloadInfo .downloadImages .mobileScreenshots img {
+        display: none;
+    }
+    .DownloadInfo .downloadTitle .downloadLink .link {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .DownloadInfo .downloadTitle h3 {
+        font-size: 18px; 
+    }
+
+    .DownloadInfo .downloadTitle p {
+        font-size: 12px; 
+    }
+
+    .DownloadInfo .downloadImages .mobileScreenshots img {
+        display: none;
+    }
+
+    .DownloadInfo .downloadImages .mobileScreenshots img:last-of-type {
+        margin-top: -8px;
+    }
+    .DownloadInfo .downloadTitle .downloadLink .link {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}  
