@@ -1,6 +1,6 @@
-import MoreAboutUs from "../components/MoreAboutUs";
-import OpeningTimes from "../components/OpeningTimes";
-import OurTeam from "../components/OurTeam";
+import MoreAboutUs from "../Components/MoreAboutUs.js";
+import OpeningTimes from "../Components/OpeningTimes.js"
+import OurTeam from "../Components/OurTeam.js"
 
 export default function AboutUs(){
     return(

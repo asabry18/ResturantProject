@@ -1,11 +1,11 @@
-import CardSection from '../components/QualifyCards';
-import OurTeam from '../components/OurTeam'
-import OpeningTimes from '../components/OpeningTimes';
-import MoreAboutUs from '../components/MoreAboutUs';
-import BlogsSection from '../components/BlogData.js';
-import DownloadInfo from '../components/DownloadInfo.js';
-import ControlledCarousel from '../components/Slider.js';
-import MenuSection from '../components/MenuSection.js';
+import ControlledCarousel from "../Components/Slider"
+import CardSection from "../Components/QualifyCards"
+import MoreAboutUs from "../Components/MoreAboutUs"
+import MenuSection from "../Components/MenuSection"
+import DownloadInfo from "../Components/DownloadInfo"
+import OpeningTimes from "../Components/OpeningTimes"
+import OurTeam from "../Components/OurTeam"
+import BlogsSection from "../Components/BlogData"
 
 export default function Home(){
     return(
