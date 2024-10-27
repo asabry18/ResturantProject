@@ -551,7 +551,7 @@ footer .subscribeIcons i{
 
 /* call bg in about us page */
 .CallBg{
-    /*background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/indianFood.webp); */
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/MoreAboutUs/indianFood.jpg); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
