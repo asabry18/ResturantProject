@@ -1,5 +1,5 @@
 import { useState } from 'react';
-const Blogs = () => {
+const BlogsSection = () => {
     const [menu, setMenu] = useState([
         {
             backgroundImage: require('../assets/images/latestnews/grands.png')   , 
@@ -104,4 +104,4 @@ const Blogs = () => {
     );
 };
  
-export default Blogs;
+export default BlogsSection;

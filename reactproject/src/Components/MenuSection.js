@@ -1,7 +1,7 @@
 import {Col, Container, Row, Card, CardBody, CardTitle, CardText} from 'react-bootstrap'
 import React, { useState } from 'react';
 
-export default function Menu() {
+export default function MenuSection() {
     const categories =[' All', ' Pizza', ' Asian', ' Burger', ' Salad', ' Bakery', ' Drink']
 
     const MenuItems = [
