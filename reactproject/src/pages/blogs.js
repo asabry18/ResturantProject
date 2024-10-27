@@ -1,4 +1,4 @@
-import BlogsSection from "../components/BlogData";
+import BlogsSection from "../Components/BlogData"
 
 export default function Blogs(){
     return(

@@ -1,5 +1,4 @@
-import MenuSection from "../components/MenuSection";
-
+import MenuSection from "../Components/MenuSection"
 export default function Menu(){
     return(
         <>
