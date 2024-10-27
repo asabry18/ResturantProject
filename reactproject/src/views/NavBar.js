@@ -3,8 +3,7 @@ import logo from "../assets/images/header/logo.png"; // Corrected image path
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Nav, Container } from "react-bootstrap"; // Import React Bootstrap components
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function NavBar() {
   return (
     <Navbar  expand="lg" className="p-2">
@@ -29,7 +28,7 @@ export default function NavBar() {
             <Nav.Link as={Link} to="/blogs-Details">Reservation</Nav.Link>
           </Nav>
           <form className="d-flex" role="search">
-            <button className="text-black ms-2 border-0" type="submit">
+            <button className="numButton text-black border-0" type="submit">
               <FontAwesomeIcon icon={faHeadset} className="fa-xl me-1 custom-icon" />
               +880 123 465 789
             </button>
