@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from "./pages/home";
 import ContactUs from './pages/contactUs';
-import Header from "./views/Header";
+import NavBar from "./views/NavBar";
 import AboutUs from './pages/aboutUs';
 import Blogs from './pages/blogs';
 import BlogDetails from './pages/blogDetails';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header isHomePage = {isHomePage}/>
+      <NavBar isHomePage = {isHomePage}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/AboutUs" element={<AboutUs/>}/>
