@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Home from "./pages/home";
 import ContactUs from './pages/contactUs';
 import NavBar from "./views/NavBar";
@@ -6,14 +6,11 @@ import AboutUs from './pages/aboutUs';
 import Blogs from './pages/blogs';
 import BlogDetails from './pages/blogDetails';
 import Menu from './pages/menu';
-import Footer from './views/footer';
+import Footer from './views/Footer';
 function App() {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-
   return (
     <div className="App">
-      <NavBar isHomePage = {isHomePage}/>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/AboutUs" element={<AboutUs/>}/>

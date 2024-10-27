@@ -6,8 +6,8 @@ export default function AboutUs(){
     return(
         <>
             <section class="AboutUsBg d-flex flex-column justify-content-center align-items-center mb-5">
-                <h1>Menu page</h1>
-                <p>Home/menu</p>
+                <h1>About Us page</h1>
+                <p>Home/about-us</p>
             </section>
 
             <MoreAboutUs/>

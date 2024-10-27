@@ -6,12 +6,9 @@ import chickenImg from "../assets/images/blogDetails/1 (2).png";
 export default function BlogDetails() {
   return (
     <>
-        {/* Blog details logo */}
-        <section className="BlogDetailsBg d-flex flex-column justify-content-center align-items-center mb-5">
-            <h1 style={{ fontWeight: "700" }}>Blog Details</h1>
-            <p>
-            <a href="/">Home</a> / Menu
-            </p>
+       <section class="AboutUsBg d-flex flex-column justify-content-center align-items-center mb-5">
+            <h1>Blog Details page</h1>
+            <p>Home/blog-details</p>
         </section>
 
         <section className="BlogDetailsInner">

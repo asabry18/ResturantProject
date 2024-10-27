@@ -80,7 +80,8 @@ const BlogsSection = () => {
     return (
         <section className="blogSection py-5">
             <div className="blog">
-                <h3>Latest News</h3>
+                <h5 className='newsTitle'>News & Blogs</h5>
+                <h1>Latest News</h1>
                 <div className="mainBlog">
                 {menu.map(menuItem => (
                     <div className="card latestNewsCard">
