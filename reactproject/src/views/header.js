@@ -5,7 +5,7 @@ import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Nav, Container } from "react-bootstrap"; // Import React Bootstrap components
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Header() {
+export default function Header() {
   return (
     <>
         <Navbar expand="lg" className="p-2">
@@ -35,5 +35,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;
