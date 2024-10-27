@@ -1,27 +1,27 @@
-import CardSection from './components/QualifyCards';
-import Header from './views/Header.js';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from "./pages/home";
+import ContactUs from './pages/contactUs';
+import Header from "./views/Header";
+import AboutUs from './pages/aboutUs';
+import Blogs from './pages/blogs';
+import BlogDetails from './pages/blogDetails';
+import Menu from './pages/menu';
 import Footer from './views/footer';
-import OurTeam from './components/OurTeam'
-import OpeningTimes from './components/OpeningTimes';
-import MoreAboutUs from './components/MoreAboutUs';
-import Menu from './components/Menu';
-import Blogs from './components/BlogData.js';
-import DownloadInfo from './components/DownloadInfo.js';
-import ControlledCarousel from './components/Slider.js';
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <div className="App">
-      <div className='hero'>
-        <Header />
-        <ControlledCarousel/>
-      </div>
-      <CardSection/>
-      <MoreAboutUs/>
-      <Menu/>
-      <DownloadInfo/>
-      <OpeningTimes/>
-      <OurTeam/>
-      <Blogs/>
+      <Header isHomePage = {isHomePage}/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/AboutUs" element={<AboutUs/>}/>
+        <Route path="/contactUs" element={<ContactUs/>}/>
+        <Route path="/blogs" element={<Blogs/>}/>
+        <Route path="/blogs-details" element={<BlogDetails/>}/>
+        <Route path="/menu" element={<Menu/>}/>
+      </Routes>
       <Footer/>
     </div>
   );

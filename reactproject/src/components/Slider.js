@@ -42,7 +42,7 @@ export default function ControlledCarousel() {
                         </div>
                         
                     </Col>
-                    <Col md='5'  sm='12'className=" ps-5 " >
+                    <Col md='5' sm='12' >
                         <img src={chicken1} alt="roosted chicken"   />
                     </Col>
                 </Row>

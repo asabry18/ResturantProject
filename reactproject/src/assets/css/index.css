@@ -159,6 +159,11 @@ ul li a{
 }
 
 
+.AboutUsBg{
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/various-fresh-vegetables.avif); 
+    height: 330px;
+    color: white;
+}
 .menu {
     background-image: url('../images/menu/bg-blog.png');
   }
@@ -542,3 +547,51 @@ footer .subscribeIcons i{
         width: 100%;
     }
 }
+
+
+/* call bg in about us page */
+.CallBg{
+    /*background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(../images/indianFood.webp); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 330px;
+    color: white;
+}
+.CallBg h2{
+    font-weight: 700;
+}
+.CallBg .DiscoverBtn{
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #79a1bb;
+    color: #ffff;
+}
+.CallBg .Discover:hover{
+    background-color: #517894;
+}
+
+
+
+/* blog details page */
+.BlogDetailsBg {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url(../images/various-fresh-vegetables.avif); /* The least supported option. */
+    height: 40vh;
+    color: white;
+  }
+  
+  .BlogDetailsInner img {
+    height: 70vh;
+  }
+  
+  .progress-bar1 {
+    background-color: #c33;
+  }
+  
+  .BlogDetailsInner li img {
+    width: 70px;
+    height: 70px;
+  }
