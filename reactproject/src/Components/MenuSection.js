@@ -1,25 +1,39 @@
 import {Col, Container, Row, Card, CardBody, CardTitle, CardText} from 'react-bootstrap'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function MenuSection() {
-    const categories =[' All', ' Pizza', ' Asian', ' Burger', ' Salad', ' Bakery', ' Drink']
+  const [menuItems, setMenuItems] = useState([]);
 
-    const MenuItems = [
-        { id: 1, name: 'Grilled Fish', price: '$6.99 - $5.49', rating: 4.5, img: require('../assets/images/menu/fish.png'), iconId: 1 },
-        { id: 2, name: 'Capresc Salad', price: '$5.49 - $4.29', rating: 4.0, img: require('../assets/images/menu/capreseSalad.png'), iconId: 2 },
-        { id: 3, name: 'BBQ Ribs', price: '$8.99 - $7.49', rating: 4.8, img: require('../assets/images/menu/BBQ.png'), iconId: 3 },
-        { id: 4, name: 'Tiramisu', price: '$15.99 - $12.49', rating: 4.2, img: require('../assets/images/menu/tiramisu.png'), iconId: 4 },
-        { id: 5, name: 'Mango Smoothie', price: '$18.99 - $15.49', rating: 5.0, img: require('../assets/images/menu/mango.png'), iconId: 5 },
-        { id: 6, name: 'Greek Salad', price: '$15.99 - $12.49', rating: 4.9, img: require('../assets/images/menu/greekSalad.png'), iconId: 6 },
-        { id: 7, name: 'Pork chops', price: '$6.99 - $5.49', rating: 4.3, img: require('../assets/images/menu/porkChops.png'), iconId: 7 },
-        { id: 8, name: 'Sushi platter', price: '$8.99 - $7.49', rating: 4.6, img: require('../assets/images/menu/sushi.png'), iconId: 8 },
-        ];
+  // fetch menu items from API
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('http://localhost:3001/menu');
+      if (response.status === 200)
+        setMenuItems(response.data);
+    }
+
+    fetchData();
+  }, [])
+
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    // loop over menuItems, extract unique categories to categories array
+    const newCategories = menuItems.reduce((acc, item) => {
+      if (!acc.includes(item.category))
+        acc.push(item.category);
+      return acc;
+    }, []);
+    setCategories(['All', ...newCategories]);
+  }, [menuItems]);
+
+
     const [showAll, setShowAll] = useState(false);
-    const [activeIcon, setActiveIcon] = useState(null); 
+    const [activeCategory, setActiveCategory] = useState(null);
 
-    const visibleItems = showAll ? MenuItems : MenuItems.slice(0, 4);
-    
-    const filteredItems = activeIcon ? MenuItems.filter(item => item.iconId === activeIcon) : visibleItems;
+    const visibleItems = showAll ? menuItems : menuItems.slice(0, 4);
+
+    const filteredItems = activeCategory ? menuItems.filter(item => item.category === activeCategory) : visibleItems;
 
     return (
       <>
@@ -28,7 +42,7 @@ export default function MenuSection() {
             <div class="specialHeading">
               <h5>Special Menu</h5>
             </div>
-    
+
             <h1 className="menuTitle"> Our Special Menu</h1>
 
             <Container>
@@ -36,8 +50,8 @@ export default function MenuSection() {
                 <div class="specialMenu">
                   <div class="iconsMenu d-flex flex-wrap justify-content-center">
                   {categories.map((name, index) => (
-                      <div key={index} className="iconItem text-center" onClick={() => name === categories[0] ? setActiveIcon(null) : setActiveIcon(index + 1)}>
-                        <img src={require(`../assets/images/menu/${index+1}.png`)} alt={name} className='w-100' />
+                      <div key={index} className="iconItem text-center" onClick={() => name === categories[0] ? setActiveCategory(null) : setActiveCategory(name)}>
+                        <img src={require(`../assets/images/menu/${name}.png`)} alt={name} />
                         <p>{name}</p>
                       </div>
                   ))}
@@ -50,8 +64,8 @@ export default function MenuSection() {
               <Row>
                 {filteredItems.map(item => (
                   <Col sm ='6' md = '4' lg = '3' className='mb-4'>
-                    <Card key={item.id} className="menuCard">
-                      <img src={item.img} alt={item.name}/>
+                    <Card key={item._id} className="menuCard">
+                      <img src={item.imageUrl} alt={item.name}/>
                       <CardBody className="text-center">
                         <CardTitle>{item.name}</CardTitle>
                         <div className="rating">
