@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/images/header/logo.png";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register() {
   const navigate = useNavigate();
@@ -130,7 +130,7 @@ function Register() {
 
       {/* Hello Text Section */}
       <div className="text-center mt-3 mb-3">
-        <p>Already have an account? <a href="#">Sign in</a></p>
+        <p>Already have an account? <Link to={'/login'}>Sign in</Link></p>
       </div>
     </div>
   );
