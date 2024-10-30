@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/images/header/logo.png";
 import { Container } from "react-bootstrap";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
 
@@ -69,7 +69,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </form>
         <p>
-          don`t have an account ? <a href=""> Sign in</a>
+          don`t have an account ? <Link to={'/register'}>Sign up</Link>
         </p>
       </div>
     </div>
