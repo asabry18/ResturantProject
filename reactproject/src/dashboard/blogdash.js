@@ -28,10 +28,8 @@ const BlogsDashboard = () => {
           id
         }
     })
-    console.log(id)
-
       if (response.status === 200) {
-        console.log(`Blog with ID ${id} deleted successfully.`);
+        setBlogs((prevData) => prevData.filter((member) => member._id !== id));
       } 
     } catch (error) {
       console.error("Error deleting blog:", error);

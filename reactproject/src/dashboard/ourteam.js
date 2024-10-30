@@ -1,41 +1,31 @@
 // src/CrudTable.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const TeamDashboard = () => {
   const [data, setData] = useState([]);
 
-  const  team = {
-    members : [
-      {
-        name: 'Esraa',
-        role: 'Developer',
-        contact: 'esraa@example.com',
-      },
-      {
-        name: 'Hassan',
-        role: 'Designer',
-        contact: 'hassan@example.com',
-      },
-      {
-        name: 'Ahmed',
-        role: 'Project Manager',
-        contact: 'ahmed@example.com',
-      },
-      {
-        name: 'Adham',
-        role: 'QA Engineer',
-        contact: 'adham@example.com',
-      },
-      {
-        name: 'Mazen',
-        role: 'DevOps Engineer',
-        contact: 'mazen@example.com',
-      },
-    ],
-  };
-  
+    // fetch menu items from API
+    useEffect(() => {
+      const fetchData = async () => {
+      const response = await axios.get('http://localhost:3001/OurTeam');
+      if (response.status === 200)
+          setData(response.data);
+      }
+      fetchData();
+    }, [])
+
   const handleDelete = (id) => {
-    setData(team.items.filter(item => item.id !== id));
+    try{
+      const fetchData = async () => {
+        const response = await axios.delete(`http://localhost:3001/OurTeam/${id}`);
+        if (response.status === 200)
+          setData((prevData) => prevData.filter((member) => member._id !== id));
+        }
+      fetchData();
+    }catch (error){
+      console.error("Error deleting member:", error);
+    }
   };
 
   return (
@@ -47,18 +37,20 @@ const TeamDashboard = () => {
                 <tr>
                     <th>Name</th>
                     <th>Role</th>
-                    <th>Contact</th>
+                    <th>image</th>
+                    <th>description</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                {team.members.map(member => (
-                    <tr key={member.id}>
+                {data.map(member => (
+                    <tr key={member._id}>
                     <td>{member.name}</td>
-                    <td>{member.role}</td>
-                    <td>{member.contact}</td>
+                    <td>{member.position}</td>
+                    <td>{member.imageUrl}</td>
+                    <td>{member.description}</td>
                     <td>
-                        <button className='bg-danger ms-5'>Delete</button>
+                        <button onClick={()=>{handleDelete(member._id)}} className='bg-danger ms-5'>Delete</button>
                     </td>
                     </tr>
                 ))}
