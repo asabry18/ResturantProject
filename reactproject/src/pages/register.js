@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import logo from "../assets/images/header/logo.png";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     password: "",
-    rememberMe: false,
   });
 
   const [errors, setErrors] = useState({}); // For storing validation errors
@@ -29,40 +33,38 @@ function Register() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email address is invalid";
     }
+    if (!formData.phone) newErrors.phone = "Phone number is required";
     if (!formData.password) newErrors.password = "Password is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      // Form is valid, perform the desired action (e.g., submit data)
-      console.log("Form submitted successfully:", formData);
+      // Send Registration request to API
+      const registerRequest = await axios.post("http://localhost:3001/api/register", {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        password: formData.password,
+      });
+
+      // retrieve x-auth-token from response header and store it in localStorage
+      localStorage.setItem("authToken", registerRequest.headers["x-auth-token"]);
+
       // Reset form
       setFormData({ name: "", email: "", password: "", rememberMe: false });
       setErrors({});
+
+      // redirect user to home page
+      navigate("/");
     }
   };
 
   return (
     <div className="page-container">
-      {/* Navbar Section */}
-      <nav className="navbar navbar-expand-lg navbar-light p-2">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <img
-              src={logo} // Using imported logo
-              alt="Logo"
-              width="100"
-              height="30"
-              className="d-inline-block align-text-center justify-content-center"
-            />
-          </a>
-        </div>
-      </nav>
-
       {/* Sign-up Form Section */}
       <div className="container mt-4 c-form">
         <div className="mb-5 text-center">
@@ -82,6 +84,19 @@ function Register() {
               onChange={handleChange}
             />
             {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="phone" className="form-label">Phone</label>
+            <input
+              type="phone"
+              className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
           </div>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">Email</label>
@@ -110,17 +125,6 @@ function Register() {
             {errors.password && <div className="invalid-feedback">{errors.password}</div>}
           </div>
           <button type="submit" className="c-button">Sign Up</button>
-          <div className="form-check mb-3">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="rememberMe"
-              name="rememberMe"
-              checked={formData.rememberMe}
-              onChange={handleChange}
-            />
-            <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
-          </div>
         </form>
       </div>
 
