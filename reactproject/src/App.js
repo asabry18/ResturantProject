@@ -11,7 +11,7 @@ import Sidebar from './dashboard/sidebar';
 import MenuDashboard from './dashboard/menudash';
 import BlogsDashboard from './dashboard/blogdash';
 import TeamDashboard from './dashboard/ourteam';
-import Login from './sign-in&up/Login';
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
@@ -29,6 +29,8 @@ function App() {
           <Route path="blogs" element={<BlogsDashboard />} />
           <Route path="our-team" element={<TeamDashboard />} />
         </Route>
+
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       <Footer/>
       {/* <Login/> */}

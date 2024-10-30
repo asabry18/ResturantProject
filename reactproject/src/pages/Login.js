@@ -1,31 +1,43 @@
 import React, { useState } from "react";
 import logo from "../assets/images/header/logo.png";
 import { Container } from "react-bootstrap";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
-  //const history = useHistory();
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address");
     } else {
-      setEmail(email);
-      setPassword(password);
-      console.log(email, password);
+      if (!password) return;
+
+      const loginRequest = await axios.post("http://localhost:3001/api/login", {
+          email: email,
+          password: password,
+        }
+      );
+
+      setEmail("");
+      setPassword("");
+
+      // retrieve x-auth-token from response header and store it in localStorage
+      localStorage.setItem("authToken", loginRequest.headers["x-auth-token"]);
+
+      // redirect user to home page
+      navigate("/");
     }
   };
-
-  //const handleSignUp = () => {
-  //  history.push('/signup');
-  //};
 
   return (
     <div className="bg">
@@ -33,7 +45,7 @@ const Login = () => {
       <div className="login-container">
         <h2>Sign in </h2>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <div>
             <input
               className="email"
