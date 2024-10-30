@@ -11,6 +11,7 @@ import Sidebar from './dashboard/sidebar';
 import MenuDashboard from './dashboard/menudash';
 import BlogsDashboard from './dashboard/blogdash';
 import TeamDashboard from './dashboard/ourteam';
+import Login from './sign-in&up/Login';
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
         </Route>
       </Routes>
       <Footer/>
+      {/* <Login/> */}
     </div>
   );
 }
