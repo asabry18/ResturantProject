@@ -57,13 +57,6 @@ const BlogsDashboard = () => {
     ],
   };
   
-  
-  
-  
-
-
-
-
   const handleDelete = (id) => {
     setData(data.filter(item => item.id !== id));
   };
