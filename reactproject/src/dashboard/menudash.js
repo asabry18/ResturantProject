@@ -1,7 +1,7 @@
 // src/CrudTable.js
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const MenuDashboard = () => {
   const [menu, setMenu] = useState([]);
@@ -18,13 +18,25 @@ const MenuDashboard = () => {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData(); 
   }, []);
   
-  // const handleDelete = (id) => {
-  //   setMenu(menu.filter(item => item.id !== id));
-  // };
+  const handleDelete = (id) => {
+    try{
+      const fetchData = async () => {
+        const response = await axios.delete("http://localhost:3001/menu",{
+          data: {
+            id
+        }
+      })
+        if (response.status === 200)
+          setMenu((prevData) => prevData.filter((member) => member._id !== id));
+        }
+      fetchData();
+    }catch (error) {
+      console.error("Error deleting member:", error);
+    }
+  };
 
   return (
     <>
@@ -36,6 +48,7 @@ const MenuDashboard = () => {
               <th>Name</th>
               <th>Price</th>
               <th>Category</th>
+              <th>Image</th>
               <th>Rating</th>
               <th>Actions</th>
             </tr>
@@ -46,9 +59,10 @@ const MenuDashboard = () => {
                 <td>{foodMenu.name}</td>
                 <td>{foodMenu.price}</td>
                 <td>{foodMenu.category}</td>
+                <td>{foodMenu.imageUrl}</td>
                 <td>{foodMenu.rating}</td>
                 <td>
-                  <button className='bg-danger ms-5'>Delete</button>
+                  <button onClick={()=>{handleDelete(foodMenu._id)}} className='bg-danger ms-5'>Delete</button>
                 </td>
               </tr>
             ))}
