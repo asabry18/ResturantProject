@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Nav, Container } from "react-bootstrap"; // Import React Bootstrap components
 import { Link } from 'react-router-dom';
-export default function NavBar() {
+export default function NavBar({ isUserAdmin }) {
   return (
     <Navbar  expand="lg" className="p-2">
       <Container>
@@ -26,7 +26,7 @@ export default function NavBar() {
             <Nav.Link as={Link} to="/aboutUs">About Us</Nav.Link>
             <Nav.Link as={Link} to="/contactUs">Contact Us</Nav.Link>
             <Nav.Link as={Link} to="/blogs-Details">Blog Details</Nav.Link>
-            <Nav.Link as={Link} to="/dashboard">Admin Panel</Nav.Link>
+            {isUserAdmin && <Nav.Link as={Link} to="/dashboard">Admin Panel</Nav.Link>}
           </Nav>
           <form className="d-flex" role="search">
             <button className="numButton text-black border-0" type="submit">
@@ -39,4 +39,3 @@ export default function NavBar() {
     </Navbar>
   );
 }
-

@@ -13,10 +13,35 @@ import BlogsDashboard from "./dashboard/blogdash";
 import TeamDashboard from "./dashboard/ourteam";
 import Login from "./pages/Login";
 import Register from "./pages/register";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import ProtectedRoute from "./Components/ProtectedRoute";
 function App() {
+  const [isUserAdmin, setIsUserAdmin] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUserIsAdmin = async () => {
+      const authToken = localStorage.getItem("authToken");
+      if (!authToken) {
+        setIsLoading(false);
+        return false;
+      }
+
+      const validationRequest = await axios.post("http://localhost:3001/api/verifyToken", {
+        token: authToken
+      });
+
+      setIsUserAdmin(validationRequest.data.isAdmin ?? false);
+      setIsLoading(false);
+    }
+
+    fetchUserIsAdmin();
+  }, [])
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar isUserAdmin={isUserAdmin} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
@@ -25,10 +50,13 @@ function App() {
         <Route path="/blogs-details" element={<BlogDetails />} />
         <Route path="/menu" element={<Menu />} />
 
-        <Route path="/dashboard" element={<Sidebar />}>
-          <Route path="menu" element={<MenuDashboard />} />
-          <Route path="blogs" element={<BlogsDashboard />} />
-          <Route path="our-team" element={<TeamDashboard />} />
+        {/* Only allow access to Dashboard for logged in admins */}
+        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
+          <Route path="/dashboard" element={<Sidebar />}>
+            <Route path="menu" element={<MenuDashboard />} />
+            <Route path="blogs" element={<BlogsDashboard />} />
+            <Route path="our-team" element={<TeamDashboard />} />
+          </Route>
         </Route>
 
         <Route path="/login" element={<Login />} />
