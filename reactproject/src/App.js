@@ -7,6 +7,10 @@ import Blogs from './pages/blogs';
 import BlogDetails from './pages/blogDetails';
 import Menu from './pages/menu';
 import Footer from './views/Footer';
+import Sidebar from './dashboard/sidebar';
+import MenuDashboard from './dashboard/menudash';
+import BlogsDashboard from './dashboard/blogdash';
+import TeamDashboard from './dashboard/ourteam';
 function App() {
   return (
     <div className="App">
@@ -18,6 +22,12 @@ function App() {
         <Route path="/blogs" element={<Blogs/>}/>
         <Route path="/blogs-details" element={<BlogDetails/>}/>
         <Route path="/menu" element={<Menu/>}/>
+
+        <Route path="/dashboard" element={<Sidebar />}>
+          <Route path="menu" element={<MenuDashboard />} />
+          <Route path="blogs" element={<BlogsDashboard />} />
+          <Route path="our-team" element={<TeamDashboard />} />
+        </Route>
       </Routes>
       <Footer/>
     </div>

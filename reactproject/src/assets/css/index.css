@@ -675,3 +675,88 @@ footer .subscribeIcons i{
     top: 0;
     position: absolute;
   }
+
+
+  
+/* dashboard styles */
+.offcanvas{
+    --bs-offcanvas-width: 250px;
+    }
+    .sidebar-bg {
+        width: 250px;
+        background-color: #feeee3;
+    }
+    .sidebar-color{
+      color: #c55;
+      transition: 0.5s;
+    }
+    .sidebar-color:hover , .sidebar-color:focus{
+      color: #c54;
+      scale: 1.1;
+    }
+  .sidebar-img {
+    width: 10rem;
+    height: 4rem;
+  }
+  .navbar-toggler {
+    background-color: #fdc3c3;;
+  }
+
+
+
+
+/* src/CrudTable.css */
+.crud-table {
+    max-width: auto;
+    margin: 2rem auto;
+    border: 1px solid #deb5b5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .crud-table button {
+    padding: 7px 7px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .crud-table  button:hover {
+    background-color: #0056b3;
+  }
+  .crud-table table {
+    width: 100%;
+    border-collapse: collapse;
+  } 
+  .crud-table th,.crud-table td {
+    border: 1px solid #f7cece;
+    padding: 8px;
+    text-align: center;
+  }  
+  .crud-table th {
+    background-color: #f7d6d6;
+  }  
+  @media (max-width: 600px) {
+    .crud-table  th,.crud-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    
+    }  
+    .crud-table th {
+      display: none; 
+    }
+    .crud-table tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  .crud-table  td {
+      text-align: center;
+      position: relative;
+    
+    }
+  }
+  
