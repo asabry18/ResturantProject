@@ -25,7 +25,8 @@ export default function NavBar() {
             <Nav.Link as={Link} to="/blogs">Blog</Nav.Link>
             <Nav.Link as={Link} to="/aboutUs">About Us</Nav.Link>
             <Nav.Link as={Link} to="/contactUs">Contact Us</Nav.Link>
-            <Nav.Link as={Link} to="/blogs-Details">Reservation</Nav.Link>
+            <Nav.Link as={Link} to="/blogs-Details">Blog Details</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">Admin Panel</Nav.Link>
           </Nav>
           <form className="d-flex" role="search">
             <button className="numButton text-black border-0" type="submit">

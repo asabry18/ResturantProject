@@ -20,11 +20,7 @@ const BlogsSection = () => {
 
         fetchData(); 
     }, []);
-
-
     
-
-
     return (
         <section className="blogSection py-5">
             <div className="blog">
