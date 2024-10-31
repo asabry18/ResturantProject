@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../assets/images/header/logo.png";
-import { Container } from "react-bootstrap";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
@@ -10,32 +9,20 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address");
-    } else {
-      if (!password) return;
-
+    try {
       const loginRequest = await axios.post("http://localhost:3001/api/login", {
-          email: email,
-          password: password,
-        }
-      );
-
-      setEmail("");
-      setPassword("");
-
-      // retrieve x-auth-token from response header and store it in localStorage
+        email: email,
+        password: password,
+      });
+  
       localStorage.setItem("authToken", loginRequest.headers["x-auth-token"]);
-
-      // redirect user to home page
       navigate("/");
+    } catch (error) {
+      console.error("Login failed:", error.response.data);
+      setEmailError("Invalid email or password");
     }
   };
 
