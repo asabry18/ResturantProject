@@ -5,6 +5,18 @@ import { useEffect, useState } from 'react';
 
 const MenuDashboard = () => {
   const [menu, setMenu] = useState([]);
+    
+  //to show the insert form when click on the button 
+  const [showForm, setShowForm] = useState(false);
+
+  const [newDish, setNewDish] = useState({
+    name: '',
+    price: '',
+    category: '',
+    imageUrl: '',
+    rating: ''
+  });
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +31,7 @@ const MenuDashboard = () => {
       }
     };
     fetchData(); 
-  }, []);
+  }, [menu]);
   
   const handleDelete = (id) => {
     try{
@@ -38,6 +50,24 @@ const MenuDashboard = () => {
     }
   };
 
+  //post data to the database and insert new member
+  const handleInsert = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/menu', newDish);
+      if (response.status === 200) {
+        menu((prevData) => [...prevData, response.data]);
+        setShowForm(false);
+        setNewDish({ 
+          name: '',
+          price: '',
+          category: '',
+          imageUrl: '',
+          rating: '' });
+      }
+    } catch (error) {
+      console.error("Error adding new member:", error);
+    }
+  };
   return (
     <>
       <h1 >Menu Dashboard</h1>
@@ -69,9 +99,46 @@ const MenuDashboard = () => {
           </tbody>
         </table>
           <div className='w-100 d-flex justify-content-center'>
-              <button className='my-4 px-3'>Insert</button>
+            <div className="w-100 d-flex justify-content-center">
+              <button onClick={() => setShowForm(!showForm)} className="my-4 px-3">
+                {showForm ? "Cancel" : "Insert"}
+              </button>
+            </div>
           </div>
       </div>
+
+      {/* Insert Form */}
+      {showForm && (
+          <div className="insert-form mt-4">
+            <h2>Add New Dish</h2>
+            <div>
+              <input type="text" placeholder='Name:' value={newDish.name} onChange={(e) => {
+                  setNewDish({ ...newDish, name: e.target.value })
+                }} />
+            </div>
+            <div>
+              <input type="number" placeholder='price:' value={newDish.price} onChange={(e) => {
+                  setNewDish({ ...newDish, price: e.target.value })
+                }}/>
+            </div>
+            <div>
+              <input type="text" placeholder='category:' value={newDish.category} onChange={(e) => {
+                  setNewDish({ ...newDish, category: e.target.value })
+                }}/>
+            </div>
+            <div>
+              <input type="text" placeholder='Image URL:' value={newDish.imageUrl} onChange={(e) => {
+                  setNewDish({ ...newDish, imageUrl: e.target.value })
+                }} />
+            </div>
+            <div>
+              <input type="number" placeholder='rating:' value={newDish.rating} onChange={(e) => {
+                  setNewDish({ ...newDish, rating: e.target.value })
+                }}/>
+            </div>
+            <button onClick={handleInsert} className="mt-2 px-3">Add new dish</button>
+          </div>
+        )}
     </>
     
   );
