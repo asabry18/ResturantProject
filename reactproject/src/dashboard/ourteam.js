@@ -23,7 +23,7 @@ const TeamDashboard = () => {
         setData(response.data);
     }
     fetchData();
-  }, [])
+  }, [data])
 
   //delete one member
   const handleDelete = (id) => {
@@ -38,21 +38,6 @@ const TeamDashboard = () => {
       console.error("Error deleting member:", error);
     }
   };
-
-  //set inputs data to insert new member
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewMember((prevMember) => ({ ...prevMember, [name]: value }));
-  };
-
-
-  // const handleInputChange = (e) => {
-  //   setNewMember({
-  //     ...newMember,
-  //     [e.target.id]: e.target.value,
-  //   });
-  // };
-
 
   //post data to the database and insert new member
   const handleInsert = async () => {
@@ -108,16 +93,24 @@ const TeamDashboard = () => {
           <div className="insert-form mt-4">
             <h2>Add New Team Member</h2>
             <div>
-              <input type="text" placeholder='Name:' value={newMember.name} onChange={handleInputChange} />
+              <input type="text" placeholder='Name:' value={newMember.name} onChange={(e) => {
+                  setNewMember({ ...newMember, name: e.target.value })
+                }} />
             </div>
             <div>
-              <input type="text" placeholder='Role:' value={newMember.position} onChange={handleInputChange} />
+              <input type="text" placeholder='Role:' value={newMember.position} onChange={(e) => {
+                  setNewMember({ ...newMember, position: e.target.value })
+                }}/>
             </div>
             <div>
-              <input type="text" placeholder='Image URL:' value={newMember.imageUrl} onChange={handleInputChange} />
+              <input type="text" placeholder='Image URL:' value={newMember.imageUrl} onChange={(e) => {
+                  setNewMember({ ...newMember, imageUrl: e.target.value })
+                }} />
             </div>
             <div>
-              <input type="text" placeholder='Description:' value={newMember.description} onChange={handleInputChange} />
+              <input type="text" placeholder='Description:' value={newMember.description} onChange={(e) => {
+                  setNewMember({ ...newMember, description: e.target.value })
+                }}/>
             </div>
             <button onClick={handleInsert} className="mt-2 px-3">Add Member</button>
           </div>
