@@ -28,11 +28,15 @@ function App() {
         return false;
       }
 
-      const validationRequest = await axios.post("http://localhost:3001/api/verifyToken", {
-        token: authToken
-      });
+      try {
+        const validationRequest = await axios.post("http://localhost:3001/api/verifyToken", {
+          token: authToken
+        });
+        setIsUserAdmin(validationRequest.data.isAdmin ?? false);
+      } catch (e) {
+        setIsUserAdmin(false);
+      }
 
-      setIsUserAdmin(validationRequest.data.isAdmin ?? false);
       setIsLoading(false);
     }
 
