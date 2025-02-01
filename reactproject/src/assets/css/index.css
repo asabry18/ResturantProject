@@ -998,3 +998,160 @@ body {
 .insert-form button:hover {
     background-color: #666;
 }
+.contactUsPageContainer {
+    background: var(--Neutral-02, #f9f9f7);
+    display: flex;
+    justify-content: center;
+}
+.contactUsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+
+    padding-top: 75px;
+    padding-bottom: 125px;
+
+    width: 60%;
+}
+
+.contactUsPage .contactTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.contactUsPage .contactTitle h1 {
+    color: var(--Neutral-07, #2c2f24);
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 96px;
+}
+.contactUsPage .contactTitle p {
+    color: var(--Neutral-06, #495460);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 540px;
+}
+.contactUsPage .form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--Neutral-01, #fff);
+    /* 2 */
+    box-shadow: 0px 2.979px 59.574px 0px rgba(0, 0, 0, 0.08);
+}
+.contactUsPage .form .userInput {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contactUsPage .form .userInput .textRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.contactUsPage .form .userInput .labelInput {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+.contactUsPage .form .userInput .labelInput .label {
+    padding: 0px 24px;
+    border-radius: 72px;
+    border: 1px solid var(--Neutral-03, #dbdfd0);
+    background: var(--Neutral-01, #fff);
+    height: 60px;
+}
+.contactUsPage .form .userInput .labelInput .messagelabel {
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(--Neutral-03, #dbdfd0);
+    background: var(--Neutral-01, #fff);
+    padding: 24px;
+    height: 156px;
+}
+.contactUsPage .form .userInput .buttonInput {
+    display: flex;
+    padding: 20px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 118px;
+    background: #ad343e;
+    color: #ffff;
+    border: none;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.contactUsPage .contactInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 90px;
+}
+.contactUsPage .contactInfo .contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contactUsPage .contactInfo .contactContainer h6 {
+    color: var(--Neutral-07, #2c2f24);
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+.contactUsPage .contactInfo .contactContainer p {
+    color: var(--Neutral-07, #2c2f24);
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 200px;
+}
+.contactUsPage .contactInfo .contactContainer p span {
+    color: #ad343e;
+}
+
+@media (max-width: 1024px) {
+    .contactUsPage .form .userInput .textRow {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 768px) {
+    .contactUsPage {
+        width: 90%;
+    }
+    .contactUsPage .contactInfo {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+@media (max-width: 460px) {
+    .contactUsPage .contactTitle h1 {
+        font-size: 40px;
+        line-height: 72px;
+    }
+    .contactUsPage .contactTitle p {
+        font-size: 15px;
+        max-width: 300px;
+    }
+}
