@@ -296,20 +296,23 @@ ul li a {
 .deliverySection .deliveryInfo {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
 }
 .deliverySection .deliveryInfo h1 {
     max-width: 230px;
+    font-family: "Playfair Display";
 }
 .deliverySection .deliveryInfo p {
     max-width: 400px;
-    margin: 0px;
-    font-size: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "DM Sans";
 }
 .deliverySection .deliveryInfo .deliveryOptions {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
 }
 .deliverySection .deliveryInfo .deliveryOptions .option {
     display: flex;
@@ -322,7 +325,11 @@ ul li a {
     height: 20px;
 }
 .deliverySection .deliveryInfo .deliveryOptions .option p {
-    font-size: 17px;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
 }
 
 @media (max-width: 1200px) {

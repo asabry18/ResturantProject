@@ -57,7 +57,7 @@ export default function ContactUs() {
       message: "",
     });
     setSubmissionStatus("success");
-    setTimeout(() => setSubmissionStatus(""), 5000);
+    setTimeout(() => setSubmissionStatus(""), 2000);
   };
 
   return (
