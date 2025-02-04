@@ -1,4 +1,65 @@
+import { useState } from "react";
+
 export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState("");
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name) {
+      errors.name = "Name is required";
+    }
+
+    if (!formData.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email address is invalid";
+    }
+
+    if (!formData.subject) {
+      errors.subject = "Subject is required";
+    }
+    if (!formData.message) {
+      errors.message = "Message is required";
+    } else if (formData.message.length < 3) {
+      errors.message = "Message must be at least 5 characters";
+    }
+
+    return errors;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = validateForm();
+    if (Object.keys(errors).length === 0) {
+      submitForm();
+    } else {
+      setErrors(errors);
+    }
+  };
+  const submitForm = () => {
+    console.log("Form submitted:", formData);
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    setSubmissionStatus("success");
+    setTimeout(() => setSubmissionStatus(""), 5000);
+  };
+
   return (
     <div className="contactUsPageContainer">
       <div className="contactUsPage">
@@ -9,7 +70,10 @@ export default function ContactUs() {
             need to change to create a truly happens.
           </p>
         </div>
-        <form action="submit" className="form">
+        {submissionStatus === "success" && (
+          <div className="succesMessage">Form submitted successfully</div>
+        )}
+        <form action="submit" className="form" onSubmit={handleSubmit}>
           <div className="userInput">
             <div className="textRow">
               <div className="labelInput">
@@ -19,7 +83,12 @@ export default function ContactUs() {
                   id="name"
                   placeholder="Enter your name"
                   className="label"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
+                {errors.name && (
+                  <small className="text-danger">{errors.name}</small>
+                )}
               </div>
               <div className="labelInput">
                 <label htmlFor="email">Email</label>
@@ -28,7 +97,12 @@ export default function ContactUs() {
                   id="email"
                   placeholder="Enter your Email"
                   className="label"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
+                {errors.email && (
+                  <small className="text-danger">{errors.email}</small>
+                )}
               </div>
             </div>
 
@@ -36,10 +110,15 @@ export default function ContactUs() {
               <label htmlFor="Subject">Subject</label>
               <input
                 type="text"
-                id="text"
+                id="subject"
                 placeholder="Write a Subject"
                 className="label"
+                value={formData.subject}
+                onChange={handleInputChange}
               />
+              {errors.subject && (
+                <small className="text-danger">{errors.subject}</small>
+              )}
             </div>
 
             <div className="labelInput">
@@ -49,7 +128,12 @@ export default function ContactUs() {
                 id="message"
                 placeholder="Write a message"
                 className="messagelabel"
+                value={formData.message}
+                onChange={handleInputChange}
               ></textarea>
+              {errors.message && (
+                <small className="text-danger">{errors.message}</small>
+              )}
             </div>
             <button className="buttonInput">Send</button>
           </div>

@@ -1014,7 +1014,16 @@ body {
 
     width: 60%;
 }
-
+.contactUsPage .succesMessage {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .contactUsPage .contactTitle {
     display: flex;
     flex-direction: column;
