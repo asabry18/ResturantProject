@@ -1177,3 +1177,58 @@ body {
         max-width: 300px;
     }
 }
+.serviceSection {
+    display: flex;
+    flex-direction: column;
+    background: var(--Neutral-01, #fff);
+    padding: 50px;
+    gap: 20px;
+}
+.serviceSection h2 {
+    color: var(--Neutral-07, #2c2f24);
+    font-family: "Playfair Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    max-width: 520px;
+}
+.serviceSection .serviceCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.serviceSection .serviceCards .serviceCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.serviceSection .serviceCards .serviceCard img {
+    width: 255px;
+    height: 240px;
+    border-radius: 40px;
+}
+.serviceSection .serviceCards .serviceCard h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.72px;
+    font-family: "DM Sans";
+}
+.serviceSection .serviceCards .serviceCard p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 260px;
+    font-family: "DM Sans";
+}
+@media (max-width: 786px) {
+    .serviceSection .serviceCards {
+        justify-content: center;
+    }
+}
+@media (max-width: 425px) {
+    .serviceSection .serviceCards {
+        justify-content: center;
+    }
+}

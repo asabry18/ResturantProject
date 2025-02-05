@@ -1,13 +1,15 @@
-import BlogsSection from "../Components/BlogData"
+import BlogsSection from "../Components/BlogData";
+import Service from "../Components/Service";
 
-export default function Blogs(){
-    return(
-        <>
-            <div class="AboutUsBg d-flex flex-column justify-content-center align-items-center">
-                <h1>Blog page</h1>
-                <p>Home/Blog</p>
-            </div>
-            <BlogsSection/>
-        </>
-    )
+export default function Blogs() {
+  return (
+    <>
+      <div class="AboutUsBg d-flex flex-column justify-content-center align-items-center">
+        <h1>Blog page</h1>
+        <p>Home/Blog</p>
+      </div>
+      <BlogsSection />
+      <Service />
+    </>
+  );
 }
