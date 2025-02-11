@@ -64,7 +64,7 @@ export default function MenuSection() {
               <Row>
                 {filteredItems.map(item => (
                   <Col sm ='6' md = '4' lg = '3' className='mb-4'>
-                    <Card key={item._id} className="menuCard">
+                    <Card key={item._id} className="menuCardSec">
                       <img src={item.imageUrl} alt={item.name}/>
                       <CardBody className="text-center">
                         <CardTitle>{item.name}</CardTitle>
