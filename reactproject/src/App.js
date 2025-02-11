@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import './assets/css/index.css';
 import Home from "./pages/home";
 import ContactUs from "./pages/contactUs";
 import NavBar from "./views/NavBar";
@@ -16,6 +17,10 @@ import Register from "./pages/register";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import MenuItems from "./pages/menuItems";
+import ReservationPage from "./pages/reservatioPage";
+import HomeMenu from "./Components/homeMenu";
+import OurChief from "./Components/OurCheif";
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +58,10 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs-details" element={<BlogDetails />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menuItems" element={<MenuItems />} />
+        <Route path="/reservation" element={<ReservationPage />} />
+        <Route path="/homemenu" element={<HomeMenu />} />
+        <Route path="/ourChief" element={<OurChief/>} />
 
         {/* Only allow access to Dashboard for logged in admins */}
         <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>

@@ -1,7 +1,7 @@
-nav .collapse form button .custom-icon {
+.numButton .custom-icon {
     color: #c33;
 }
-form .numButton {
+.numButton {
     background-color: transparent;
 }
 .navbar-toggler:focus {
@@ -208,18 +208,18 @@ ul li a {
     height: 2px;
     background-color: #c33;
 }
-.menuCard {
+.menuCardSec {
     border: none !important;
     box-shadow: 0 4px 8px rgba(179, 176, 176, 0.1);
     transition: transform 0.3s;
 }
-.menuCard img {
+.menuCardSec img {
     background-color: #f2f2f2;
     height: 300px;
     padding: 20px;
     border: white 10px solid;
 }
-.menuCard:hover {
+.menuCardSec:hover {
     transform: scale(1.05);
 }
 .rating {

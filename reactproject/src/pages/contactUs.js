@@ -7,13 +7,11 @@ export default function ContactUs() {
     subject: "",
     message: "",
   });
+
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.id]: e.target.value});
   };
 
   const validateForm = () => {
@@ -92,14 +90,7 @@ export default function ContactUs() {
               </div>
               <div className="labelInput">
                 <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Enter your Email"
-                  className="label"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
+                <input type="email" id="email" placeholder="Enter your Email" className="label" value={formData.email} onChange={handleInputChange}/>
                 {errors.email && (
                   <small className="text-danger">{errors.email}</small>
                 )}
