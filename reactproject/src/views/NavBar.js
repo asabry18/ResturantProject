@@ -1,14 +1,14 @@
 import React from "react";
 import logo from "../assets/images/header/logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function NavBar({ isUserAdmin }) {
   return (
+    
     <Navbar expand="lg" className="p-2">
       <Container className="d-flex justify-content-between align-items-center">
+
         <Navbar.Brand as={Link} to="/" className="me-auto">
           <img src={logo} alt="Logo" width="100" height="30" />
         </Navbar.Brand>
@@ -27,9 +27,8 @@ export default function NavBar({ isUserAdmin }) {
         </Navbar.Collapse>
 
         <div className="ms-auto">
-          <button className="numButton text-black border-0" type="button">
-            <FontAwesomeIcon icon={faHeadset} className="fa-xl me-1 custom-icon" />
-            +880 123 465 789
+          <button className="numButton" type="button">
+            <Nav.Link as={Link} to="/reservation">Reservation</Nav.Link>
           </button>
         </div>
       </Container>
