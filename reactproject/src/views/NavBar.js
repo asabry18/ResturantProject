@@ -23,7 +23,7 @@ export default function NavBar({ isUserAdmin }) {
             <Nav.Link as={Link} to="/menu">
               Menu
             </Nav.Link>
-            <Nav.Link as={Link} to="/aboutUs">
+            <Nav.Link as={Link} to="/aboutus">
               About Us
             </Nav.Link>
             <Nav.Link as={Link} to="/service">

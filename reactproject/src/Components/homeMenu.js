@@ -1,6 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import mainDish from '../assets/images/menu/maindish-removebg-preview.png'
 import '../assets/css/menu.css'
+import { Link } from "react-router-dom";
 export default function HomeMenu(){
     return(
         <>
@@ -15,8 +16,12 @@ export default function HomeMenu(){
                                 <h2 className="display-2">Welcome To Our Resturant</h2>
                                 <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div className="d-flex gap-4 menuBtn">
-                                    <Button>Menu</Button>
-                                    <Button>Book A Table</Button>
+                                    <Link to="/menu" className="btn btn-primary">
+                                        Menu
+                                    </Link>
+                                    <Link to="/reservation" className="btn btn-primary">
+                                        Reservtion
+                                    </Link>
                                 </div>
                             </div>
                         </Col>

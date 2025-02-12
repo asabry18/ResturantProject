@@ -1,25 +1,13 @@
 import MoreAboutUs from "../Components/MoreAboutUs.js";
 import OpeningTimes from "../Components/OpeningTimes.js"
-import OurTeam from "../Components/OurTeam.js"
+import OurChief from "../Components/OurCheif.js"
 
 export default function AboutUs(){
     return(
         <>
-            <section class="AboutUsBg d-flex flex-column justify-content-center align-items-center mb-5">
-                <h1>About Us page</h1>
-                <p>Home/about-us</p>
-            </section>
-
             <MoreAboutUs/>
 
-            <section className="CallBg d-flex flex-column justify-content-center align-items-center">
-                <p>CALL TO ACTION</p>
-                <h2 className="text-capitalize">Hire your next candidate on discate</h2>
-                <h6>Call Us: +99 698 569 565</h6>
-                <button className="DiscoverBtn">Discover More</button>
-            </section>
-
-            <OurTeam/>
+            <OurChief/>
 
             <OpeningTimes/>
         </>
