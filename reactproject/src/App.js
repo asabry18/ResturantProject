@@ -1,11 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import './assets/css/index.css';
+import "./assets/css/index.css";
 import Home from "./pages/home";
 import ContactUs from "./pages/contactUs";
 import NavBar from "./views/NavBar";
 import AboutUs from "./pages/aboutUs";
-import Blogs from "./pages/blogs";
-import BlogDetails from "./pages/blogDetails";
 import Menu from "./pages/menu";
 import Footer from "./views/Footer";
 import Sidebar from "./dashboard/sidebar";
@@ -35,19 +33,22 @@ function App() {
       }
 
       try {
-        const validationRequest = await axios.post("http://localhost:3001/api/verifyToken", {
-          token: authToken
-        });
+        const validationRequest = await axios.post(
+          "http://localhost:3001/api/verifyToken",
+          {
+            token: authToken,
+          },
+        );
         setIsUserAdmin(validationRequest.data.isAdmin ?? false);
       } catch (e) {
         setIsUserAdmin(false);
       }
 
       setIsLoading(false);
-    }
+    };
 
     fetchUserIsAdmin();
-  }, [])
+  }, []);
 
   return (
     <div className="App">
@@ -56,16 +57,18 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs-details" element={<BlogDetails />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menuItems" element={<MenuItems />} />
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/homemenu" element={<HomeMenu />} />
-        <Route path="/ourChief" element={<OurChief/>} />
+        <Route path="/ourChief" element={<OurChief />} />
 
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
+        <Route
+          element={
+            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
+          }
+        >
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
             <Route path="blogs" element={<BlogsDashboard />} />
