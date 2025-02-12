@@ -1,10 +1,10 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import mainDish from '../assets/images/menu/maindish-removebg-preview.png'
-
+import '../assets/css/menu.css'
 export default function HomeMenu(){
     return(
         <>
-            <section>
+            <section className="homeMenu pb-5">
                 <Container>
                     <Row className="align-items-center">
                         <Col md = '6'>

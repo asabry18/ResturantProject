@@ -6,7 +6,7 @@ import '../assets/css/ourChief.css'
 export default function OurChief() {
   return (
     <>
-        <section>
+        <section className="Chief my-5">
             <Container>
                 <Row className="align-items-center">
                     <Col md = '6'>

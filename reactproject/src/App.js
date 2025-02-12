@@ -18,9 +18,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import MenuItems from "./pages/menuItems";
-import ReservationPage from "./pages/reservatioPage";
+import ReservationPage from "./pages/reservationPage";
 import HomeMenu from "./Components/homeMenu";
 import OurChief from "./Components/OurCheif";
+
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
