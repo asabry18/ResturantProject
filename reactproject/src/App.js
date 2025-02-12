@@ -19,6 +19,7 @@ import MenuItems from "./pages/menuItems";
 import ReservationPage from "./pages/reservationPage";
 import HomeMenu from "./Components/homeMenu";
 import OurChief from "./Components/OurCheif";
+import ServicePage from "./pages/servicePage";
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
@@ -57,6 +58,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/service" element={<ServicePage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menuItems" element={<MenuItems />} />
         <Route path="/reservation" element={<ReservationPage />} />
