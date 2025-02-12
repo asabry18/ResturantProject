@@ -26,6 +26,9 @@ export default function NavBar({ isUserAdmin }) {
             <Nav.Link as={Link} to="/aboutUs">
               About Us
             </Nav.Link>
+            <Nav.Link as={Link} to="/service">
+              Service
+            </Nav.Link>
             <Nav.Link as={Link} to="/contactUs">
               Contact Us
             </Nav.Link>

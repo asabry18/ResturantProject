@@ -7,7 +7,7 @@ const Service = () => {
   return (
     <>
       <div className="serviceSection">
-        <h2>We also offer unique services for your events</h2>
+        <h2>We offer unique services for your events</h2>
         <div className="serviceCards">
           <div className="serviceCard">
             <img src={birthday} alt="birthday" />
