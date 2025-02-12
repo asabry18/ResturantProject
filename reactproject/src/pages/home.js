@@ -1,11 +1,9 @@
 import ControlledCarousel from "../Components/Slider"
 import CardSection from "../Components/QualifyCards"
 import MoreAboutUs from "../Components/MoreAboutUs"
-import MenuSection from "../Components/MenuSection"
 import DownloadInfo from "../Components/DownloadInfo"
 import OpeningTimes from "../Components/OpeningTimes"
-import OurTeam from "../Components/OurTeam"
-import BlogsSection from "../Components/BlogData"
+import MenuItems from "./menuItems"
 
 export default function Home(){
     return(
@@ -15,11 +13,9 @@ export default function Home(){
             </div>
             <CardSection/>
             <MoreAboutUs/>
-            <MenuSection/>
+            <MenuItems/>
             <DownloadInfo/>
             <OpeningTimes/>
-            <OurTeam/>
-            <BlogsSection/>
         </>
     )
 }

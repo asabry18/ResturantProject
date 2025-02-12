@@ -4,6 +4,7 @@ import dish2 from "../assets/images/menu/dish3.png"
 import dish3 from "../assets/images/menu/dish4.png"
 import dish4 from "../assets/images/menu/dish5.png"
 import {Col} from 'react-bootstrap'
+import '../assets/css/menu.css'
 const menuItems = [
   { id: 1, image: dish1, itemName: "Lumpia with Sauce", price: 12, itemDescription: "Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor" },
   { id: 2, image: dish2, itemName: "Fish and Veggie", price: 15, itemDescription: "Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor" },
@@ -14,16 +15,17 @@ const menuItems = [
 export default function MenuItems() {
   return (
     <>
-
-
       <section className="menuContainer">
-        <div className="container">
-          <h2 className="display-2">
-            Our Speacial Dishes
-          </h2>
-        </div>
         <section className="container py-4">
-          <div className="row">
+          <div className="text-center py-5">
+            <h2 className="display-2">
+              Our Speacial Dishes
+            </h2>
+            <p className="lead m-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </p>
+          </div>
+          <div className="row my-5">
             {menuItems.map((item) => (
               <Col md='3' className="menuCol m-auto" key={item.id}>
                 <MenuItem itemName={item.itemName} itemDescription={item.itemDescription} price={item.price} image={item.image}/>
