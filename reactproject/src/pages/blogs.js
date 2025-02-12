@@ -1,5 +1,4 @@
 import BlogsSection from "../Components/BlogData";
-import Service from "../Components/Service";
 
 export default function Blogs() {
   return (
@@ -9,7 +8,6 @@ export default function Blogs() {
         <p>Home/Blog</p>
       </div>
       <BlogsSection />
-      <Service />
     </>
   );
 }
