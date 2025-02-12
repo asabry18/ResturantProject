@@ -27,7 +27,7 @@ export default function MenuItems() {
           </div>
           <div className="row my-5">
             {menuItems.map((item) => (
-              <Col md='3' className="menuCol m-auto" key={item.id}>
+              <Col sm = '12' md='3' className="menuCol m-auto" key={item.id}>
                 <MenuItem itemName={item.itemName} itemDescription={item.itemDescription} price={item.price} image={item.image}/>
               </Col>
             ))}

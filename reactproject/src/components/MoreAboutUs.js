@@ -2,6 +2,7 @@ import waiter from'../assets/images/MoreAboutUs/waiter.png'
 import experience from '../assets/images/MoreAboutUs/experience.png'
 import booking from '../assets/images/MoreAboutUs/booking.png'
 import {Col, Container, Row} from "react-bootstrap"
+import { Link } from 'react-router-dom'
 export default function MoreAboutUs(){
     return(
         <>
@@ -36,7 +37,9 @@ export default function MoreAboutUs(){
                                         <p>Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Maxime, deserunt.</p>
                                     </div>
                                 </div>
-                                <button className="AboutUsBtn">About Us</button>
+                                <Link to="/aboutus" className="AboutUsBtn btn btn-primary">
+                                    About Us
+                                </Link>
                             </div>
                         </Col>
                     </Row>

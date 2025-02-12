@@ -4,7 +4,6 @@ import Home from "./pages/home";
 import ContactUs from "./pages/contactUs";
 import NavBar from "./views/NavBar";
 import AboutUs from "./pages/aboutUs";
-import Menu from "./pages/menu";
 import Footer from "./views/Footer";
 import Sidebar from "./dashboard/sidebar";
 import MenuDashboard from "./dashboard/menudash";
@@ -58,9 +57,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
+<<<<<<< Updated upstream
         <Route path="/service" element={<ServicePage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menuItems" element={<MenuItems />} />
+=======
+        <Route path="/menu" element={<MenuItems />} />
+>>>>>>> Stashed changes
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/homemenu" element={<HomeMenu />} />
         <Route path="/ourChief" element={<OurChief />} />

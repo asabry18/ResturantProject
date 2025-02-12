@@ -2,6 +2,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import chief from '../assets/images/OurTeam/chief.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheckCircle} from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 import '../assets/css/ourChief.css'
 export default function OurChief() {
   return (
@@ -40,8 +41,12 @@ export default function OurChief() {
                                 </Col>
                             </Row>
                             <div className="d-flex gap-4 menuBtn">
-                                <Button>Menu</Button>
-                                <Button>Book A Table</Button>
+                                <Link to="/menu" className="btn btn-primary">
+                                    Menu
+                                </Link>
+                                <Link to="/reservation" className="btn btn-primary">
+                                    Reservtion
+                                </Link>
                             </div>
                         </div>
                     </Col>

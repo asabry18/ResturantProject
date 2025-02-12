@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import chicken1 from "../assets/images/slider/first-slider.png";
 import chicken2 from "../assets/images/slider/baner1.png";
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 
 export default function ControlledCarousel() {
@@ -32,7 +33,9 @@ export default function ControlledCarousel() {
                         adipisicin
                         </p>
                         <div class="d-flex pt-4">
-                            <button className="btns order-btn">Order Now</button>
+                        <Link to="/menu" className="btns order-btn">
+                            Order Now
+                        </Link>
                             <span className="d-flex ps-4">
                                 <button className="btns watch-btn mx-2">
                                     <FontAwesomeIcon icon={faPlay} className="opacity-75" />
@@ -66,7 +69,9 @@ export default function ControlledCarousel() {
                     adipisicin
                     </p>
                     <div class="d-flex pt-4">
-                        <button className="btns order-btn">Order Now</button>
+                        <Link to="/menu" className="btns order-btn">
+                            Order Now
+                        </Link>
                         <span className="d-flex ps-4">
                             <button className="btns watch-btn mx-2">
                             <FontAwesomeIcon icon={faPlay} className="opacity-75" />
@@ -100,7 +105,9 @@ export default function ControlledCarousel() {
                     adipisicin
                     </p>
                     <div class="d-flex pt-4">
-                        <button className="btns order-btn">Order Now</button>
+                        <Link to="/menu" className="btns order-btn">
+                            Order Now
+                        </Link>
                         <span className="d-flex ps-4">
                             <button className="btns watch-btn mx-2">
                                 <FontAwesomeIcon icon={faPlay} className="opacity-75" />
