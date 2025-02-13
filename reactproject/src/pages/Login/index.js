@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/images/header/logo.png";
+import logo from "../../assets/images/header/logo.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
@@ -9,7 +9,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
 
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -17,7 +16,7 @@ const Login = () => {
         email: email,
         password: password,
       });
-  
+
       localStorage.setItem("authToken", loginRequest.headers["x-auth-token"]);
       navigate("/");
     } catch (error) {
@@ -56,7 +55,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </form>
         <p>
-          don`t have an account ? <Link to={'/register'}>Sign up</Link>
+          don`t have an account ? <Link to={"/register"}>Sign up</Link>
         </p>
       </div>
     </div>
