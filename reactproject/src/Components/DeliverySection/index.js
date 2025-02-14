@@ -1,5 +1,4 @@
-import React from "react";
-
+import "./deliverySection.css"
 const DeliverySection = () => {
   return (
     <section className="deliverySection">

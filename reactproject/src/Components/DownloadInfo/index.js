@@ -1,8 +1,8 @@
-import PlayStore from "../assets/images/downloadInfo/play-store.png";
-import AppleStore from "../assets/images/downloadInfo/apple.png";
-import App1 from "../assets/images/downloadInfo/app-1.png";
-import App2 from "../assets/images/downloadInfo/app-2.png";
-import DeliverySection from "./deliverySection";
+import PlayStore from "../../assets/images/downloadInfo/play-store.png";
+import AppleStore from "../../assets/images/downloadInfo/apple.png";
+import App1 from "../../assets/images/downloadInfo/app-1.png";
+import App2 from "../../assets/images/downloadInfo/app-2.png";
+import "./downloadInfo.css"
 export default function DownloadInfo() {
   return (
     <>
@@ -38,8 +38,6 @@ export default function DownloadInfo() {
           </div>
         </div>
       </section>
-
-      <DeliverySection />
     </>
   );
 }

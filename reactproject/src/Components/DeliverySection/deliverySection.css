@@ -1,0 +1,93 @@
+.deliverySection {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding: 50px;
+    background-color: #f9f9f7;
+    justify-content: center;
+    align-items: center;
+}
+
+.deliverySection .deliveryInfoPhoto img {
+    max-width: 745px;
+    height: 400px;
+}
+.deliverySection .deliveryInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.deliverySection .deliveryInfo h1 {
+    max-width: 230px;
+    font-family: "Playfair Display";
+}
+.deliverySection .deliveryInfo p {
+    max-width: 400px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "DM Sans";
+}
+.deliverySection .deliveryInfo .deliveryOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.deliverySection .deliveryInfo .deliveryOptions .option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+.deliverySection .deliveryInfo .deliveryOptions .option img {
+    width: 20px;
+    height: 20px;
+}
+.deliverySection .deliveryInfo .deliveryOptions .option p {
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+}
+@media (max-width: 1200px) {
+    .deliverySection .deliveryInfoPhoto img {
+        max-width: 745px;
+        height: 330px;
+    }
+    .deliverySection .deliveryInfo p {
+        max-width: 400px;
+        margin: 0px;
+        font-size: 16px;
+    }
+    .deliverySection .deliveryInfo .deliveryOptions .option p {
+        font-size: 13px;
+    }
+}
+@media (max-width: 768px) {
+    .deliverySection .deliveryInfoPhoto img {
+        max-width: 745px;
+        height: 200px;
+    }
+    .deliverySection .deliveryInfo p {
+        max-width: 400px;
+        margin: 0px;
+        font-size: 10px;
+    }
+    .deliverySection .deliveryInfo .deliveryOptions .option p {
+        font-size: 10px;
+    }
+    .deliverySection .deliveryInfo h1 {
+        max-width: 237px;
+        font-size: 21px;
+    }
+    .deliverySection {
+        gap: 14px;
+    }
+
+}
+@media (max-width: 480px) {
+    .deliverySection {
+        flex-direction: column;
+    }
+}

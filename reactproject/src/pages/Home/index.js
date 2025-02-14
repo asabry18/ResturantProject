@@ -3,10 +3,11 @@ import CardSection from "../../Components/QualifyCards";
 import MoreAboutUs from "../../Components/MoreAboutUs";
 import DownloadInfo from "../../Components/DownloadInfo";
 import OpeningTimes from "../../Components/OpeningTimes";
-import MenuItems from "../MenuItems";
-import HomeMenu from "../../Components/homeMenu";
-import OurChief from "../../Components/OurCheif";
 import Testimonials from "../../Components/Testimonials";
+import Menu from "../Menu";
+import OurChief from "../../Components/OurChief";
+import DeliverySection from "../../Components/DeliverySection";
+import HomeMenu from "../../Components/HomeMenu";
 
 export default function Home() {
   return (
@@ -16,9 +17,10 @@ export default function Home() {
       </div>
       <CardSection />
       <MoreAboutUs />
-      <MenuItems />
+      <Menu />
       <HomeMenu />
       <DownloadInfo />
+      <DeliverySection/>
       <OurChief />
       <Testimonials />
       <OpeningTimes />

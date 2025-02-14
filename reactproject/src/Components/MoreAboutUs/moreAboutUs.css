@@ -1,0 +1,27 @@
+.AboutUsSec .AboutUsTxt h5 {
+    color: #c33;
+}
+.AboutUsSec .AboutUsTxt h2 {
+    font-weight: 700;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .iconTxt h6 {
+    font-weight: 700;
+}
+.AboutUsSec .AboutUsBtn {
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #c33;
+    color: #ffff;
+}
+.AboutUsSec .AboutUsTxt {
+    margin-left: 50px;
+}
+.AboutUsSec .AboutUsBtn:hover {
+    background-color: #666;
+}
+.AboutUsSec .AboutUsTxt .iconsSec .icon {
+    width: 40px;
+    margin-right: 30px;
+}

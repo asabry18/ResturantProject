@@ -1,16 +1,16 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
-import chief from '../assets/images/OurTeam/chief.png'
+import { Col, Container, Row } from "react-bootstrap";
+import chief from '../../assets/images/OurTeam/chief.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
-import '../assets/css/ourChief.css'
+import './ourChief.css'
 export default function OurChief() {
   return (
     <>
         <section className="Chief my-5">
             <Container>
                 <Row className="align-items-center">
-                    <Col md = '6'>
+                    <Col sm = '6' md = '6'>
                         <div className="d-flex flex-column w-75">
                             <h2 className="display-2">Our Expert Chiefs</h2>
                             <p className="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -50,7 +50,7 @@ export default function OurChief() {
                             </div>
                         </div>
                     </Col>
-                    <Col md = '6'>
+                    <Col sm = '6' md = '6'>
                         <img src={chief} alt="main dish"/>
                     </Col>
                 </Row>

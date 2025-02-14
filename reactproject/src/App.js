@@ -12,12 +12,9 @@ import Register from "./pages/Register";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProtectedRoute from "./Components/ProtectedRoute";
-import MenuItems from "./pages/MenuItems";
-import ReservationPage from "./pages/ ReservationPage";
-import HomeMenu from "./Components/homeMenu";
-import OurChief from "./Components/OurCheif";
 import ServicePage from "./pages/ServicePage";
 import Menu from "./pages/Menu";
+import ReservationPage from "./pages/ReservationPage";
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
@@ -57,18 +54,10 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/service" element={<ServicePage />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/menu" element={<MenuItems />} />
+        <Route path="/menu" element={<Menu/>} />
         <Route path="/reservation" element={<ReservationPage />} />
-        <Route path="/homemenu" element={<HomeMenu />} />
-        <Route path="/ourChief" element={<OurChief />} />
-
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route
-          element={
-            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
-          }
-        >
+        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
           </Route>
