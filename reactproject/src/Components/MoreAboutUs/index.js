@@ -1,8 +1,9 @@
-import waiter from'../assets/images/MoreAboutUs/waiter.png'
-import experience from '../assets/images/MoreAboutUs/experience.png'
-import booking from '../assets/images/MoreAboutUs/booking.png'
+import waiter from'../../assets/images/MoreAboutUs/waiter.png'
+import experience from '../../assets/images/MoreAboutUs/experience.png'
+import booking from '../../assets/images/MoreAboutUs/booking.png'
 import {Col, Container, Row} from "react-bootstrap"
 import { Link } from 'react-router-dom'
+import "./moreAboutUs.css"
 export default function MoreAboutUs(){
     return(
         <>

@@ -1,5 +1,5 @@
 import { Card, CardBody, CardImg, CardText, CardTitle } from "react-bootstrap";
-import "../assets/css/menu.css";
+import "../pages/Menu/Menu.css";
 
 export default function MenuItem({ itemName, itemDescription, price, image }) {
   return (

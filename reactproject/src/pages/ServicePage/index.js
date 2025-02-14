@@ -1,4 +1,4 @@
-import DeliverySection from "../../Components/deliverySection";
+import DeliverySection from "../../Components/DeliverySection";
 import CardSection from "../../Components/QualifyCards";
 import Service from "../../Components/Service";
 import Testimonials from "../../Components/Testimonials";
