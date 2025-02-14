@@ -54,10 +54,14 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/service" element={<ServicePage />} />
-        <Route path="/menu" element={<Menu/>} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/reservation" element={<ReservationPage />} />
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
+        <Route
+          element={
+            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
+          }
+        >
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
           </Route>
