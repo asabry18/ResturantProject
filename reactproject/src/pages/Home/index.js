@@ -20,7 +20,7 @@ export default function Home() {
       <Menu />
       <HomeMenu />
       <DownloadInfo />
-      <DeliverySection/>
+      <DeliverySection />
       <OurChief />
       <Testimonials />
       <OpeningTimes />

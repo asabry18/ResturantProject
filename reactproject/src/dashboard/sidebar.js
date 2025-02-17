@@ -3,7 +3,7 @@ import { Navbar, Nav, Offcanvas, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import logo from '../assets/images/dashborad/logo.png';
+import logo from "../assets/images/dashborad/logo.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -21,8 +21,8 @@ export default function Sidebar() {
 
   const handleLogout = () => {
     localStorage.removeItem("authToken"); // Remove token
-    setIsAuthenticated(false);            // Update auth state
-    navigate("/login");                   // Redirect to login page
+    setIsAuthenticated(false); // Update auth state
+    navigate("/login"); // Redirect to login page
   };
 
   return (
@@ -30,10 +30,24 @@ export default function Sidebar() {
       {isAuthenticated && (
         <div className="d-none d-md-flex flex-column sidebar-bg p-3">
           <img className="sidebar-img my-3" src={logo} alt="logo" />
-          <Nav className='flex-column flex-grow-1 p-2'>
-            <Nav.Link as={Link} to="/dashboard/menu" className="sidebar-color">Menu</Nav.Link>
-            <Nav.Link as={Link} to="/dashboard/blogs" className="sidebar-color">Blogs</Nav.Link>
-            <Nav.Link as={Link} to="/dashboard/our-team" className="sidebar-color">Our Team</Nav.Link>
+          <Nav className="flex-column flex-grow-1 p-2">
+            <Nav.Link as={Link} to="/dashboard/menu" className="sidebar-color">
+              Menu
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/dashboard/testimonials"
+              className="sidebar-color"
+            >
+              Testimonials
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/dashboard/our-team"
+              className="sidebar-color"
+            >
+              Our Team
+            </Nav.Link>
           </Nav>
           <button className="btn btn-danger" onClick={handleLogout}>
             <FontAwesomeIcon icon={faSignOutAlt} /> Logout
@@ -43,20 +57,45 @@ export default function Sidebar() {
 
       <Navbar expand="md" className="d-md-none">
         <Container>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleSidebar} />
+          <Navbar.Toggle
+            aria-controls="offcanvasNavbar"
+            onClick={toggleSidebar}
+          />
         </Container>
       </Navbar>
 
-      <Offcanvas show={show} onHide={toggleSidebar} className="d-md-none sidebar-bg">
+      <Offcanvas
+        show={show}
+        onHide={toggleSidebar}
+        className="d-md-none sidebar-bg"
+      >
         <Offcanvas.Header closeButton>
           <img src={logo} alt="logo" />
         </Offcanvas.Header>
         <Offcanvas.Body>
           {isAuthenticated && (
             <Nav className="flex-column">
-              <Nav.Link as={Link} to="/dashboard/menu" className="sidebar-color">Menu</Nav.Link>
-              <Nav.Link as={Link} to="/dashboard/blogs" className="sidebar-color">Blogs</Nav.Link>
-              <Nav.Link as={Link} to="/dashboard/our-team" className="sidebar-color">Our Team</Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/dashboard/menu"
+                className="sidebar-color"
+              >
+                Menu
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/dashboard/blogs"
+                className="sidebar-color"
+              >
+                Blogs
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/dashboard/our-team"
+                className="sidebar-color"
+              >
+                Our Team
+              </Nav.Link>
               <Nav.Link className="sidebar-color mt-5 " onClick={handleLogout}>
                 <FontAwesomeIcon icon={faSignOutAlt} /> Logout
               </Nav.Link>

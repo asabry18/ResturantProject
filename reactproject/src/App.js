@@ -15,7 +15,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import ServicePage from "./pages/ServicePage";
 import Menu from "./pages/Menu";
 import ReservationPage from "./pages/ReservationPage";
-import BlogsDashboard from "./dashboard/blogdash";
+import TestimonialDash from "./dashboard/ TestimonialDash";
 import TeamDashboard from "./dashboard/ourteam";
 
 function App() {
@@ -27,15 +27,13 @@ function App() {
       const authToken = localStorage.getItem("authToken");
       if (!authToken) {
         setIsLoading(false);
-        return false;
+        return;
       }
 
       try {
         const validationRequest = await axios.post(
           "http://localhost:3001/api/verifyToken",
-          {
-            token: authToken,
-          },
+          { token: authToken },
         );
         setIsUserAdmin(validationRequest.data.isAdmin ?? false);
       } catch (e) {
@@ -58,12 +56,17 @@ function App() {
         <Route path="/service" element={<ServicePage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservation" element={<ReservationPage />} />
+
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
+        <Route
+          element={
+            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
+          }
+        >
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
-            <Route path="our-team" element={<BlogsDashboard />} />
-            <Route path="blogs" element={<TeamDashboard />} />
+            <Route path="testimonials" element={<TestimonialDash />} />
+            <Route path="our-team" element={<TeamDashboard />} />
           </Route>
         </Route>
 
