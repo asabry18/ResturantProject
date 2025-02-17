@@ -1,15 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-  faSkype,
-} from "@fortawesome/free-brands-svg-icons";
+import {faLocationDot,faEnvelope,faPhone,} from "@fortawesome/free-solid-svg-icons";
+import {faFacebook,faTwitter,faInstagram,faSkype,} from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { Container, Row, Col } from "react-bootstrap";
 import FooterLogo from "../../assets/images/footer/logo-white.png";
@@ -19,6 +10,7 @@ import soup from "../../assets/images/footer/soup.jpg";
 import eggs from "../../assets/images/footer/eggs.jpeg";
 import salad from "../../assets/images/footer/salad.png";
 import burger from "../../assets/images/footer/burger.jpg";
+import './Footer.css'
 export default function Footer() {
   return (
     <>

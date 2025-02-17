@@ -3,7 +3,7 @@ import image1 from "../../assets/images/QualityCards/1.jpg";
 import image2 from "../../assets/images/QualityCards/2.jpg";
 import image3 from "../../assets/images/QualityCards/3.jpg";
 import image4 from "../../assets/images/QualityCards/4.jpg";
-
+import "./QualifyCards.css"
 const CardSection = () => {
   // Card data with imported images
   const cards = [

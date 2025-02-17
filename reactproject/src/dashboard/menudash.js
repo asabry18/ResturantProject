@@ -12,9 +12,9 @@ const MenuDashboard = () => {
   const [newDish, setNewDish] = useState({
     name: '',
     price: '',
+    description: '',
     category: '',
-    imageUrl: '',
-    rating: ''
+    imageUrl: ''
   });
 
 
@@ -60,9 +60,9 @@ const MenuDashboard = () => {
         setNewDish({ 
           name: '',
           price: '',
+          description: '',
           category: '',
-          imageUrl: '',
-          rating: '' });
+          imageUrl: '' });
       }
     } catch (error) {
       console.error("Error adding new member:", error);
@@ -77,9 +77,9 @@ const MenuDashboard = () => {
             <tr>
               <th>Name</th>
               <th>Price</th>
+              <th>Description</th>
               <th>Category</th>
               <th>Image</th>
-              <th>Rating</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -88,9 +88,9 @@ const MenuDashboard = () => {
               <tr key={foodMenu.id}>
                 <td>{foodMenu.name}</td>
                 <td>{foodMenu.price}</td>
+                <td>{foodMenu.description}</td>
                 <td>{foodMenu.category}</td>
                 <td>{foodMenu.imageUrl}</td>
-                <td>{foodMenu.rating}</td>
                 <td>
                   <button onClick={()=>{handleDelete(foodMenu._id)}} className='bg-danger ms-5'>Delete</button>
                 </td>
@@ -122,6 +122,11 @@ const MenuDashboard = () => {
                 }}/>
             </div>
             <div>
+              <input type="text" placeholder='description:' value={newDish.description} onChange={(e) => {
+                  setNewDish({ ...newDish, description: e.target.value })
+                }}/>
+            </div>
+            <div>
               <input type="text" placeholder='category:' value={newDish.category} onChange={(e) => {
                   setNewDish({ ...newDish, category: e.target.value })
                 }}/>
@@ -130,11 +135,6 @@ const MenuDashboard = () => {
               <input type="text" placeholder='Image URL:' value={newDish.imageUrl} onChange={(e) => {
                   setNewDish({ ...newDish, imageUrl: e.target.value })
                 }} />
-            </div>
-            <div>
-              <input type="number" placeholder='rating:' value={newDish.rating} onChange={(e) => {
-                  setNewDish({ ...newDish, rating: e.target.value })
-                }}/>
             </div>
             <button onClick={handleInsert} className="mt-2 px-3">Add new dish</button>
           </div>

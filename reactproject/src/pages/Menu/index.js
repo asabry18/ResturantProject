@@ -19,8 +19,7 @@ const menuItems = [
     itemName: "Lumpia with Sauce",
     category: "Vegan",
     price: 12,
-    itemDescription:
-      "Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor",
+    itemDescription:"Lorem ipsum dolor sit, consectetur adipiscing elit, sed do eiusmod tempor",
   },
   {
     id: 2,

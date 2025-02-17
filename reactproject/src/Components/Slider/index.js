@@ -7,7 +7,7 @@ import chicken1 from "../../assets/images/slider/first-slider.png";
 import chicken2 from "../../assets/images/slider/baner1.png";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
+import "./Slider.css"
 export default function ControlledCarousel() {
   const [index, setIndex] = useState(0);
 
@@ -98,13 +98,13 @@ export default function ControlledCarousel() {
           </Row>
           <ul className="social-links d-flex list-unstyled mt-5 ">
             <li className="me-5">
-              <a href="">Facebook</a>
+              <a href="home.html">Facebook</a>
             </li>
             <li className="me-5">
-              <a href=""> Instagram</a>
+              <a href="home.html"> Instagram</a>
             </li>
             <li className="me-5">
-              <a href="">Twitter</a>
+              <a href="home.html">Twitter</a>
             </li>
           </ul>
         </Container>
@@ -145,13 +145,13 @@ export default function ControlledCarousel() {
           </Row>
           <ul className="social-links list-unstyled d-flex  mt-5 ">
             <li className="me-5">
-              <a href="">Facebook</a>
+              <a href="home.html">Facebook</a>
             </li>
             <li className="me-5">
-              <a href="">Instagram </a>
+              <a href="home.html">Instagram </a>
             </li>
             <li className="me-5">
-              <a href="">Twitter</a>
+              <a href="home.html">Twitter</a>
             </li>
           </ul>
         </Container>
