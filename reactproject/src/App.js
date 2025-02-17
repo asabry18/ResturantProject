@@ -15,6 +15,8 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import ServicePage from "./pages/ServicePage";
 import Menu from "./pages/Menu";
 import ReservationPage from "./pages/ReservationPage";
+import BlogsDashboard from "./dashboard/blogdash";
+import TeamDashboard from "./dashboard/ourteam";
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
@@ -57,13 +59,11 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservation" element={<ReservationPage />} />
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route
-          element={
-            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
-          }
-        >
+        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
+            <Route path="our-team" element={<BlogsDashboard />} />
+            <Route path="blogs" element={<TeamDashboard />} />
           </Route>
         </Route>
 

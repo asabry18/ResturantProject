@@ -1,0 +1,33 @@
+
+.featureBox {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    transition:
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+.featureBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.featureBox .icon img {
+    width: 50px;
+    height: 50px;
+}
+.featureBox h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.featureBox p {
+    color: #777;
+    font-size: 0.875rem;
+}
+.featureBox a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 15px;
+    display: inline-block;
+}

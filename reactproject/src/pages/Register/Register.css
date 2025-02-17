@@ -1,0 +1,85 @@
+
+html,
+body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+.page-container.container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+.page-container .c-form {
+    max-width: 450px; /* Set a max width for the form */
+    width: 100%; /* Make the container responsive */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.invalid-feedback {
+    display: block; /* Ensure the error message is displayed */
+}
+
+.c-button {
+    width: 100%;
+    padding: 7px 0px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: white;
+    background-color: #c55;
+    border: none;
+}
+
+/* insert input style */
+.insert-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.insert-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.insert-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.insert-form input[type="text"]:focus {
+    border-color: #c55;
+    outline: none;
+}
+
+.insert-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.insert-form button:hover {
+    background-color: #666;
+}

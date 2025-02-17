@@ -1,0 +1,16 @@
+.numButton {
+    border: 2px solid #c33;
+    background-color: transparent;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: #c33;
+}
+.numButton:hover {
+    background-color: #c33;
+    color: white;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}

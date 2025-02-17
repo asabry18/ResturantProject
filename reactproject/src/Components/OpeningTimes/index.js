@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import {Container, Row} from "react-bootstrap"
+import "./OpeningTimes.css"
 export default function OpeningTimes(){
     return (
         <>

@@ -3,6 +3,7 @@ import kebab from "../../assets/images/service/happy-man.png";
 import birthday from "../../assets/images/service/birthday.png";
 import freinds from "../../assets/images/service/group-friends.png";
 import caterings from "../../assets/images/service/caterings.png";
+import "./Service.css"
 const Service = () => {
   return (
     <>

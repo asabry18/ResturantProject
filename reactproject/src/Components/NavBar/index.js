@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/images/header/logo.png";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import "./NavBar.css"
 export default function NavBar({ isUserAdmin }) {
   return (
     <Navbar expand="lg" className="p-2">
