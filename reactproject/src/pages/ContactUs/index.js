@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ContactUs.css"
+import "./ContactUs.css";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -11,8 +11,10 @@ export default function ContactUs() {
 
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [apiError, setApiError] = useState("");
+
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value});
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   const validateForm = () => {
@@ -20,43 +22,61 @@ export default function ContactUs() {
     if (!formData.name) {
       errors.name = "Name is required";
     }
-
     if (!formData.email) {
       errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "Email address is invalid";
     }
-
     if (!formData.subject) {
       errors.subject = "Subject is required";
     }
     if (!formData.message) {
       errors.message = "Message is required";
-    } else if (formData.message.length < 3) {
+    } else if (formData.message.length < 5) {
       errors.message = "Message must be at least 5 characters";
     }
-
     return errors;
   };
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errors = validateForm();
     if (Object.keys(errors).length === 0) {
-      submitForm();
+      await submitForm();
     } else {
       setErrors(errors);
     }
   };
-  const submitForm = () => {
-    console.log("Form submitted:", formData);
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setSubmissionStatus("success");
-    setTimeout(() => setSubmissionStatus(""), 2000);
+
+  const submitForm = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/contact-us", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setApiError(errorData.error || "Something went wrong");
+      } else {
+        const data = await response.json();
+        console.log("Response from API:", data);
+        setSubmissionStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setErrors({});
+        setApiError("");
+        setTimeout(() => setSubmissionStatus(""), 2000);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setApiError("Server error, please try again later");
+    }
   };
 
   return (
@@ -72,6 +92,7 @@ export default function ContactUs() {
         {submissionStatus === "success" && (
           <div className="succesMessage">Form submitted successfully</div>
         )}
+        {apiError && <div className="errorMessage">{apiError}</div>}
         <form action="submit" className="form" onSubmit={handleSubmit}>
           <div className="userInput">
             <div className="textRow">
@@ -91,7 +112,14 @@ export default function ContactUs() {
               </div>
               <div className="labelInput">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your Email" className="label" value={formData.email} onChange={handleInputChange}/>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your Email"
+                  className="label"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
                 {errors.email && (
                   <small className="text-danger">{errors.email}</small>
                 )}
@@ -99,7 +127,7 @@ export default function ContactUs() {
             </div>
 
             <div className="labelInput">
-              <label htmlFor="Subject">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <input
                 type="text"
                 id="subject"
@@ -127,7 +155,9 @@ export default function ContactUs() {
                 <small className="text-danger">{errors.message}</small>
               )}
             </div>
-            <button className="buttonInput">Send</button>
+            <button className="buttonInput" type="submit">
+              Send
+            </button>
           </div>
         </form>
         <div className="contactInfo">
