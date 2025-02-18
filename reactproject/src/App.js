@@ -17,6 +17,7 @@ import Menu from "./pages/Menu";
 import ReservationPage from "./pages/ReservationPage";
 import TestimonialDash from "./dashboard/ TestimonialDash";
 import TeamDashboard from "./dashboard/ourteam";
+import ContactDashboard from "./dashboard/ContactDashboard";
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
@@ -67,6 +68,7 @@ function App() {
             <Route path="menu" element={<MenuDashboard />} />
             <Route path="testimonials" element={<TestimonialDash />} />
             <Route path="our-team" element={<TeamDashboard />} />
+            <Route path="contact-us" element={<ContactDashboard />} />
           </Route>
         </Route>
 

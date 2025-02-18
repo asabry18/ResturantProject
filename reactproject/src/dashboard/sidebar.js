@@ -48,7 +48,15 @@ export default function Sidebar() {
             >
               Our Team
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/dashboard/contact-us"
+              className="sidebar-color"
+            >
+              Contacts
+            </Nav.Link>
           </Nav>
+
           <button className="btn btn-danger" onClick={handleLogout}>
             <FontAwesomeIcon icon={faSignOutAlt} /> Logout
           </button>
@@ -82,20 +90,7 @@ export default function Sidebar() {
               >
                 Menu
               </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="/dashboard/blogs"
-                className="sidebar-color"
-              >
-                Blogs
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="/dashboard/our-team"
-                className="sidebar-color"
-              >
-                Our Team
-              </Nav.Link>
+
               <Nav.Link className="sidebar-color mt-5 " onClick={handleLogout}>
                 <FontAwesomeIcon icon={faSignOutAlt} /> Logout
               </Nav.Link>
