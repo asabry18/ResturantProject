@@ -13,7 +13,7 @@ export default function Reservation() {
   });
 
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState(""); 
+  const [successMessage, setSuccessMessage] = useState("");
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,10 +24,11 @@ export default function Reservation() {
     if (!formData.date) newErrors.date = "Date is required.";
     if (!formData.time) newErrors.time = "Time is required.";
     if (!formData.name.trim()) newErrors.name = "Name is required.";
-    if (!formData.phone)
+    if (!formData.phone.match(/^\d{3}-\d{4}-\d{4}$/))
       newErrors.phone = "Enter a valid phone number (xxx-xxxx-xxxx).";
     if (!formData.totalPerson || formData.totalPerson <= 0)
       newErrors.totalPerson = "Enter a valid number of people.";
+    
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
@@ -38,8 +39,9 @@ export default function Reservation() {
       try {
         const response = await axios.post("http://localhost:3001/reservation", formData);
         if (response.status === 201) {
-          setSuccessMessage("Reservation saved successfully!");
+          setSuccessMessage("🎉 Reservation saved successfully!");
           
+          // ✅ Reset Form Inputs
           setFormData({
             date: "",
             time: "",
@@ -47,13 +49,18 @@ export default function Reservation() {
             phone: "",
             totalPerson: "",
           });
+
           setErrors({});
-          
-          setTimeout(() => setSuccessMessage(), 3000);
+
+          // ✅ Alert User
+          alert("✅ Reservation saved successfully!");
+
+          // ✅ Hide Success Message After 3 Seconds
+          setTimeout(() => setSuccessMessage(""), 3000);
         }
       } catch (error) {
         console.error("Error saving reservation:", error);
-        alert("Failed to save reservation. Please try again.");
+        alert("❌ Failed to save reservation. Please try again.");
       }
     }
   }
@@ -64,21 +71,18 @@ export default function Reservation() {
         <div className="bookingTitle text-center pt-5 pb-3">
           <h1 className="display-1">Book A Table</h1>
           <h6 className="opacity-75 lead">
-            We consider all the drivers of change gives you the components you
-            need to change to create a truly happens.
+            Secure your seat and enjoy an unforgettable dining experience.
           </h6>
         </div>
 
         <section>
           <Container className="container w-50 py-5">
+            {/* ✅ Show Success Message */}
             {successMessage && (
               <Alert variant="success" className="text-center">{successMessage}</Alert>
             )}
 
-            <form
-              className="bookingForm row row-gap-4 bg-white"
-              onSubmit={handleSubmit}
-            >
+            <form className="bookingForm row row-gap-4 bg-white" onSubmit={handleSubmit}>
               <Col md={6} className="d-flex flex-column">
                 <label htmlFor="date">Date</label>
                 <input
@@ -87,10 +91,9 @@ export default function Reservation() {
                   value={formData.date}
                   onChange={handleChange}
                 />
-                {errors.date && (
-                  <small className="text-danger">{errors.date}</small>
-                )}
+                {errors.date && <small className="text-danger">{errors.date}</small>}
               </Col>
+
               <Col md={6} className="d-flex flex-column">
                 <label htmlFor="time">Time</label>
                 <input
@@ -99,10 +102,9 @@ export default function Reservation() {
                   value={formData.time}
                   onChange={handleChange}
                 />
-                {errors.time && (
-                  <small className="text-danger">{errors.time}</small>
-                )}
+                {errors.time && <small className="text-danger">{errors.time}</small>}
               </Col>
+
               <Col md={6} className="d-flex flex-column">
                 <label htmlFor="name">Name</label>
                 <input
@@ -112,10 +114,9 @@ export default function Reservation() {
                   value={formData.name}
                   onChange={handleChange}
                 />
-                {errors.name && (
-                  <small className="text-danger">{errors.name}</small>
-                )}
+                {errors.name && <small className="text-danger">{errors.name}</small>}
               </Col>
+
               <Col md={6} className="d-flex flex-column">
                 <label htmlFor="phone">Phone</label>
                 <input
@@ -126,24 +127,23 @@ export default function Reservation() {
                   value={formData.phone}
                   onChange={handleChange}
                 />
-                {errors.phone && (
-                  <small className="text-danger">{errors.phone}</small>
-                )}
+                {errors.phone && <small className="text-danger">{errors.phone}</small>}
               </Col>
+
               <Col md={12} className="d-flex flex-column">
                 <label htmlFor="totalPerson">Total Person</label>
                 <input
                   name="totalPerson"
                   type="number"
+                  min="1"
                   value={formData.totalPerson}
                   onChange={handleChange}
                 />
-                {errors.totalPerson && (
-                  <small className="text-danger">{errors.totalPerson}</small>
-                )}
+                {errors.totalPerson && <small className="text-danger">{errors.totalPerson}</small>}
               </Col>
+
               <Col md={12} className="d-flex flex-column">
-                <Button type="submit" onClick={handleSubmit} className="bookingBtn">
+                <Button type="submit" className="bookingBtn">
                   Book A Table
                 </Button>
               </Col>

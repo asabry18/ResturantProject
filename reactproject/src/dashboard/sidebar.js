@@ -43,10 +43,10 @@ export default function Sidebar() {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/dashboard/our-team"
+              to="/dashboard/reservation"
               className="sidebar-color"
             >
-              Our Team
+              reservations
             </Nav.Link>
             <Nav.Link
               as={Link}
