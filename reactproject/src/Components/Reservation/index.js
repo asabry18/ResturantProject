@@ -1,6 +1,7 @@
-import { Button, Col, Container } from "react-bootstrap";
+import { Button, Col, Container, Alert } from "react-bootstrap";
 import { useState } from "react";
-import "./Reservation.css"
+import axios from "axios";
+import "./Reservation.css";
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ export default function Reservation() {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState(""); 
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,19 +32,29 @@ export default function Reservation() {
     return Object.keys(newErrors).length === 0;
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     if (validateForm()) {
-      localStorage.setItem("reservation", JSON.stringify(formData));
-      alert("Reservation saved successfully!");
-      setFormData({
-        date: "",
-        time: "",
-        name: "",
-        phone: "",
-        totalPerson: "",
-      });
-      setErrors({});
+      try {
+        const response = await axios.post("http://localhost:3001/reservation", formData);
+        if (response.status === 201) {
+          setSuccessMessage("Reservation saved successfully!");
+          
+          setFormData({
+            date: "",
+            time: "",
+            name: "",
+            phone: "",
+            totalPerson: "",
+          });
+          setErrors({});
+          
+          setTimeout(() => setSuccessMessage(), 3000);
+        }
+      } catch (error) {
+        console.error("Error saving reservation:", error);
+        alert("Failed to save reservation. Please try again.");
+      }
     }
   }
 
@@ -59,6 +71,10 @@ export default function Reservation() {
 
         <section>
           <Container className="container w-50 py-5">
+            {successMessage && (
+              <Alert variant="success" className="text-center">{successMessage}</Alert>
+            )}
+
             <form
               className="bookingForm row row-gap-4 bg-white"
               onSubmit={handleSubmit}
@@ -127,7 +143,7 @@ export default function Reservation() {
                 )}
               </Col>
               <Col md={12} className="d-flex flex-column">
-                <Button type="submit" className="bookingBtn">
+                <Button type="submit" onClick={handleSubmit} className="bookingBtn">
                   Book A Table
                 </Button>
               </Col>
