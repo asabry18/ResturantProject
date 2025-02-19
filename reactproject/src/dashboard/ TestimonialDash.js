@@ -1,4 +1,3 @@
-// src/TestimonialDash.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -45,13 +44,21 @@ const TestimonialDash = () => {
   };
 
   const handleInsert = async () => {
+    // Make sure that rating is converted to a number if needed
+    const testimonialToSend = {
+      ...newTestimonial,
+      rating: Number(newTestimonial.rating),
+    };
+
     try {
-      const response = await axios.post(
-        "http://localhost:3001/testimonials",
-        newTestimonial,
-      );
-      if (response.status === 200) {
-        setTestimonials((prev) => [...prev, response.data]);
+      // Wrap the testimonial object in an array as required by the backend
+      const response = await axios.post("http://localhost:3001/testimonials", [
+        testimonialToSend,
+      ]);
+      if (response.status === 201 || response.status === 200) {
+        // Depending on your backend response, you might need to adjust this.
+        // For example, if response.data contains {message, testimonials}, then:
+        setTestimonials((prev) => [...prev, ...response.data.testimonials]);
         setShowForm(false);
         setNewTestimonial({
           name: "",
@@ -64,6 +71,9 @@ const TestimonialDash = () => {
       }
     } catch (error) {
       console.error("Error adding new testimonial:", error);
+      alert(
+        "Failed to add new testimonial. Please check your input and try again.",
+      );
     }
   };
 
