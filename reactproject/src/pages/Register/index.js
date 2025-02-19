@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import "./Register.css"
+import "./Register.css";
 function Register() {
   const navigate = useNavigate();
 
@@ -43,15 +43,21 @@ function Register() {
     e.preventDefault();
     if (validate()) {
       // Send Registration request to API
-      const registerRequest = await axios.post("http://localhost:3001/api/register", {
-        name: formData.name,
-        phone: formData.phone,
-        email: formData.email,
-        password: formData.password,
-      });
+      const registerRequest = await axios.post(
+        "http://localhost:3001/api/register",
+        {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          password: formData.password,
+        },
+      );
 
       // retrieve x-auth-token from response header and store it in localStorage
-      localStorage.setItem("authToken", registerRequest.headers["x-auth-token"]);
+      localStorage.setItem(
+        "authToken",
+        registerRequest.headers["x-auth-token"],
+      );
 
       // Reset form
       setFormData({ name: "", email: "", password: "", rememberMe: false });
@@ -72,64 +78,84 @@ function Register() {
         </div>
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="name" className="form-label">Name</label>
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
             <input
               type="text"
-              className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+              className={`form-control ${errors.name ? "is-invalid" : ""}`}
               id="name"
               name="name"
               placeholder="Enter your name"
               value={formData.name}
               onChange={handleChange}
             />
-            {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+            {errors.name && (
+              <div className="invalid-feedback">{errors.name}</div>
+            )}
           </div>
           <div className="mb-3">
-            <label htmlFor="phone" className="form-label">Phone</label>
+            <label htmlFor="phone" className="form-label">
+              Phone
+            </label>
             <input
               type="phone"
-              className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+              className={`form-control ${errors.phone ? "is-invalid" : ""}`}
               id="phone"
               name="phone"
               placeholder="Enter your phone number"
               value={formData.phone}
               onChange={handleChange}
             />
-            {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
+            {errors.phone && (
+              <div className="invalid-feedback">{errors.phone}</div>
+            )}
           </div>
           <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email</label>
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
             <input
               type="email"
-              className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+              className={`form-control ${errors.email ? "is-invalid" : ""}`}
               id="email"
               name="email"
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
             />
-            {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+            {errors.email && (
+              <div className="invalid-feedback">{errors.email}</div>
+            )}
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="form-label">Password</label>
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
             <input
               type="password"
-              className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+              className={`form-control ${errors.password ? "is-invalid" : ""}`}
               id="password"
               name="password"
               placeholder="Enter your password"
               value={formData.password}
               onChange={handleChange}
             />
-            {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+            {errors.password && (
+              <div className="invalid-feedback">{errors.password}</div>
+            )}
           </div>
-          <button type="submit" className="c-button">Sign Up</button>
+          <button type="submit" className="c-button">
+            Sign Up
+          </button>
         </form>
       </div>
 
       {/* Hello Text Section */}
       <div className="text-center mt-3 mb-3">
-        <p>Already have an account? <Link to={'/login'}>Sign in</Link></p>
+        <p>
+          Already have an account? <Link to={"/login"}>Sign in</Link>
+        </p>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/header/logo.png";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
+import axios from "axios";
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -27,37 +27,52 @@ const Login = () => {
   };
 
   return (
-    <div className="bg">
-      <img src={logo} alt="logo" />
-      <div className="login-container">
-        <h2>Sign in </h2>
-
+    <div className="page-container">
+      <div className="container mt-4 c-form">
+        <div className="mb-5 text-center">
+          <h2>Sign In</h2>
+          <p>Sign in to continue</p>
+        </div>
         <form onSubmit={handleLogin}>
-          <div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
             <input
-              className="email"
+              className={`form-control ${emailError ? "is-invalid" : ""}`}
               type="email"
-              placeholder="Email"
+              id="email"
+              placeholder="Enter your email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (emailError) setEmailError("");
+              }}
             />
-            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+            {emailError && <div className="invalid-feedback">{emailError}</div>}
           </div>
-          <div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
             <input
-              className="password"
+              className="form-control"
               type="password"
+              id="password"
+              placeholder="Enter your password"
               value={password}
-              placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
-          <button type="submit">Login</button>
+          <button type="submit" className="c-button">
+            Login
+          </button>
         </form>
-        <p>
-          don`t have an account ? <Link to={"/register"}>Sign up</Link>
-        </p>
+        <div className="text-center mt-3 mb-3">
+          <p>
+            Don&apos;t have an account? <Link to="/register">Sign up</Link>
+          </p>
+        </div>
       </div>
     </div>
   );
