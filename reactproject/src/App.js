@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import "./assets/css/index.css";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import NavBar from "./Components/NavBar";
 import AboutUs from "./pages/Aboutus";
 import Footer from "./Components/Footer";
-import Sidebar from "./dashboard/sidebar";
-import MenuDashboard from "./dashboard/menudash";
+import Sidebar from "./dashboard/Sidebar";
+import MenuDashboard from "./dashboard/Menu";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { useEffect, useState } from "react";
@@ -15,9 +14,9 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import ServicePage from "./pages/ServicePage";
 import Menu from "./pages/Menu";
 import ReservationPage from "./pages/ReservationPage";
-import TestimonialDash from "./dashboard/ TestimonialDash";
-import Reservation from "./dashboard/reservations";
-import ContactDashboard from "./dashboard/ContactDashboard";
+import TestimonialDash from "./dashboard/Testimonial";
+import Reservation from "./dashboard/Reservation";
+import ContactDashboard from "./dashboard/Contact";
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
