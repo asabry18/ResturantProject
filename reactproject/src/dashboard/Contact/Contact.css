@@ -1,0 +1,168 @@
+.contact-dashboard {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.error-message {
+    background-color: #fff3f3;
+    color: #dc3545;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
+    padding: 0 20px;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    min-width: 800px; /* Ensures table doesn't get too squeezed */
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 12px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #f7d6d6;
+    color: #333;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.contact-table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.contact-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.message-cell {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete-btn {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .contact-dashboard {
+        padding: 15px;
+    }
+
+    .table-responsive {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .message-cell {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-table {
+        min-width: unset;
+        border: 0;
+    }
+
+    .contact-table thead {
+        display: none;
+    }
+
+    .contact-table tr {
+        margin-bottom: 1rem;
+        display: block;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .contact-table td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .contact-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .contact-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    .message-cell {
+        max-width: none;
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-dashboard {
+        padding: 10px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .table-responsive {
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+}
