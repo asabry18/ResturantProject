@@ -17,6 +17,7 @@
 }
 .AboutUsSec .AboutUsTxt {
     margin-left: 50px;
+    padding-top: 3rem;
 }
 .AboutUsSec .AboutUsBtn:hover {
     background-color: #666;

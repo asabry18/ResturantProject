@@ -13,7 +13,7 @@ const Reservation = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:3001/reservation");
+        const response = await axios.get("https://cafeu-api.vercel.app/reservation");
         if (response.status === 200) {
           setData(response.data);
         }
@@ -30,7 +30,7 @@ const Reservation = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3001/reservation/${id}`,
+        `https://cafeu-api.vercel.app/reservation/${id}`,
       );
       if (response.status === 200) {
         setData((prevData) => prevData.filter((member) => member._id !== id));

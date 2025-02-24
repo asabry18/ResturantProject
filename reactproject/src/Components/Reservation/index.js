@@ -37,7 +37,7 @@ export default function Reservation() {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.post("http://localhost:3001/reservation", formData);
+        const response = await axios.post("https://cafeu-api.vercel.app/reservation", formData);
         if (response.status === 201) {
           setSuccessMessage("🎉 Reservation saved successfully!");
           

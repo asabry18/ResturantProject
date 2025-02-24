@@ -30,7 +30,7 @@ const TestimonialDash = () => {
   const fetchTestimonials = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3001/testimonials");
+      const response = await axios.get("https://cafeu-api.vercel.app/testimonials");
       if (response.status === 200) {
         setTestimonials(response.data);
       }
@@ -46,7 +46,7 @@ const TestimonialDash = () => {
     if (window.confirm("Are you sure you want to delete this testimonial?")) {
       try {
         const response = await axios.delete(
-          `http://localhost:3001/testimonials/${id}`,
+          `https://cafeu-api.vercel.app/testimonials/${id}`,
         );
         if (response.status === 200) {
           setTestimonials((prev) =>
@@ -68,7 +68,7 @@ const TestimonialDash = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3001/testimonials", [
+      const response = await axios.post("https://cafeu-api.vercel.app/testimonials", [
         testimonialToSend,
       ]);
       if (response.status === 201 || response.status === 200) {
