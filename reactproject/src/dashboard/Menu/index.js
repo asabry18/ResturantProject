@@ -25,7 +25,7 @@ const MenuDashboard = () => {
   const fetchMenu = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3001/menu");
+      const response = await axios.get("https://cafeu-api.vercel.app/menu");
       if (response.status === 200) {
         setMenu(response.data);
       }
@@ -44,9 +44,7 @@ const MenuDashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this dish?")) {
       try {
-        const response = await axios.delete("http://localhost:3001/menu", {
-          data: { id },
-        });
+        const response = await axios.delete(`https://cafeu-api.vercel.app/menu/${id}`);
         if (response.status === 200) {
           await fetchMenu(); // Refresh the menu after deletion
         }
@@ -60,7 +58,7 @@ const MenuDashboard = () => {
   const handleInsert = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/menu", newDish);
+      const response = await axios.post("https://cafeu-api.vercel.app/menu", newDish);
       if (response.status === 200) {
         await fetchMenu(); // Refresh the menu after insertion
         setShowForm(false);

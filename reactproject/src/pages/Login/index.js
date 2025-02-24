@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const loginRequest = await axios.post("http://localhost:3001/api/login", {
+      const loginRequest = await axios.post("https://cafeu-api.vercel.app/api/login", {
         email: email,
         password: password,
       });

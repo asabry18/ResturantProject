@@ -50,7 +50,7 @@ export default function ContactUs() {
 
   const submitForm = async () => {
     try {
-      const response = await fetch("http://localhost:3001/contact-us", {
+      const response = await fetch("https://cafeu-api.vercel.app/contact-us", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -15,7 +15,7 @@ export default function MoreAboutUs(){
                                 <img src={experience} className="w-100" alt="experience-image"/>
                             </div>
                         </Col>
-                        <Col sm="12" lg="6" className='pt-5'>
+                        <Col sm="12" lg="6">
                             <div className="AboutUsTxt">
                                 <h5>About us</h5>
                                 <h2 className="text-capitalize pt-2 pb-3">why we are the best</h2>

@@ -10,7 +10,7 @@ const Testimonials = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch("http://localhost:3001/testimonials");
+        const response = await fetch("https://cafeu-api.vercel.app/testimonials");
         if (!response.ok) {
           throw new Error("Failed to fetch testimonials");
         }

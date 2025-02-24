@@ -11,7 +11,7 @@ const ContactDashboard = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/contact-us");
+        const response = await axios.get("https://cafeu-api.vercel.app/contact-us");
         if (response.status === 200) {
           setContacts(response.data);
         }
@@ -31,7 +31,7 @@ const ContactDashboard = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3001/contact-us/${id}`,
+        `https://cafeu-api.vercel.app/contact-us/${id}`,
       );
       if (response.status === 200) {
         setContacts((prevContacts) =>
