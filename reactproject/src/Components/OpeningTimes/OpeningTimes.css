@@ -1,39 +1,21 @@
-
 .CheckSec {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url(../../assets/images/OpeningTimes/subscribe-bg.png);
     color: white;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    margin-bottom: 90px;
 }
+
 .OpenTimes {
     position: relative;
 }
-.OpenTimes .CheckSec {
-    margin-bottom: 90px;
-}
+
 .OpenTimes .CheckSec h2 {
     font-weight: 700;
 }
-.OpenTimes .openingTimes h5 {
-    color: #c33;
-}
-.OpenTimes .openingTimes h2 {
-    font-weight: 700;
-}
-.OpenTimes .openingTimes .ContactInfo h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
-.OpenTimes .openingTimes .ContactInfo p {
-    font-size: 20px;
-}
-.OpenTimes .openingTimes {
-    position: absolute;
-    background-color: white;
-    color: #000;
-    right: 110px;
-    bottom: -150px;
-    box-shadow: 3px 3px 10px 1px rgba(50, 50, 93, 0.15);
-}
+
 .watch-btn {
     background-color: #c33;
     color: white;
@@ -41,12 +23,98 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.watch-btn:hover {
+    background-color: #a22;
+}
+
+.OpenTimes .openingTimes {
+    background-color: white;
+    color: #000;
+    box-shadow: 3px 3px 10px 1px rgba(50, 50, 93, 0.15);
+    padding: 2rem;
+    position: relative;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 90%;
+    top: -50px;
+}
+
+.OpenTimes .openingTimes h5 {
+    color: #c33;
+    margin-bottom: 0.5rem;
+}
+
+.OpenTimes .openingTimes h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
 .OpenTimes .openingTimes .TimesSec {
     margin: 0 auto;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 }
+
 .OpenTimes .openingTimes .TimesSec hr {
     margin: 0;
     border-style: dashed;
+}
+
+.Times {
+    padding: 0.5rem 0;
+}
+
+.OpenTimes .openingTimes .ContactInfo {
+    margin-top: 2rem;
+}
+
+.OpenTimes .openingTimes .ContactInfo h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.OpenTimes .openingTimes .ContactInfo p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .OpenTimes {
+        margin-bottom: 0;
+    }
+    
+    .OpenTimes .openingTimes {
+        position: absolute;
+        right: 10%;
+        bottom: -150px;
+        width: 400px;
+        max-width: 40%;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .OpenTimes .openingTimes {
+        right: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .OpenTimes .CheckSec br {
+        display: none;
+    }
+    
+    .OpenTimes .openingTimes .TimesSec {
+        width: 100%;
+    }
+    
+    .OpenTimes .openingTimes {
+        padding: 1.5rem;
+    }
 }

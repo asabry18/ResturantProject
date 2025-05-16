@@ -16,8 +16,8 @@
     color: #ffff;
 }
 .AboutUsSec .AboutUsTxt {
-    margin-left: 50px;
-    padding-top: 3rem;
+    width: 80%;
+    margin: auto;
 }
 .AboutUsSec .AboutUsBtn:hover {
     background-color: #666;
@@ -25,4 +25,10 @@
 .AboutUsSec .AboutUsTxt .iconsSec .icon {
     width: 40px;
     margin-right: 30px;
+}
+@media (max-width: 991px) {
+    .AboutUsSec .AboutUsTxt {
+        padding-top: 3rem;
+    }
+    
 }
