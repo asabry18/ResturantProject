@@ -5,8 +5,10 @@ import BreakfastIcon from "../../assets/images/menu/breakfast.png";
 import LunchIcon from "../../assets/images/menu/Lunch.png";
 import SeafoodIcon from "../../assets/images/menu/seafood.png";
 import axios from "axios";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import { useCart } from "../../Context/CartContext"; 
+import { useNavigate } from "react-router-dom";
 import "../Menu/Menu.css";
 
 const categoryIcons = {
@@ -21,6 +23,8 @@ export default function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [menu, setMenu] = useState([]);
   const [categories, setCategories] = useState([]);
+  const { cartItems, addToCart } = useCart();
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,9 +46,7 @@ export default function Menu() {
   }, []);
 
   const filteredItems =
-    selectedCategory === "All"
-      ? menu
-      : menu.filter((item) => item.category === selectedCategory);
+    selectedCategory === "All" ? menu : menu.filter((item) => item.category === selectedCategory);
 
   return (
     <>
@@ -72,10 +74,18 @@ export default function Menu() {
           <Row className="menuItems py-5 my-3">
             {filteredItems.map((item) => (
               <Col sm="6" md="4" lg="3" className="menuCol m-auto" key={item.id}>
-                <MenuItem itemName={item.name} price={item.price} itemDescription={item.description} image={item.imageUrl}/>
+                <MenuItem itemName={item.name} price={item.price} itemDescription={item.description} image={item.imageUrl} onAddToCart={() => addToCart(item)}/>
               </Col>
             ))}
           </Row>
+
+          {cartItems.length > 0 && (
+            <div className="text-center">
+              <Button className="btn btn-danger btn-lg mt-4" onClick={() => navigate("/checkout")}>
+                Go to Checkout ({cartItems.length})
+              </Button>
+            </div>
+          )}
         </section>
       </section>
     </>

@@ -1,11 +1,10 @@
 
-h1 span {
-    color: #c33;
-    text-decoration: underline;
-}
 .carousel-inner {
     background-image: url("../../assets/images/slider/banner-bg.jpg");
+    background-size: cover;
+    background-position: center;
 }
+
 .carousel-indicators [data-bs-target] {
     background-color: #666 !important;
     width: 2rem;
@@ -13,77 +12,192 @@ h1 span {
     display: flex;
     margin-right: 10px;
 }
+
 .carousel-indicators .active {
     background-color: #c33 !important;
 }
-/* Button Styles */
+
 .btns {
     background-color: #c33;
     border: none;
 }
+
 .order-btn {
     color: white;
-    padding: 7px 25px;
+    padding: 10px 25px;
     border-radius: 3px;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
 }
+
+.order-btn:hover {
+    background-color: #a22;
+    color: white;
+    text-decoration: none;
+}
+
+.watch-container {
+    margin-bottom: 15px;
+}
+
 .watch-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
+
+.watch-btn:hover {
+    background-color: #a22;
+}
+
+.social-links-container {
+    position: relative;
+    height: 0;
+}
+
 .social-links {
     position: absolute;
-    top: 50%;
-    left: 95%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    top: -100px;
+    right: -50px;
+    transform: rotate(90deg);
+    transform-origin: right center;
+    display: none;
 }
-ul li a {
+
+.social-links li a {
     all: unset;
     cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
 }
+
+.social-links li a:hover {
+    color: #c33;
+}
+
 .carousel-control-next,
 .carousel-control-prev {
     display: none;
 }
+
 .hero {
     background-image: url("../../assets/images/slider/banner-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    overflow: hidden;
 }
-@media (max-width: 1148px) {
-    .hero .carousel-item img {
-        width: 125%;
-        height: 95%;
+
+.chicken-img {
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+@media (min-width: 992px) {
+    .social-links {
+        display: flex;
     }
-    .hero .carousel-item h1 {
-        font-size: 30px;
+    
+
+    .chicken-img {
+        max-width: 90%;
     }
-    .hero .carousel-item h5 {
-        font-size: 20px;
-    }
-    .hero .carousel-item .btns {
-        margin-bottom: 50px;
-        font-size: small;
+    
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
-@media (max-width: 768px) {
-    .hero .carousel-item h5 {
-        padding-top: 1rem;
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero {
+        padding: 3rem 0;
     }
-    .hero .carousel-item h1 {
-        font-size: 24px;
+    
+    .hero h1 {
+        font-size: 2rem;
     }
-    .hero .carousel-item h5 {
-        font-size: 18px;
+    
+    .chicken-img {
+        max-width: 80%;
+        margin: 0 auto;
     }
-    .hero .carousel-item img {
-        width: 100%;
-        height: 100%;
-        align-self: center;
-        padding-right: 10px;
-        padding-bottom: 50px;
+    
+    .carousel-item .row {
+        align-items: center;
     }
-    .btns {
-        margin-bottom: 0;
-        margin-left: 4rem;
-        font-size: small;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero h5 {
+        font-size: 1.1rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .chicken-img {
+        max-width: 70%;
+        margin: 0 auto 2rem;
+    }
+    
+    .watch-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .carousel-indicators {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero h5 {
+        font-size: 1rem;
+    }
+    
+    .hero p {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+    
+    .chicken-img {
+        max-width: 80%;
+    }
+    
+    .order-btn {
+        padding: 10px 20px;
+    }
+    
+    .watch-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 1.5rem;
     }
 }
