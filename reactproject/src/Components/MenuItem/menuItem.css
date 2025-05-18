@@ -73,7 +73,13 @@
   .homeMenu{
       background-color: #f3f3f4;
   }
-  
+  .addToCartButton{
+    background-color: #c33;
+    border: none;
+  }
+  .addToCartButton:hover{
+    background-color: #666;
+  }
   @media (max-width: 992px) {
       .menuItems{
           row-gap: 45px;

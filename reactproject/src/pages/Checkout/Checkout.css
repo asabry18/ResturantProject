@@ -1,0 +1,19 @@
+.checkOut{
+    background-color: #f3f3f4;
+}
+.checkoutCard img{
+    width: 100px;
+    height: 100px;
+}
+.totalCost span, .checkoutCard h5{
+    color: #c33;
+}
+.placeOrder, .checkoutCard button, .couponButton{
+    background-color: #c33;
+}
+.placeOrder:hover{
+    background-color: #666;
+}
+.checkoutCard button:hover, .couponButton:hover{
+    background-color: #666;
+}

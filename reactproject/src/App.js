@@ -17,6 +17,9 @@ import ReservationPage from "./pages/ReservationPage";
 import TestimonialDash from "./dashboard/Testimonial";
 import Reservation from "./dashboard/Reservation";
 import ContactDashboard from "./dashboard/Contact";
+import CheckoutPage from "./pages/Checkout";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isUserAdmin, setIsUserAdmin] = useState(false);
@@ -58,11 +61,7 @@ function App() {
         <Route path="/reservation" element={<ReservationPage />} />
 
         {/* Only allow access to Dashboard for logged in admins */}
-        <Route
-          element={
-            <ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />
-          }
-        >
+        <Route element={<ProtectedRoute isAdmin={isUserAdmin} isLoading={isLoading} />}>
           <Route path="/dashboard" element={<Sidebar />}>
             <Route path="menu" element={<MenuDashboard />} />
             <Route path="testimonials" element={<TestimonialDash />} />
@@ -73,8 +72,10 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

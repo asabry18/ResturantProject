@@ -28,7 +28,7 @@ export default function Menu() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('https://cafeu-api.vercel.app/menu');
+      const response = await axios.get('http://localhost:3001/menu');
       if (response.status === 200) {
         setMenu(response.data);
         const uniqueCategories = [...new Set(response.data.map(item => item.category))];
@@ -74,14 +74,14 @@ export default function Menu() {
           <Row className="menuItems py-5 my-3">
             {filteredItems.map((item) => (
               <Col sm="6" md="4" lg="3" className="menuCol m-auto" key={item.id}>
-                <MenuItem itemName={item.name} price={item.price} itemDescription={item.description} image={item.imageUrl} onAddToCart={() => addToCart(item)}/>
+                <MenuItem item={item} onAddToCart={addToCart}/>
               </Col>
             ))}
           </Row>
 
           {cartItems.length > 0 && (
             <div className="text-center">
-              <Button className="btn btn-danger btn-lg mt-4" onClick={() => navigate("/checkout")}>
+              <Button className="checkoutButton btn-lg" onClick={() => navigate("/checkout")}>
                 Go to Checkout ({cartItems.length})
               </Button>
             </div>
