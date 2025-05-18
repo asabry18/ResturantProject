@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import logo from "../../assets/images/header/logo.png";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useCart } from "../../Context/CartContext";
-import "./NavBar.css";
+import { useState } from "react"
+import logo from "../../assets/images/header/logo.png"
+import { Navbar, Nav, Container } from "react-bootstrap"
+import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { useCart } from "../../Context/CartContext"
+import "./NavBar.css"
 
 export default function NavBar({ isUserAdmin }) {
-  const [expanded, setExpanded] = useState(false);
-  const { cartItems } = useCart();
+  const [expanded, setExpanded] = useState(false)
+  const { cartItems } = useCart()
 
-  const closeNavbar = () => setExpanded(false);
+  const closeNavbar = () => setExpanded(false)
 
   return (
     <Navbar expand="lg" className="p-2" expanded={expanded} onToggle={setExpanded}>
