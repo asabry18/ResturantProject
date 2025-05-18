@@ -28,7 +28,7 @@ export default function Menu() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('http://localhost:3001/menu');
+      const response = await axios.get('https://cafeu-api.vercel.app/menu');
       if (response.status === 200) {
         setMenu(response.data);
         const uniqueCategories = [...new Set(response.data.map(item => item.category))];
