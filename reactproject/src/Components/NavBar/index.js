@@ -57,11 +57,13 @@ export default function NavBar({ isUserAdmin }) {
               </Nav.Link>
             </div>
 
-            <button className="numButton" type="button">
-              <Nav.Link as={Link} to="/login" onClick={closeNavbar}>
-                Log in 
-              </Nav.Link>
-            </button>
+            {!isUserAdmin && <button className="numButton" type="button">
+                <Nav.Link as={Link} to="/login" onClick={closeNavbar}>
+                  Log in 
+                </Nav.Link>
+              </button>
+            }
+            
           </div>
         </Navbar.Collapse>
       </Container>

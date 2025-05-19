@@ -44,7 +44,7 @@ function Register() {
     if (validate()) {
       // Send Registration request to API
       const registerRequest = await axios.post(
-        "https://cafeu-api.vercel.app/api/register",
+        "http://localhost:3001/api/register",
         {
           name: formData.name,
           phone: formData.phone,

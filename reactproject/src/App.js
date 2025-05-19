@@ -35,7 +35,7 @@ function App() {
 
       try {
         const validationRequest = await axios.post(
-          "https://cafeu-api.vercel.app/api/verifyToken",
+          "http://localhost:3001/api/verifyToken",
           { token: authToken },
         );
         setIsUserAdmin(validationRequest.data.isAdmin ?? false);
